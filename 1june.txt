@@ -1,0 +1,182 @@
+Q. What is a servlet?
+it is an p.l.in java . it an API and interface & it is used in creating dyanamic web pages.
+ Java Servlets are programs that run on a Web or Application server and act as a middle layer between a requests coming from a Web browser or other HTTP client
+ and databases or applications on the HTTP server.
+Using Servlets, you can collect input from users through web page forms, present records from a database or another source, and create web pages dynamically.
+ ============================================================================================================================================================= 
+
+ Q. Explain Servlets Lifecycle?
+there are three states of a servlet: new, ready and end. The servlet is in new state if servlet instance is created. After invoking the init() method, 
+Servlet comes in the ready state. In the ready state, servlet performs all the tasks. When the web container invokes the destroy() method, it shifts to the end state.
+1) Servlet class is loaded
+The classloader is responsible to load the servlet class. The servlet class is loaded when the first request for the servlet is received by the web container.
+
+2) Servlet instance is created
+The web container creates the instance of a servlet after loading the servlet class. The servlet instance is created only once in the servlet life cycle.
+
+3) init method is invoked
+The web container calls the init method only once after creating the servlet instance. The init method is used to initialize the servlet. It is the life cycle 
+method of the javax.servlet.Servlet interface
+
+4) service method is invoked
+The web container calls the service method each time when request for the servlet is received. If servlet is not initialized, it follows the first three steps as
+ described above then calls the service method. If servlet is initialized, it calls the service method. Notice that servlet is initialized only once.
+5) destroy method is invoked
+The web container calls the destroy method before removing the servlet instance from the service. It gives the servlet an opportunity to clean up any resource for
+ example memory, thread etc
+===============================================================================================================================================================
+
+Q. What is a servlet container?
+
+Q. What is ServletContext Interface?
+Q. How does the servlet container manage the servlet life cycle, when and what methods are called?
+Q. What actions do you need to do when creating servlets?
+Q. How to call another servlet from one servlet?
+Q. What is Request Dispatcher?
+Q. What are the differences between forward() and sendRedirect() methods?
+
+What is the JDBC?
+Explain the JDBC Architecture?
+What are the new features available in JDBC 4.0?
+What are the advantages of using PreparedStatement in Java?
+================================================================================
+What is ResultSet?
+The java. sql. ResultSet interface represents the result set of a database query. A ResultSet object maintains a cursor that points to the current 
+row in the result set. The term "result set" refers to the row and column data contained in a ResultSet object.
+
+
+
+================================================================================================
+
+
+What are types of ResultSet?
+
+The result of a SQL query is available in ResultSet object. ResultSets are of 3 types.
+
+ 1) Forward-only
+This type of ResultSet can make the traversal for rows only in the forward direction and non-scrollable.
+
+2) Scroll-insensitive
+Scroll-insensitive ResultSet are not capable for scrolling. That means the cursor can move in only one direction.
+ When the ResultSet is open, any change to the database table will not reflect.
+
+3) Scroll-sensitive
+ Unlike Scroll-insensitive, the Scroll-sensitive ResultSet is capable to move the cursor in bidirectional.
+ It also enables the changes done to the database tables when open.
+============================================================================================================================
+  What is the difference between executing, executeQuery, executeUpdate in JDBC?
+
+
+
+
+=====================================================================================================================
+
+What is JSP?What are the different Life-Cycle methods? 
+Paths Followed By JSP
+The following are the paths followed by a JSP −
+
+Compilation
+Initialization
+Execution
+Cleanup
+
+1)JSP Compilation
+When a browser asks for a JSP, the JSP engine first checks to see whether it needs to compile the page. 
+If the page has never been compiled,
+ or if the JSP has been modified since it was last compiled, the JSP engine compiles the page.
+
+The compilation process involves three steps −
+
+Parsing the JSP.
+Turning the JSP into a servlet.
+Compiling the servlet.
+
+2)SP Initialization
+When a container loads a JSP it invokes the jspInit() method before servicing any requests. If you need to perform JSP-specific initialization, 
+override the jspInit() method −
+Typically, initialization is performed only once and as with the servlet init method, you generally initialize database connections, open files, 
+and create lookup tables in the jspInit method.
+
+3)JSP Execution
+This phase of the JSP life cycle represents all interactions with requests until the JSP is destroyed.
+
+Whenever a browser requests a JSP and the page has been loaded and initialized, the JSP engine invokes the _jspService() method in the JSP.
+
+The _jspService() method takes an HttpServletRequest and an HttpServletResponse as its parameters as follows −
+
+void _jspService(HttpServletRequest request, HttpServletResponse response) {
+   // Service handling code...
+}
+The _jspService() method of a JSP is invoked on request basis. This is responsible for generating the response for that request and this method
+ is also responsible for generating responses to all seven of the HTTP methods, i.e, GET, POST, DELETE, etc.
+
+4)JSP Cleanup
+The destruction phase of the JSP life cycle represents when a JSP is being removed from use by a container.
+
+The jspDestroy() method is the JSP equivalent of the destroy method for servlets. Override jspDestroy when you need to perform any cleanup, such as releasing 
+database connections or closing open files.
+
+===========================================================================================================================
+Mention some important JSP Action Tags.
+Here is the list of JSP Actions:
+
+jsp:forward: is used for forwarding the request and response to other resources.
+jsp:include: is used for including another resource.
+jsp:body: is used for defining dynamically-defined body of XML element.
+jsp:useBean: is used for creating or locating bean objects.
+jsp:setProperty: is used for setting the value of property in the bean object.
+jsp:getProperty: is used for printing the value of the property of the bean.
+jsp:element: is used for defining XML elements dynamically.
+jsp:plugin: is used for embedding other components (applets).
+jsp:param: is used for setting the parameter for (forward or include) value.
+jsp:text: is used for writing template text in JSP pages and documents.
+jsp:fallback: is used for printing the message if plugins are working.
+jsp:attribute: is used for defining attributes of dynamically-defined XML element.
+
+
+
+
+
+=============================================================================================================
+Why are the request.getRequestDispatcher() and context.getRequestDispatcher() used?
+
+request.getRequestDispatcher(“url”) means the dispatch is relative to the current HTTP request.
+request.getRequestDispatcher(“url”) is for chaing two servlets with in the same web application and servletContext.getRequestDispacher(“destination url”) is 
+for chainig two web applications with in the same server/two different servers
+note- or dekho iska ans mil nahi raha...
+===========================================================================================================================
+What are the various Implicit Objects used in JSP 
+SP provide you Total 9 implicit objects which are as follows 
+ 
+
+request: This is the object of HttpServletRequest class associated with the request.
+response: This is the object of  HttpServletResponse class associated with the response to the client.
+config: This is the object of ServletConfig class associated with the page.
+application: This is the object of ServletContext class associated with the application context.
+session: This is the object of HttpSession class associated with the request.
+page context: This is the object of PageContext class that encapsulates the use of server-specific features. This object can be used to find, get or remove an 
+attribute.
+page object: The manner we use the keyword this for current object, page object is used to refer to the current translated servlet class.
+exception: The exception object represents all errors and exceptions which is accessed by the respective jsp. The exception implicit object is of type java.lang.
+Throwable.
+out: This is the PrintWriter object wher
+
+
+=============================================================================================
+How can we stop errors on Display in a JSP Page?
+You first set "Errorpage" attribute of PAGE directory to the name of the error page (ie Errorpage="error.jsp")in your jsp page .
+Then in the error jsp page set "isErrorpage=TRUE". When an error occur in your jsp page it will automatically call the error page
+
+
+
+============================================================================================================
+
+Explain Client-Side and Server-Side Validation.
+
+The user input validation that takes place on the server side during a post back session is called server-side validation. The languages such as PHP and ASP.Net use 
+server-side validation. Once the validation process on server side is over, the feedback is sent back to client by generating a new and dynamic web page.
+ With the help of server-side validation, we can get protection against malicious users.
+
+On the other hand, the user input validation that takes place on the client side is called client-side validation. Scripting languages such as JavaScript 
+and VBScript are used for client-side validation. In this kind of validation, all the user input validation is done in user’s browser only. It is not so secure 
+like server-side validation because the hacker can easily bypass our client side scripting language and submit dangerous input to the server.
