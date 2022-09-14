@@ -143,3 +143,15 @@ java.net.URISyntaxException: Illegal character in path at index 26: file:/G:/CDA
 
 !ENTRY org.eclipse.ui 2 2 2022-09-14 21:58:39.928
 !MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-09-14 22:05:51.187
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.YpGjBxIc
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-09-14 22:05:51.193
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.YpGjBxIc
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-09-14 22:05:51.194
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-09-14 22:05:51.196
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.YpGjBxIc => OK
