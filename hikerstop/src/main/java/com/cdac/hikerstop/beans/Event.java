@@ -1,8 +1,5 @@
 package com.cdac.hikerstop.beans;
 
-
-
-
 import java.util.Date;
 
 import javax.persistence.Entity;
