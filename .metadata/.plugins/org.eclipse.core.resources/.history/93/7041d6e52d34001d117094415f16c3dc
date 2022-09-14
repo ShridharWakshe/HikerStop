@@ -1,0 +1,5 @@
+package com.cdac.finalproject.beans;
+
+public class Admin {
+
+}
