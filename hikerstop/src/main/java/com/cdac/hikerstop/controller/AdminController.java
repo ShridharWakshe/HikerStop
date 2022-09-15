@@ -22,8 +22,8 @@ import com.cdac.hikerstop.services.AdminInfoService;
 @RequestMapping("/author")
 public class AdminController {
 	
-	@Autowired
-	 AdminInfoService adminInfoService;
+	@Autowired(required=true)
+	AdminInfoService adminInfoService;
 	
 	// Get all Admins
 	@GetMapping("/admindata")

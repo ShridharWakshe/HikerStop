@@ -21,7 +21,7 @@ public class Admin {
 	@Column(name = "a_id")
 	private int adminId;
 	@NotNull
-	private String userName;
+	private String username;
 	@NotNull
 	private String password; 
 	
@@ -61,7 +61,7 @@ public class Admin {
 			List<Event> event) {
 		super();
 		
-		this.userName = userName;
+		this.username = userName;
 		this.password = password;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -89,11 +89,11 @@ public class Admin {
 
 
 	public String getUserName() {
-		return userName;
+		return username;
 	}
 
 	public void setUserName(String userName) {
-		this.userName = userName;
+		this.username = userName;
 	}
 
 
@@ -196,7 +196,7 @@ public class Admin {
 
 	@Override
 	public String toString() {
-		return "Admin [adminId=" + adminId + ", userName=" + userName + ", password=" + password + ", firstName="
+		return "Admin [adminId=" + adminId + ", userName=" + username + ", password=" + password + ", firstName="
 				+ firstName + ", lastName=" + lastName + ", mobileNo=" + mobileNo + ", emailId=" + emailId + ", gender="
 				+ gender + ", age=" + age + ", address=" + address + ", addharCardNo=" + addharCardNo + ", status="
 				+ status + ", event=" + event + "]";
