@@ -21,8 +21,8 @@ public class Event {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
 	private int eventid;
+	
 	@NotNull
-
 	private String eventname;
 	@NotNull
 	private Date eventdate;
@@ -41,7 +41,6 @@ public class Event {
 	
 	@OneToMany(mappedBy = "event")
 	private List<Bookevent> bookEvent;
-	
 	
 
 	public Event() {
