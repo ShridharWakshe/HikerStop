@@ -13,8 +13,8 @@ public class Event {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int eventid;
+	
 	@NotNull
-
 	private String eventname;
 	@NotNull
 	private Date eventdate;
@@ -22,7 +22,6 @@ public class Event {
 	private int availabilty;
 	@NotNull
 	private Double price;
-	
 	
 	
 	
