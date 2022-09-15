@@ -16,10 +16,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class EscapadesApplication {
+public class HikerStopApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EscapadesApplication.class, args);
+		SpringApplication.run(HikerStopApplication.class, args);
 	}
 
 }
