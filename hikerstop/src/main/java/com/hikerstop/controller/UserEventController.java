@@ -12,11 +12,6 @@ import com.hikerstop.services.UserEventService;
 
 
 
-
-
-
-
-
 //main
 
 

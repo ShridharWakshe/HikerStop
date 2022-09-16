@@ -20,46 +20,48 @@ public class Customer {
 	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int c_id;
-	@NotNull
+
 	private String cname;
-	@NotNull
+
 	private String username;
-	@NotNull
+
 	private String password;
 	
-	@NotNull
+	
 	private String mob_no;
-	@NotNull
+
 	private String email_id;
-	@NotNull
+
 	private String gender;
-	@NotNull
+
 	private String address;
-	@NotNull
+
 	private String city;
-	@NotNull
+
 	private int age;
 	
 	
 	
-	/*@OneToOne(cascade = {CascadeType.ALL})
+	/*
+	@OneToOne(cascade = {CascadeType.ALL})
 	@JoinColumn(name="eventid",referencedColumnName = "eventid")
-	private Event event;*/
+	private Event event;
+	*/
 	
 	@OneToMany(mappedBy = "customer")
 	private List<Bookevent> bookEvent;
 	
-	
+
 
 	public Customer() {
 		super();
 	}
 
+	
 
 
-	public Customer(@NotNull String cname, @NotNull String username, @NotNull String password, @NotNull String mob_no,
-			@NotNull String email_id, @NotNull String gender, @NotNull String address, @NotNull String city,
-			@NotNull int age, List<Bookevent> bookEvent) {
+	public Customer(String cname, String username, String password, String mob_no, String email_id, String gender,
+			String address, String city, int age ) {
 		super();
 		this.cname = cname;
 		this.username = username;
@@ -70,8 +72,9 @@ public class Customer {
 		this.address = address;
 		this.city = city;
 		this.age = age;
-		this.bookEvent = bookEvent;
+		
 	}
+
 
 
 
@@ -193,24 +196,11 @@ public class Customer {
 	}
 
 
-
-	public List<Bookevent> getBookEvent() {
-		return bookEvent;
-	}
-
-
-
-	public void setBookEvent(List<Bookevent> bookEvent) {
-		this.bookEvent = bookEvent;
-	}
-
-
-
 	@Override
 	public String toString() {
 		return "Customer [c_id=" + c_id + ", cname=" + cname + ", username=" + username + ", password=" + password
 				+ ", mob_no=" + mob_no + ", email_id=" + email_id + ", gender=" + gender + ", address=" + address
-				+ ", city=" + city + ", age=" + age + ", bookEvent=" + bookEvent + "]";
+				+ ", city=" + city + ", age=" + age + "]";
 	}
 	
 	

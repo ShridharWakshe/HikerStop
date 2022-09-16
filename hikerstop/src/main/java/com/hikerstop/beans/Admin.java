@@ -13,55 +13,70 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 
+import lombok.Data;
+
+
 @Entity
 public class Admin {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "a_id")
 	private int adminId;
-	@NotNull
+
 	private String username;
-	@NotNull
+	
 	private String password; 
 	
-	@NotNull
+	
 	private String firstName;
-	@NotNull
+	
 	private String lastName;
-	@NotNull
+
 	private String mobileNo;
-	@NotNull
+
 	private String emailId;
-	@NotNull
+	
 	private String gender;
-	@NotNull
+	
 	private int age;
-	@NotNull
+	
 	private String address;
-	@NotNull
+	
 	@Column(unique=true)
 	private String addharCardNo;
-	@NotNull
+
 	@Column(columnDefinition = "boolean default false")
 	private boolean status;
 
 	
 	@OneToMany(mappedBy = "admin")
 	private List<Event> event;
+
+	public String getUsername() {
+		return username;
+	}
+
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+
 	
+
+
 	public Admin() {
 		super();
 	}
 
 
-	public Admin(@NotNull String userName, @NotNull String password, @NotNull String firstName,
-			@NotNull String lastName, @NotNull String mobileNo, @NotNull String emailId, @NotNull String gender,
-			@NotNull int age, @NotNull String address, @NotNull String addharCardNo, @NotNull boolean status,
-			List<Event> event) {
+	
+
+	public Admin(String username, String password, String firstName, String lastName, String mobileNo, String emailId,
+			String gender, int age, String address, String addharCardNo, boolean status) {
 		super();
-		
-		this.username = userName;
+		this.username = username;
 		this.password = password;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -72,7 +87,7 @@ public class Admin {
 		this.address = address;
 		this.addharCardNo = addharCardNo;
 		this.status = status;
-		this.event = event;
+		
 	}
 
 
@@ -186,20 +201,14 @@ public class Admin {
 	}
 
 
-	public List<Event> getEvent() {
-		return event;
-	}
-
-	public void setEvent(List<Event> event) {
-		this.event = event;
-	}
+	
 
 	@Override
 	public String toString() {
 		return "Admin [adminId=" + adminId + ", userName=" + username + ", password=" + password + ", firstName="
 				+ firstName + ", lastName=" + lastName + ", mobileNo=" + mobileNo + ", emailId=" + emailId + ", gender="
 				+ gender + ", age=" + age + ", address=" + address + ", addharCardNo=" + addharCardNo + ", status="
-				+ status + ", event=" + event + "]";
+				+ status + "]";
 	}
 	
 	

@@ -5,6 +5,7 @@ import java.util.Date;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -25,30 +26,30 @@ public class Bookevent {
 		 
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private int bookid;
-		@NotNull
+		
 		private String trekkersname;
-		@NotNull
+		
 		@Temporal(TemporalType.TIMESTAMP)
 		private Date bookdate;
-		@NotNull
+		
 		private String eventname;
-		@NotNull
+		
 		private int noofperson;
-		@NotNull
+		
 		@Column(name = "mobile_no")
 		private String mobileNo;
-		@NotNull
+		
 		@Column(name = "email_id")
 		private String emailId;
 
 		
 		
-		@ManyToOne(cascade = CascadeType.PERSIST)
-		@JoinColumn(name="c_id")
+		@ManyToOne //(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+		@JoinColumn(name="c_id",referencedColumnName = "c_id",nullable=false)
 		private Customer customer;
 		
-		@ManyToOne(cascade = CascadeType.PERSIST)
-		@JoinColumn(name="eventid")
+		@ManyToOne	(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+		@JoinColumn(name="eventid",referencedColumnName = "eventid",nullable=false)
 		private Event event;
 		
 
@@ -56,12 +57,10 @@ public class Bookevent {
 			super();
 		}
 
-
-		public Bookevent( @NotNull String trekkersname, @NotNull Date bookdate, @NotNull String eventname,
-				@NotNull int noofperson, @NotNull String mobileNo, @NotNull String emailId, Customer customer,
-				Event event) {
+		
+		public Bookevent(String trekkersname, Date bookdate, String eventname, int noofperson, String mobileNo,
+				String emailId, Customer customer, Event event) {
 			super();
-			
 			this.trekkersname = trekkersname;
 			this.bookdate = bookdate;
 			this.eventname = eventname;

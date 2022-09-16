@@ -34,7 +34,10 @@ public class CustomerServiceImpl implements CustomerService{
 
 	@Override
 	public List<Customer> getAllUsers() {
+		
+		System.out.println("it working");
 		List<Customer> clist= custDao.findAll();
+		
 		clist.forEach((c) -> c.getUsername());
 		return clist;
 	}

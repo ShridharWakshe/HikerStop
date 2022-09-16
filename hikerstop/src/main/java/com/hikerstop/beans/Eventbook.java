@@ -23,11 +23,11 @@ public class Eventbook {
 		@Id
 		@GeneratedValue(generator="gen")  //(strategy=GenerationType.AUTO)
 		private int bookid;
-		@NotNull
+	
 		private Date bookdate;
-		@NotNull
+		
 		private int noofperson;
-		@NotNull
+	
 		private String Eventname;
 		
 		

@@ -22,17 +22,17 @@ public class Event {
 	
 	private int eventid;
 	
-	@NotNull
+	
 	private String eventname;
-	@NotNull
+	
 	private Date eventdate;
-	@NotNull
+	
 	private int availabilty;
-	@NotNull
+	
 	private Double price;
 	
-	@ManyToOne(cascade = CascadeType.PERSIST)
-	@JoinColumn(name="a_id")
+	@ManyToOne //(cascade = CascadeType.PERSIST)
+	@JoinColumn(name="a_id",referencedColumnName = "a_id",nullable=false)
 	private Admin admin;
 	
 	/*@OneToOne(mappedBy = "event")
@@ -42,21 +42,24 @@ public class Event {
 	@OneToMany(mappedBy = "event")
 	private List<Bookevent> bookEvent;
 	
-
 	public Event() {
 		super();
 	}
 
-	public Event(@NotNull String eventname, @NotNull Date eventdate, @NotNull int availabilty, @NotNull Double price,
-			Admin admin, List<Bookevent> bookEvent) {
+	
+
+	public Event(String eventname, Date eventdate, int availabilty, Double price, Admin admin
+			) {
 		super();
 		this.eventname = eventname;
 		this.eventdate = eventdate;
 		this.availabilty = availabilty;
 		this.price = price;
 		this.admin = admin;
-		this.bookEvent = bookEvent;
+		
 	}
+
+
 
 	public int getEventid() {
 		return eventid;
@@ -106,18 +109,11 @@ public class Event {
 		this.admin = admin;
 	}
 
-	public List<Bookevent> getBookEvent() {
-		return bookEvent;
-	}
-
-	public void setBookEvent(List<Bookevent> bookEvent) {
-		this.bookEvent = bookEvent;
-	}
 
 	@Override
 	public String toString() {
 		return "Event [eventid=" + eventid + ", eventname=" + eventname + ", eventdate=" + eventdate + ", availabilty="
-				+ availabilty + ", price=" + price + ", admin=" + admin + ", bookEvent=" + bookEvent + "]";
+				+ availabilty + ", price=" + price + ", admin=" + admin + "]";
 	}
 
 	

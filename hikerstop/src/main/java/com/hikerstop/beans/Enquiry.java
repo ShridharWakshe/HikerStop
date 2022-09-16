@@ -4,12 +4,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.core.serializer.Serializer;
+
 
 
 //main
 
 @Entity
-public class Enquiry {
+public class Enquiry  {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int enquiryid;

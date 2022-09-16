@@ -23,9 +23,9 @@ public class Payment {
 	@Id
 	@GeneratedValue(generator="gen1")
 	private int pid;
-	@NotNull
+
 	private String noofperson;
-	@NotNull
+	
 	private Date paydate;
 	
 	
@@ -48,7 +48,7 @@ public class Payment {
 
 
 
-	public Payment(@NotNull String noofperson, @NotNull Date paydate, Eventbook eventbook) {
+	public Payment( String noofperson,  Date paydate, Eventbook eventbook) {
 		super();
 		this.noofperson = noofperson;
 		this.paydate = paydate;
