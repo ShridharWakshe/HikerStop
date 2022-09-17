@@ -1,4 +1,4 @@
-package com.hikerstop.services;
+package com.hikerstop.serviceImp;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,15 +11,7 @@ import com.hikerstop.dao.AdminInfoDao;
 import com.hikerstop.exception.CustomerAuthorizationExeception;
 import com.hikerstop.exception.CustomerExcpetion;
 import com.hikerstop.exception.CustomerNotFoundException;
-
-
-
-
-
-
-
-//main
-
+import com.hikerstop.services.AdminInfoService;
 
 
 
@@ -27,20 +19,20 @@ import com.hikerstop.exception.CustomerNotFoundException;
 
 
 	@Service
-	public class AdminInfiImp1 implements AdminInfoService{
+	public class AdminInfoImp implements AdminInfoService{
 		@Autowired
 		AdminInfoDao admindao;
 
 		@Override
 		public List<Admin> getAllUsers() {
 			List<Admin> clist= admindao.findAll();
-			clist.forEach((c) -> c.getUserName());
+			clist.forEach((c) -> c.getUsername());
 			return clist;
 		}
 
 		@Override
 		public Admin save(Admin c) {
-			Optional<Admin> op = admindao.findByUsername(c.getUserName());
+			Optional<Admin> op = admindao.findByUsername(c.getUsername());
 			if(op.isPresent()) {
 				throw new CustomerExcpetion("Customer Exists Excpetion");
 			}
@@ -64,7 +56,7 @@ import com.hikerstop.exception.CustomerNotFoundException;
 			Admin admin = admindao.findByUsername(username)
 					.orElseThrow(() -> new CustomerNotFoundException("Customer Not Found"));
 			if(username!=null) {
-				admin.setUserName(c.getUserName());
+				admin.setUsername(c.getUsername());
 				admin.setPassword(c.getPassword());
 			
 				

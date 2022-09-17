@@ -18,13 +18,6 @@ import com.hikerstop.services.AdminInfoService;
 
 
 
-
-
-//main
-
-
-
-
 @CrossOrigin(origins="http://localhost:3000")
 @RestController
 @RequestMapping("/author")
@@ -37,16 +30,11 @@ public class AdminController {
 		return ResponseEntity.ok(new ResponseDTO<>(adminInfoService.getAllUsers()));
 	}
 	
-	@PostMapping
-	public ResponseEntity<?> addCustomer(@RequestBody Admin c) {
+	@PostMapping("/add")
+	public ResponseEntity<?> addAdmin(@RequestBody Admin c) {
 		return new ResponseEntity<>(new ResponseDTO<>(adminInfoService.save(c)), HttpStatus.CREATED);
 	}
 	
-	/*@GetMapping("/login/{username}/{password}")
-	public ResponseEntity<?> authenticateLogin(@PathVariable String username, @PathVariable String password) {
-		System.out.println(username+ "   "+password);
-		return ResponseEntity.ok(new ResponseDTO<>(customerService.authenticateUser(username, password)));
-	}*/
 	
 	@GetMapping("/adminlogin/{username}/{password}")
 	public ResponseEntity<?> authenticateLogin(@PathVariable String username,@PathVariable String password) {

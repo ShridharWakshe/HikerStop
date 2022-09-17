@@ -1,4 +1,4 @@
-package com.hikerstop.services;
+package com.hikerstop.serviceImp;
 
 import java.util.List;
 
@@ -7,15 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.hikerstop.beans.Feedback;
 import com.hikerstop.dao.FeedbackDao;
-
-
-
-
-
-//main
-
-
-
+import com.hikerstop.services.FeedbackService;
 
 
 

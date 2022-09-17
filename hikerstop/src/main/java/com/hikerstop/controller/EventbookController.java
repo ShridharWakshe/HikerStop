@@ -19,11 +19,6 @@ import com.hikerstop.services.EventbookService;
 
 
 
-
-
-
-//main
-
 @CrossOrigin(origins="http://localhost:3000")
 @RestController
 @RequestMapping("/eventbook")
