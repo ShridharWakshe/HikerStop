@@ -12,16 +12,6 @@ import com.hikerstop.services.UserEventService;
 
 
 
-
-
-
-
-
-//main
-
-
-
-
 @RestController
 @RequestMapping("/user")
 public class UserEventController {

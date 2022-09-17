@@ -5,17 +5,6 @@ import java.util.List;
 import com.hikerstop.beans.Customer;
 
 
-
-
-
-
-//main
-
-
-
-
-
-
 public interface AdminAuthorService {
 
 	Customer fetchCustomers(String cname);
@@ -23,5 +12,7 @@ public interface AdminAuthorService {
 	List<Customer> getAllCustomers();
 
 	String deletebyCustomerId(int a_id);
+	
+	//Admin update(Admin c, String username);
 
 }

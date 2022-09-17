@@ -16,11 +16,6 @@ import com.hikerstop.beans.Bookevent;
 import com.hikerstop.services.BookeventService;
 
 
-
-
-//main
-
-
 @CrossOrigin(origins="http://localhost:3000")
 @RestController
 @RequestMapping("/bookevent")
@@ -35,7 +30,7 @@ public class BookeventController {
 	@GetMapping("/event")
 	private List<Bookevent> getAllBooks() 
 	{
-	return bookeventService.getAllBooks();//why not going through dto
+	return bookeventService.getAllBooks();  //why not going through dto
 	}
 	
 	

@@ -20,13 +20,6 @@ import com.hikerstop.services.AdminService;
 
 
 
-
-
-
-//main
-
-
-
 @CrossOrigin(origins="http://localhost:3000")
 @RestController
 @RequestMapping("/origin")
@@ -35,40 +28,6 @@ public class AdminEventController {
 		@Autowired
 		AdminService adminService;
 		
-//		@GetMapping("/{eventid}")
-//		public ResponseEntity<?> fetchEvents(@PathVariable int eventid){
-//			//Event event = adminService.fetchEvents(eventname);
-//			System.out.println(eventid);
-//			return ResponseEntity.ok(new ResponseDTO<>(adminService.fetchEvents(eventid)));
-//		}
-//		
-//		@GetMapping("/allevent")
-//		public ResponseEntity<?> getEvents() {
-//			return ResponseEntity.ok(new ResponseDTO<>(adminService.getAllEvents()));
-//		}
-//		
-//		@PostMapping("/add")
-//		public ResponseEntity<?> addEvent(@RequestBody Event e) {
-//			return new ResponseEntity<>(new ResponseDTO<>(adminService.save(e)), HttpStatus.CREATED);
-//		}
-//		
-//		@PutMapping("/update/{eventname}")
-//		public ResponseEntity<?> updateUser(@PathVariable String eventname,  @RequestBody  Event e) {
-//			System.out.println(e);
-//			return ResponseEntity.ok(new ResponseDTO<>(adminService.update(e,eventname)));
-//		}
-//		
-//		@DeleteMapping("/delete/{eventid}")
-//		public ResponseEntity<?> deleteEvent(@PathVariable int eventid) {
-//			return ResponseEntity.ok(new ResponseDTO<>(adminService.deletebyId(eventid)));
-//		}
-////		
-//	
-//}
-//  
-		//autowire the BooksService class
-		
-		//creating a get mapping that retrieves all the books detail from the database 
 		
 		@GetMapping("/allevent")
 		private List<Event> getAllBooks() 
@@ -105,7 +64,14 @@ public class AdminEventController {
 		
 		
 		//creating put mapping that updates the book detail 
-		@PutMapping("/admin")
+//		@PutMapping("/admin")
+//		private Event update(@RequestBody Event event) 
+//		{
+//			adminService.saveOrUpdate(event);
+//		return event;
+//		}
+		
+		@PutMapping("/admin/{eventid}")
 		private Event update(@RequestBody Event event) 
 		{
 			adminService.saveOrUpdate(event);

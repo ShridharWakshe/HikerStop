@@ -1,4 +1,4 @@
-package com.hikerstop.services;
+package com.hikerstop.serviceImp;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,19 +7,7 @@ import org.springframework.stereotype.Service;
 import com.hikerstop.beans.Customer;
 import com.hikerstop.dao.AdminAuthorDao;
 import com.hikerstop.exception.CustomerNotFoundException;
-
-
-
-
-
-//main
-
-
-
-
-
-
-
+import com.hikerstop.services.AdminAuthorService;
 
 
 @Service
