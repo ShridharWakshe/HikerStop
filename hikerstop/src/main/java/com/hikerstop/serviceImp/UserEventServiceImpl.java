@@ -1,4 +1,4 @@
-package com.hikerstop.services;
+package com.hikerstop.serviceImp;
 
 
 import java.util.List;
@@ -9,19 +9,7 @@ import org.springframework.stereotype.Service;
 import com.hikerstop.beans.Event;
 import com.hikerstop.dao.UserEventDao;
 import com.hikerstop.exception.CategoryNotFoundException;
-
-
-
-
-
-
-
-
-
-
-//main
-
-
+import com.hikerstop.services.UserEventService;
 
 
 @Service

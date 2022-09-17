@@ -18,15 +18,6 @@ import com.hikerstop.services.FeedbackService;
 
 
 
-
-
-
-
-
-//main
-
-
-
 @CrossOrigin(origins="http://localhost:3000")
 @RestController
 @RequestMapping("/feedback")

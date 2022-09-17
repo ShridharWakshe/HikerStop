@@ -7,10 +7,13 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
+
+import lombok.Data;
 
 
 
@@ -19,11 +22,12 @@ import javax.validation.constraints.NotNull;
 
 
 @Entity
+@Data
 public class Payment {
 	@Id
-	@GeneratedValue(generator="gen1")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int pid;
-
+	
 	private String noofperson;
 	
 	private Date paydate;
@@ -33,82 +37,6 @@ public class Payment {
 	@JoinColumn(name="eventbook_fk")
 	private Eventbook eventbook;
 	
-	
-	
-	public Payment() {
-		super();
-	}
-
-	
-
-	public Payment(int pid) {
-		super();
-		this.pid = pid;
-	}
-
-
-
-	public Payment( String noofperson,  Date paydate, Eventbook eventbook) {
-		super();
-		this.noofperson = noofperson;
-		this.paydate = paydate;
-		this.eventbook = eventbook;
-	}
-
-
-
-	public int getPid() {
-		return pid;
-	}
-
-
-
-	public void setPid(int pid) {
-		this.pid = pid;
-	}
-
-
-
-	public String getName() {
-		return noofperson;
-	}
-
-
-
-	public void setName(String noofperson) {
-		this.noofperson = noofperson;
-	}
-
-
-
-	public Date getPaydate() {
-		return paydate;
-	}
-
-
-
-	public void setPaydate(Date paydate) {
-		this.paydate = paydate;
-	}
-
-
-
-	public Eventbook  getEventbook () {
-		return eventbook;
-	}
-
-
-
-	public void setEventbook (Eventbook  eventbook ) {
-		this.eventbook = eventbook;
-	}
-
-
-
-	@Override
-	public String toString() {
-		return "Payment [pid=" + pid + ", noofperson=" + noofperson + ", paydate=" + paydate + ", eventbook=" + eventbook + "]";
-	}
 
 
 

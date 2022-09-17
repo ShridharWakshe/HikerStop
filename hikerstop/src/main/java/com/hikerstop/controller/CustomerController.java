@@ -20,12 +20,6 @@ import com.hikerstop.services.CustomerService;
 
 
 
-
-//main
-
-
-
-
 @CrossOrigin(origins="http://localhost:3000")
 @RestController
 @RequestMapping("/customer")
@@ -43,11 +37,7 @@ public class CustomerController {
 		return new ResponseEntity<>(new ResponseDTO<>(customerService.save(c)), HttpStatus.CREATED);
 	}
 	
-	/*@GetMapping("/login/{username}/{password}")
-	public ResponseEntity<?> authenticateLogin(@PathVariable String username, @PathVariable String password) {
-		System.out.println(username+ "   "+password);
-		return ResponseEntity.ok(new ResponseDTO<>(customerService.authenticateUser(username, password)));
-	}*/
+
 	
 	@GetMapping("/login/{username}/{password}")
 	public ResponseEntity<?> authenticateLogin(@PathVariable String username,@PathVariable String password) {
@@ -60,6 +50,7 @@ public class CustomerController {
 			return ResponseEntity.notFound().build();
 		}
 	}
+	
 	
 	@PutMapping("/update/{username}")
 	public ResponseEntity<?> updateUser(@PathVariable String username,  @RequestBody  Customer c) {

@@ -18,11 +18,6 @@ import com.hikerstop.services.EnquiryService;
 
 
 
-
-
-//main
-
-
 @CrossOrigin(origins="http://localhost:3000")
 @RestController
 @RequestMapping("/enquiry")

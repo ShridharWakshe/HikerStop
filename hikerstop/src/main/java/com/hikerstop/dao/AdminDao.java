@@ -10,15 +10,6 @@ import com.hikerstop.beans.Event;
 
 
 
-
-
-
-//main
-
-
-
-
-
 @Repository
 public interface AdminDao extends CrudRepository<Event,Integer> {
 	

@@ -1,21 +1,11 @@
-package com.hikerstop.services;
+package com.hikerstop.serviceImp;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.hikerstop.beans.Payment;
 import com.hikerstop.dao.PaymentDao;
-
-
-
-
-
-//main
-
-
-
-
-
+import com.hikerstop.services.PaymentService;
 
 
 
