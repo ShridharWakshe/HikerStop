@@ -1,0 +1,85 @@
+.about-info{
+    line-height: 200%;
+}
+
+.about-info > h1{
+    text-align: center;
+    background-color: rgb(46, 44, 44);
+    color: #f3ede8;
+    line-height: 200%;
+}
+
+.article{
+    background:url(../images/cycle.jpg) no-repeat   center center  ;
+background-size: cover;
+filter: blur();
+    margin-left: 70px;
+    margin-right: 70px;
+    text-align: center;
+    font-style: italic;
+    font-size: 18px;
+    background-color: rgb(253, 253, 245);
+}
+
+.foundedBy{
+    color: #151515;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 100%;
+}
+
+.fstrow{
+    margin-left: px;
+    background-color: rgb(250, 247, 246);
+}
+.submit{
+    text-align: center;
+   
+    margin-top: 25px;
+    margin-bottom: 35px;
+   background-color: rgb(103, 99, 99);
+}
+
+.lfullname{
+    color: rgb(12, 12, 12);
+  
+    
+}
+
+.lphone{
+
+    color:rgb(12, 12, 12);
+  
+}
+
+.lemailid{
+    color: rgb(12, 12, 12);
+   
+}
+
+.lmessage{
+    color: rgb(12, 12, 12);
+  
+}
+
+.message{
+    color: rgb(12, 12, 12);
+   
+}
+
+.button1 {
+    border: none;
+    color: rgb(226, 216, 216);
+    background-color: #151515;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .h1{
+      
+      color:azure;
+  }
