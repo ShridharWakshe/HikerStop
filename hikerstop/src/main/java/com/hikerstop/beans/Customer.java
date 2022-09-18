@@ -48,8 +48,11 @@ public class Customer {
 	@JoinColumn(name="eventid",referencedColumnName = "eventid")
 	private Event event;*/
 	
-	@OneToMany(mappedBy = "customer")
-	private List<Bookevent> bookEvent;
+	
+	
+	//was giving stack over flow error
+//	@OneToMany(mappedBy = "customer")
+//	private List<Bookevent> bookEvent;
 	
 	
 

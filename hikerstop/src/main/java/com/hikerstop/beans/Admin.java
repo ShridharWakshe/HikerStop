@@ -46,6 +46,14 @@ public class Admin {
 	@Column(columnDefinition = "boolean default false")
 	private boolean status;
 
+	@Override
+	public String toString() {
+		return "Admin [adminId=" + adminId + ", username=" + username + ", password=" + password + ", firstName="
+				+ firstName + ", lastName=" + lastName + ", mobileNo=" + mobileNo + ", emailId=" + emailId + ", gender="
+				+ gender + ", age=" + age + ", address=" + address + ", addharCardNo=" + addharCardNo + ", status="
+				+ status + "]";
+	}
+
 	
 	
 }
