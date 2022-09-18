@@ -16,14 +16,9 @@ import javax.validation.constraints.NotNull;
 import lombok.Data;
 
 
-
-//main
-
-
-
 @Entity
 @Data
-public class Payment {
+public class Payment {  //implements Serializable
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int pid;
