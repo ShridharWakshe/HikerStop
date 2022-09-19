@@ -7,6 +7,7 @@ import { Nav } from 'react-bootstrap'
 //import { LinkContainer } from 'react-router-bootstrap'
 import "./AdminLogin.css";
 import Home from "./components/pages/Home";
+import Footer from "./Footer";
 
 
 const AdminLogin = () => {
@@ -26,6 +27,7 @@ const AdminLogin = () => {
     //     }
     //   }
     return(
+        
         <div className="images2">
             <Navbar/>
             <div className='login-container'>
@@ -52,9 +54,12 @@ const AdminLogin = () => {
                 <button className='login-input-btn' type='submit'   >Login</button>
                 
             </form>
+            
         </div>
+        <Footer />
         </div>
         
+     
 )
 }
 

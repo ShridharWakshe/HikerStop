@@ -28,23 +28,43 @@ const useAdminLogin= validateInfo =>{
 
         setErrors(validateInfo(values));
         setIsSubmiting(true);
-        fetch("http://localhost:8081/customer/login/"+values.username+"/"+values.password,{
-            method:"GET",
-            headers:{"Content-Type":"application/json"},
-        }).then((Response)=>{
-            console.log(Response);
-            if(Response.status===200){
-                 alert("Login Succesful")
-                // toast.success('Login Succesful')
-                history.push("/add");
-                console.log("login success");
-            }
-            else{
-                alert("Login unsuccesful")
-                console.log("unsuccess");
-            }
+        // fetch("http://localhost:8081/customer/login/"+values.username+"/"+values.password,{
+        //     method:"GET",
+        //     headers:{"Content-Type":"application/json"},
+        // }).then((Response)=>{
+        //     console.log(Response);
+        //     if(Response.status===200){
+        //          alert("Login Succesful")
+        //         // toast.success('Login Succesful')
+        //         history.push("/add");
+        //         console.log("login success");
+        //     }
+        //     else{
+        //         alert("Login unsuccesful")
+        //         console.log("unsuccess");
+        //     }
            
+        // })
+
+        var axios = require('axios');
+
+        var config = {
+        method: 'get',
+        url: 'http://localhost:8081/author/adminlogin/'+values.username+"/"+values.password,
+        headers: { }
+        };
+
+        axios(config)
+        .then(function (response) {
+            alert("Login Succesful")
+            history.push("/add");
+        console.log(JSON.stringify(response));
         })
+        .catch(function (error) {
+            alert("Login unsuccesful")
+            console.log(error);
+        });
+
     }
 
     return {handleChange, values, handleSubmit1, errors};

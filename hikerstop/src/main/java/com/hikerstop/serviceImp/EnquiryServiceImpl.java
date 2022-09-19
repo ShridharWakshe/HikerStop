@@ -17,11 +17,13 @@ public class EnquiryServiceImpl implements EnquiryService{
 	
 	@Override
 	public Enquiry save(Enquiry e) {
+		System.out.println(e);
 		return eDao.save(e);
 	}
 
 	@Override
 	public Enquiry fetchEnquiry(int enquiryid) {
+		System.out.println(enquiryid);
 		return eDao.getById(enquiryid);
 	}
 

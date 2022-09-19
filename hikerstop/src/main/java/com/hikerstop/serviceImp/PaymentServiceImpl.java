@@ -16,6 +16,7 @@ public class PaymentServiceImpl implements PaymentService{
 
 	@Override
 	public Payment save(Payment p) {
+		System.out.println(p);
 		return pd.save(p);
 	}
 

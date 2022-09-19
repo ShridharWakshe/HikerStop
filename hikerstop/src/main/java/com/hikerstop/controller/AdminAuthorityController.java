@@ -1,5 +1,7 @@
 package com.hikerstop.controller;
 
+import java.util.Base64;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -38,6 +40,7 @@ public class AdminAuthorityController {
 	public ResponseEntity<?> deleteCustomer(@PathVariable int a_id) {
 		return ResponseEntity.ok(new ResponseDTO<>(adminauthorService.deletebyCustomerId(a_id)));
 	}
+	
 	
 
 

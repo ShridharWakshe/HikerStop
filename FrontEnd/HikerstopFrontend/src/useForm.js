@@ -37,15 +37,36 @@ const useForm = (validateInfo,props) => {
        
         setErrors(validateInfo(values));
         setIsSubmiting(true);
-        fetch("http://localhost:8081/customer",{
-            method:"POST",
-            headers:{"Content-Type":"application/json"},
-            body:JSON.stringify(values)
-        }).then(()=>{
-            alert("Register Succesfully...")
-            history.push("/login");
-            console.log("Register Succesfully...")
+        // fetch("http://localhost:8081/customer",{
+        //     method:"POST",
+        //     headers:{"Content-Type":"application/json"},
+        //     body:JSON.stringify(values)
+        // }).then(()=>{
+        //     alert("Register Succesfully...")
+        //     history.push("/login");
+        //     console.log("Register Succesfully...")
+        // })
+
+        var axios = require('axios');
+        var data = JSON.stringify(values);
+
+        var config = {
+        method: 'post',
+        url: 'http://localhost:8081/customer',
+        headers: { 
+            'Content-Type': 'application/json'
+        },
+        data : data
+        };
+
+        axios(config)
+        .then(function (response) {
+        console.log(JSON.stringify(response.data));
+        alert(response);
         })
+        .catch(function (error) {
+        console.log(error);
+        });
 
         
 

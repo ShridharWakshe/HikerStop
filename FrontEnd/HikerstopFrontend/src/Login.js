@@ -2,10 +2,11 @@ import React from "react";
 import useLogin from "./useLogin";
 import validateInfo from "./validateInfo";
 import Navbar from "./components/Navbarhome";
-import { useHistory } from "react-router-dom";
+import { useHistory,Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from "./Footer";
+import './Footer.css';
 import { Nav } from 'react-bootstrap'
 //import { LinkContainer } from 'react-router-bootstrap'
 import "./Login.css";
@@ -17,21 +18,12 @@ const Login = () => {
 
     const history = useHistory();
   
-    // async function handleSubmit(event) {
-    //     event.preventDefault();
-      
-    //     try {
-    //       await Auth.signIn(username, password);
-    //       userHasAuthenticated(true);
-    //       history.push("/Evtable");
-    //     } catch (e) {
-    //       alert(e.message);
-    //     }
-    //   }
+    
     return(
         <div className="images1">
             <ToastContainer/>
             <Navbar/>
+            
             <div className='login-container'>
             <form className='login-form' onSubmit={handleSubmit}>
                 <h1>
@@ -54,16 +46,17 @@ const Login = () => {
                 </div>
 
                 <button className='login-input-btn' type='submit'   >Login</button>
-                <span className='form-input-register'>Do not have Account? <a href='\Register/1'>Register Now</a>
+                <span className='form-input-register' >Do not have Account? <Link to='/Register/1'>Register Now</Link>
         
              </span>
             </form>
-            {/* <footer/> */}
+          
         </div>
-       
+        <Footer/>
         </div>
         
 )
+
 }
 
 export default Login
