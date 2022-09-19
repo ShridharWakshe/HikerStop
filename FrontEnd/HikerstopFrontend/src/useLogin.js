@@ -28,27 +28,48 @@ const useLogin= validateInfo =>{
 
         setErrors(validateInfo(values));
         setIsSubmiting(true);
-        fetch("http://localhost:8081/customer/login/"+values.username+"/"+values.password,{
-            method:"GET",
-            headers:{"Content-Type":"application/json"},
-        }).then((Response)=>{
-            console.log(Response);
+        //  fetch("http://localhost:8081/customer/login/"+values.username+"/"+values.password,{
+        //      method:"GET",
+        //    headers:{"Content-Type":"application/json"},
+        // }).then((Response)=>{
+        //      console.log(Response);
            
-            if(Response.status===200){
-                alert("Login Succesful")
+        //     if(Response.status===200){
+        //         alert("Login Succesful")
                
-                toast.success('Login Successful');
+        //        toast.success('Login Successful');
               
-                console.log("login success");
-                history.push("/events");
-            }
-            else{
-                toast.error('Login unsuccessful')
-                // alert("Login unsuccesful")
-                console.log("unsuccess");
-            }
-           
+        //         console.log("login success");
+        //         history.push("/events");
+        //     }
+        //    else{
+        //         toast.error('Login unsuccessful')
+        //        // alert("Login unsuccesful")
+        //        console.log("unsuccess");
+        //     }
+
+
+         var axios = require('axios');
+
+         var config = {
+         method: 'get',
+         url: 'http://localhost:8081/customer/login/'+values.username+"/"+values.password,
+         headers: { }
+         };
+
+         axios(config)
+         .then(function (response) {
+             alert(response.data)
+         console.log(JSON.stringify(response.data));
+         toast.success('Login Successful');
+         history.push("/events");
         })
+         .catch(function (error) {
+        console.log(error);
+});
+
+           
+        
     }
 
     return {handleChange, values, handleSubmit, errors};

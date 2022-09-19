@@ -1,8 +1,9 @@
 export default function validateInfo(values){
     let errors={};
 
-    if(!values.name) 
+    if(values.cname == "" ) 
     {
+        alert("Enter your name");
         errors.name='Please enter name';
     }
 

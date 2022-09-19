@@ -2,7 +2,7 @@ import React from "react";
 import useLogin from "./useLogin";
 import validateInfo from "./validateInfo";
 import Navbar from "./components/Navbarhome";
-import { useHistory } from "react-router-dom";
+import { useHistory,Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from "./Footer";
@@ -46,7 +46,7 @@ const Login = () => {
                 </div>
 
                 <button className='login-input-btn' type='submit'   >Login</button>
-                <span className='form-input-register' >Do not have Account? <a href='\Register/1'>Register Now</a>
+                <span className='form-input-register' >Do not have Account? <Link to='/Register/1'>Register Now</Link>
         
              </span>
             </form>
