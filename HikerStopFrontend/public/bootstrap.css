@@ -5826,9 +5826,7 @@ a.close.disabled {
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
-  outline: 0;
-  width: 166%;
-  height: 568px;
+  outline: 0; 568px;
 }
 
 .modal-backdrop {
@@ -6759,6 +6757,7 @@ button.bg-dark:focus {
   justify-content: center;
   align-content: stretch;
   height: 100%;
+
 }
 
 .d-inline-flex {
@@ -8016,6 +8015,7 @@ button.bg-dark:focus {
 .mx-3 {
   margin-left: 1rem !important;
   width: 50%;
+
 }
 
 .m-4 {
@@ -8116,7 +8116,6 @@ button.bg-dark:focus {
 
 .p-2 {
   padding: 0.5rem !important;
-  
 }
 
 .pt-2,
