@@ -7,7 +7,7 @@ const cartitemsreducer=(state=initialState,action)=>{
             console.log(action.payload)         
             return [...state,action.payload] 
         case 'RemoveItem':
-            state=state.filter(x=>x.prodid!==action.payload.prodid)            
+            state=state.filter(x=>x.eventid!==action.payload.eventid)            
             return state
         case 'Clear':
             state=[]
