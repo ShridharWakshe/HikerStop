@@ -5829,6 +5829,7 @@ a.close.disabled {
   outline: 0;
   width: 166%;
   height: 568px;
+
 }
 
 .modal-backdrop {
@@ -8116,7 +8117,8 @@ button.bg-dark:focus {
 
 .p-2 {
   padding: 0.5rem !important;
-  
+
+ 
 }
 
 .pt-2,
