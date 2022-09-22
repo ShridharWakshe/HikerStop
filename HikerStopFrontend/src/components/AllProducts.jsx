@@ -129,7 +129,8 @@ function AllProduct(){
                         </div>
                         <div className="modal-body">
                             <div className="d-flex">
-                                <img src={"http://localhost:9090/"+item.photo} style={{width:"350px"}} alt=""/>
+                                <img src={"http://localhost:9090/"+item.photo} style={{width:"350px"}}  alt=""/>
+                                
                                 <div className="ml-3">
                                     <h4 className="p-2 text-warning">{item.eventname}</h4>
                                     {/* <h5 className="px-2">photo: {item.photo}</h5> */}

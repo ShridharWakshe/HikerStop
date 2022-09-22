@@ -87,7 +87,7 @@ function ViewCart(){
                         <tr key={item.prodid}>
                             <td>{item.prodid}</td>
                             <td>
-                                <img className="mr-2 float-left" src={"http://localhost:9090/"+item.photo} width="100" />
+                                <img className="mr-2 float-left" src={"http://localhost:9090/"+item.photo} width="100" alt=""/>
                                 {item.pname}
                             </td>
                             <td>&#8377; {item.price}</td>
