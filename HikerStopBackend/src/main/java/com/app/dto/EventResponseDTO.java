@@ -1,0 +1,45 @@
+package com.app.dto;
+
+import org.springframework.beans.BeanUtils;
+
+import com.app.pojos.Event;
+
+import lombok.Data;
+
+@Data
+public class EventResponseDTO {
+	
+
+	private String location;
+	
+	
+	private int eventid;
+	
+	
+	private String eventname;
+	
+	
+	private String eventcat;
+	
+	
+	private int price;
+	
+	
+	private int guideId;
+	
+	
+	private String guideName;
+	
+	
+	private String photo;
+	
+		
+	public static EventResponseDTO fromEntity(Event entity) {
+		EventResponseDTO dto = new EventResponseDTO();
+		dto.setGuideId(entity.getGuide().getId());
+		dto.setGuideName(entity.getGuide().getName());
+		BeanUtils.copyProperties(entity, dto);
+		
+		return dto;
+	}
+}
