@@ -74,8 +74,8 @@ function ViewCart(){
             <table className="table table-bordered table-dark table-striped">
                 <thead>
                     <tr>
-                        <th>Prodid</th>
-                        <th>Product Name</th>
+                        <th>Event</th>
+                        <th>Event Name</th>
                         <th>Price</th>
                         <th>Qty</th>
                         <th>Amount</th>
@@ -84,11 +84,11 @@ function ViewCart(){
                 </thead>
                 <tbody>
                     {state.cart.map(item=>(
-                        <tr key={item.prodid}>
-                            <td>{item.prodid}</td>
+                        <tr key={item.eventid}>
+                            <td>{item.eventid}</td>
                             <td>
                                 <img className="mr-2 float-left" src={"http://localhost:9090/"+item.photo} width="100" />
-                                {item.pname}
+                                {item.eventname}
                             </td>
                             <td>&#8377; {item.price}</td>
                             <td>{item.qty}</td>

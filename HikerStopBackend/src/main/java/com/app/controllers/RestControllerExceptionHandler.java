@@ -16,7 +16,6 @@ public class RestControllerExceptionHandler {
 		
 		return Response.error(ex.getMessage());
 		
-		
 	}	
 }
 
