@@ -129,13 +129,17 @@ function AllProduct(){
                         </div>
                         <div className="modal-body">
                             <div className="d-flex">
-                                <img src={"http://localhost:9090/"+item.photo} style={{width:"200px"}}/>
+                                <img src={"http://localhost:9090/"+item.photo} style={{width:"350px"}} alt=""/>
                                 <div className="ml-3">
                                     <h4 className="p-2 text-warning">{item.eventname}</h4>
                                     {/* <h5 className="px-2">photo: {item.photo}</h5> */}
                                     <h5 className="px-2">Category: {item.eventcat}</h5>
                                     <h5 className="px-2">Guide: {item.guideName}</h5>
+                                    <h5 className="px-2">short description :</h5>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam rerum totam impedit non laborum temporibus nemo! Ratione non, eligendi odio consequatur, culpa cum, suscipit praesentium illo voluptate aspernatur minima odit orem ipsum dolor sit amet consectetur adipisicing elit.g?</p>
                                     <h5 className="px-2">Price: &#8377; {item.price}</h5>
+                                    <label> Enter Number Of Person</label><br />
+                                  
                                     <input type="number" value={qty} onChange={e=>setQty(e.target.value)}/>
                                 </div>
                             </div>

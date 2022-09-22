@@ -48,7 +48,7 @@ function MyEvent(){
                 <tbody>
                 {events.map(x=>(
                     <tr key={x.eventid}>
-                        <td><img width="100" src={"http://localhost:9090/"+x.photo} className="img-thumnail" />{x.eventname}</td>
+                        <td><img width="100" src={"http://localhost:9090/"+x.photo} className="img-thumnail"  alt=""/>{x.eventname}</td>
                         <td>{x.eventcat}</td>
                         <td>{x.location}</td>
                         <td>{x.price}</td>
