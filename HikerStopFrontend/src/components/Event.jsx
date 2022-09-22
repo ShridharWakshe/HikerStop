@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 
 function Event(props){
     const {x,showModal}=props
@@ -8,11 +10,13 @@ function Event(props){
                     <h5>{x.eventname}</h5>
                 </div>
                 <div className="card-body py-1">
-                <img style={{width:"90%",height:"250px",marginBottom:"10px"}} src={"http://localhost:9090/"+x.photo} className="img-thumnail" />
-                <h6 className="float-left">Location :{x.Location}</h6>                
+                <img style={{width:"90%",height:"250px",marginBottom:"10px"}} src={"http://localhost:9090/"+x.photo} className="img-thumnail" alt=""/>
+                <p className="float-left">Location :<br/>
+                {x.location}</p>                
                 <h6 className="float-right">Price: &#8377; {x.price}</h6>                           
                 </div>
                 <div className="card-footer p-1">
+                    <button  className="btn btn-info btn-sm mr-2"><Link to= './Sandhanvalley'>view details</Link></button>
                     <button onClick={e=>showModal(x)} className="btn btn-primary btn-sm">Book</button>
                 </div>
             </div>
