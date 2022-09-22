@@ -85,8 +85,7 @@ function AddProduct(){
                                         <option>Biking</option>     
                                         <option>Winter Treks</option>     
                                         <option>Adventure Sports</option>  
-                                        {/* <option>Audio</option> 
-                                        <option>AC</option>  */}
+                                    
                                     </select>   
                                     {errors.eventcat && <small className="text-danger float-right">{errors.eventcat}</small>}                    
                                 </div>                        
@@ -117,14 +116,7 @@ function AddProduct(){
                                         <option>Manipur</option>
                                         <option>Meghalaya</option>
                                         <option>Rajasthan</option>
-                                        {/* <option>JBL</option>
-                                        <option>Apple</option>
-                                        <option>Canon</option>
-                                        <option>Dell</option>
-                                        <option>HP</option>
-                                        <option>Nokia</option>
-                                        <option>Boat</option>
-                                        <option>Nikon</option> */}
+                                     
 
                                     </select>
                                     {errors.brand && <small className="text-danger float-right">{errors.brand}</small>}
