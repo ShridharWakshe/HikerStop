@@ -51,8 +51,7 @@ public class GuideController {
 		List<Guide> result = guideService.allGuide();
 		return Response.success(result);
 	}
-	 
-	
+
 	@GetMapping("{id}")
 	public ResponseEntity<?> findSellerProfile(@PathVariable("id") int id) {
 		Guide result = guideService.findById(id);
