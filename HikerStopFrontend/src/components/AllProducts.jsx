@@ -78,15 +78,18 @@ function AllProduct(){
                 showModal() 
                 setDisplay("none")
                 setShowDialog("modal fade") 
-                item.qty=qty         
-                dispatch({type:'AddItem',payload:item})
-                alert("Item added to cart successfully")
+               
+                    item.qty=qty  
+                    dispatch({type:'AddItem',payload:item})
+                    alert("Item added to cart successfully")
+               
             }
-            else{                
+            else{   
                 alert("Item already in cart")
             }
         }
     }
+
 
 
     const handlePageClick=({selected:selectedPage})=>{
@@ -141,7 +144,17 @@ function AllProduct(){
                                     <h5 className="px-2">Price: &#8377; {item.price}</h5>
                                     <label> Enter Number Of Person</label><br />
                                   
-                                    <input type="number" value={qty} onChange={e=>setQty(e.target.value)}/>
+                                    <input type="number" 
+                                    value={qty} onChange={(e) => {
+                                        const reg = /^$|^[1-9]+$/;
+                                        const newValue = e.target.value;
+                                        if (reg.test(newValue)) {
+                                         setQty(newValue);
+                                        }
+                                      }
+                                    } required/>
+                                    <span> <strong>Tatal bill : {item.price * qty}</strong></span>
+
                                 </div>
                             </div>
                         </div>
