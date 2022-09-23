@@ -34,10 +34,30 @@ public class Event {
 	private String eventcat;
 	
 	
+	private String noofdays;
+	
+	@Column(length = 4000)
+	private String dailywiseschedule;
+	
+	@Column(length = 4000)
+	private String thingstocarry;
+	
+	
+	
+	
 	private int price;
 	
+	@Column(length = 4000)
+	private String description;
 	
-	private String photo;
+	
+	private String photo1;
+	
+	
+	private String photo2;
+	
+	
+	private String photo3;
 	
 	
 	@Temporal(TemporalType.TIMESTAMP)
@@ -46,7 +66,7 @@ public class Event {
 	
 	
 	@ManyToOne
-	@JoinColumn(name="guideId")
+	@JoinColumn(name="guided")
 	private Guide guide;
 	
 	
