@@ -11,7 +11,7 @@ import com.app.pojos.Event;
 public interface EventService {
 	
 	
-	void addEvent(Event p,MultipartFile pic);
+	void addEvent(Event p,MultipartFile pic1, MultipartFile pic2, MultipartFile pic3);
 	
 	
 	List<Event> findEvent(int guideId);
