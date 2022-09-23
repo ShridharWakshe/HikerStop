@@ -95,6 +95,13 @@ function AllProduct(){
     const handlePageClick=({selected:selectedPage})=>{
         loadDataFromServer(selectedPage)
     }
+
+    const mystyle=({
+
+    })
+
+
+   
     
     return (
         <>   
@@ -130,20 +137,58 @@ function AllProduct(){
                             <h5>Book This Event</h5>
                             <button onClick={closeDialog} className="close">&times;</button>
                         </div>
-                        <div className="modal-body">
+                        <div className="modal-body" >
+                        {/* <div className="modal-body vertical-scrollable"> */}
                             <div className="d-flex">
-                                <img src={"http://localhost:9090/"+item.photo} style={{width:"350px"}}  alt=""/>
-                                
-                                <div className="ml-3">
+                                {/* <img src={"http://localhost:9090/"+item.photo1} style={{width:"350px" ,height:"350px"}}  alt=""/> */}
+                                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                    <div className="carousel-inner">
+                                        <div className="carousel-item active">
+                                        <img src={"http://localhost:9090/"+item.photo1} style={{width:"350px" ,height:"350px"}}  alt=""/>
+                                        </div>
+                                        <div className="carousel-item">
+                                        <img src={"http://localhost:9090/"+item.photo2} style={{width:"350px" ,height:"350px"}}  alt=""/>
+                                        </div>
+                                        <div className="carousel-item">
+                                        <img src={"http://localhost:9090/"+item.photo3} style={{width:"350px" ,height:"350px"}}  alt=""/>
+                                        </div>
+                                    </div>
+                                    <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span className="sr-only">Previous</span>
+                                    </a>
+                                    <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span className="sr-only">Next</span>
+                                    </a>
+                                    </div>
+                                <div >
+                                <div className="ml-5 " style={{overflowY : "scroll",overflowX:"auto ",height:"400px"}}>
                                     <h4 className="p-2 text-warning">{item.eventname}</h4>
                                     {/* <h5 className="px-2">photo: {item.photo}</h5> */}
                                     <h5 className="px-2">Category: {item.eventcat}</h5>
                                     <h5 className="px-2">Guide: {item.guideName}</h5>
-                                    <h5 className="px-2">short description :</h5>
-                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam rerum totam impedit non laborum temporibus nemo! Ratione non, eligendi odio consequatur, culpa cum, suscipit praesentium illo voluptate aspernatur minima odit orem ipsum dolor sit amet consectetur adipisicing elit.g?</p>
                                     <h5 className="px-2">Price: &#8377; {item.price}</h5>
-                                    <label> Enter Number Of Person</label><br />
+                                    <h5 className="px-2">No of Days: ; {item.noofdays}</h5>
+                                    <h5 className="px-2">Description :</h5><h6>{item.description}</h6>
+                                    
+                                    <h5 className="px-2">Day Wise Schedule :</h5><h6>{item.dailywiseschedule}</h6>
+                                    <h5 className="px-2">Things to carry :</h5><h6>{item.thingstocarry}</h6>
+                                    {/* <h5 className="px-2">description :{item.description}</h5> */}
+                                    
+                                    {/* <h5 className="px-2">Price: &#8377; {item.price}</h5>
+                                    <label> Enter Number Of Person</label><br /> */}
                                   
+
+                                    {/* <input type="number" value={qty} onChange={e=>setQty(e.target.value)}/> */}
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div className="modal-footer">
+                       
+                                    <label> Enter Number Of Person</label><br />
+                                    {/* <input type="number" value={qty} onChange={e=>setQty(e.target.value)}/> */}
                                     <input type="number" 
                                     value={qty} onChange={(e) => {
                                         const reg = /^$|^[1-9]+$/;
@@ -155,10 +200,7 @@ function AllProduct(){
                                     } required/>
                                     <span> <strong>Tatal bill : {item.price * qty}</strong></span>
 
-                                </div>
-                            </div>
-                        </div>
-                        <div className="modal-footer">
+                                    
                             <button onClick={e=>addToCart(item)} className="btn btn-warning btn-sm">Book Now</button>
                         </div>
                     </div>

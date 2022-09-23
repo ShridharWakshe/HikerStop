@@ -24,10 +24,14 @@ public class EventServiceImpl implements EventService{
 	private StorageService storageService;
 	@Autowired GuideService guideService;
 	@Override
-	public void addEvent(Event p,MultipartFile pic) {
+	public void addEvent(Event p,MultipartFile pic1, MultipartFile pic2, MultipartFile pic3) {
 		
-		String photo=storageService.store(pic);
-		p.setPhoto(photo);
+		String photo1=storageService.store(pic1);
+		String photo2=storageService.store(pic2);
+		String photo3=storageService.store(pic3);
+		p.setPhoto1(photo1);
+		p.setPhoto2(photo2);
+		p.setPhoto3(photo3);
 		dao.save(p);
 	}
 

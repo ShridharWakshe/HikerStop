@@ -25,13 +25,35 @@ public class EventResponseDTO {
 	private int price;
 	
 	
+	private String description;
+	
+	
+	private String noofdays;
+	
+	
+	
+	private String dailywiseschedule;
+	
+	
+	private String thingstocarry;
+	
+	
+	private String pickupanddroplocation;
+	
+	
 	private int guideId;
 	
 	
 	private String guideName;
 	
 	
-	private String photo;
+	private String photo1;
+	
+	
+	private String photo2;
+	
+	
+	private String photo3;
 	
 		
 	public static EventResponseDTO fromEntity(Event entity) {

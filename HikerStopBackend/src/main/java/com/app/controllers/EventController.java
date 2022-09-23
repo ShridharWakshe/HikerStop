@@ -43,7 +43,9 @@ public class EventController {
 		Event event=EventDTO.toEntity(dto);
 		Guide guide= guideService.findById(dto.getGuideId());
 		event.setGuide(guide);
-		eventService.addEvent(event,dto.getPic());
+		eventService.addEvent(event,dto.getPic1(), dto.getPic2(), dto.getPic3());
+//		eventService.addEvent(event,dto.getPic2());
+//		eventService.addEvent(event,dto.getPic3());
 		return Response.success(event);
 	}
 	
