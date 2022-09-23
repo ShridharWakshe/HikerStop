@@ -77,7 +77,7 @@ function ViewCart(){
                         <th>Event</th>
                         <th>Event Name</th>
                         <th>Price</th>
-                        <th>Qty</th>
+                        <th>No of person</th>
                         <th>Amount</th>
                         <th>Action</th>
                     </tr>
@@ -87,7 +87,7 @@ function ViewCart(){
                         <tr key={item.eventid}>
                             <td>{item.eventid}</td>
                             <td>
-                                <img className="mr-2 float-left" src={"http://localhost:9090/"+item.photo} width="100" />
+                                <img className="mr-2 float-left" src={"http://localhost:9090/"+item.photo} width="100"  alt=""/>
                                 {item.eventname}
                             </td>
                             <td>&#8377; {item.price}</td>
