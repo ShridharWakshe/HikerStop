@@ -38,7 +38,7 @@ public class EventResponseDTO {
 	private String thingstocarry;
 	
 	
-	private String pickupandDropLocation;
+	private String pickupanddroplocation;
 	
 	
 	private int guideId;

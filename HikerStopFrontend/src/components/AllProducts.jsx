@@ -166,11 +166,12 @@ function AllProduct(){
                                     <h5 className="px-2">Category: {item.eventcat}</h5>
                                     <h5 className="px-2">Guide: {item.guideName}</h5>
                                     <h5 className="px-2">Price: &#8377; {item.price}</h5>
-                                    <h5 className="px-2">Description :{item.description}</h5>
-                                    <h5 className="px-2">noofdays :{item.noofdays}</h5>
-                                    <h5 className="px-2">dailywiseschedule :{item.dailywiseschedule}</h5>
-                                    <h5 className="px-2">thingstocarry :{item.thingstocarry}</h5>
-                                    <h5 className="px-2">description :{item.description}</h5>
+                                    <h5 className="px-2">No of Days: ; {item.noofdays}</h5>
+                                    <h5 className="px-2">Description :</h5><h6>{item.description}</h6>
+                                    
+                                    <h5 className="px-2">Day Wise Schedule :</h5><h6>{item.dailywiseschedule}</h6>
+                                    <h5 className="px-2">Things to carry :</h5><h6>{item.thingstocarry}</h6>
+                                    {/* <h5 className="px-2">description :{item.description}</h5> */}
                                     
                                     {/* <h5 className="px-2">Price: &#8377; {item.price}</h5>
                                     <label> Enter Number Of Person</label><br /> */}
@@ -183,7 +184,19 @@ function AllProduct(){
                         <div className="modal-footer">
                        
                                     <label> Enter Number Of Person</label><br />
-                                    <input type="number" value={qty} onChange={e=>setQty(e.target.value)}/>
+                                    {/* <input type="number" value={qty} onChange={e=>setQty(e.target.value)}/> */}
+                                    <input type="number" 
+                                    value={qty} onChange={(e) => {
+                                        const reg = /^$|^[1-9]+$/;
+                                        const newValue = e.target.value;
+                                        if (reg.test(newValue)) {
+                                         setQty(newValue);
+                                        }
+                                      }
+                                    } required/>
+                                    <span> <strong>Tatal bill : {item.price * qty}</strong></span>
+
+                                    
                             <button onClick={e=>addToCart(item)} className="btn btn-warning btn-sm">Book Now</button>
                         </div>
                     </div>

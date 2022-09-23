@@ -111,16 +111,38 @@ function AddProduct(){
                                 <div className="col-sm-8">
                                     <select name="location" value={event.location} onChange={handleInput} className="form-control">
                                         <option value="">Select State</option>
-                                        <option>Maharashtra</option>
+                                        <option>Andhra Pradesh</option>
+                                        <option>Arunachal Pradesh</option>
+                                        <option>Assam</option>
+                                        <option>Bihar</option>
+                                        <option>Chhattisgarh</option>
+                                        <option>Goa</option>
+                                        <option>Gujarat</option>
+                                        <option>Haryana</option>
                                         <option>Himachal Pradesh</option>
+                                        <option>Jharkhand</option>
+                                        <option>Karnataka</option>
                                         <option>Kerala</option>
+                                        <option>Madhya Pradesh</option>
+                                        <option>Maharashtra</option>
                                         <option>Manipur</option>
                                         <option>Meghalaya</option>
+                                        <option>Mizoram</option>
+                                        <option>Nagaland</option>
+                                        <option>Odisha</option>
+                                        <option>Punjab</option>
                                         <option>Rajasthan</option>
+                                        <option>Sikkim</option>
+                                        <option>Tamil Nadu</option>
+                                        <option>Telangana</option>
+                                        <option>Tripura</option>
+                                        <option>Uttar Pradesh</option>
+                                        <option>Uttarakhand	</option>
+                                        <option>West Bengal</option>
                                      
 
                                     </select>
-                                    {errors.location && <small className="text-danger float-right">{errors.location}</small>}
+                                    {errors.brand && <small className="text-danger float-right">{errors.brand}</small>}
                                 </div>                                
                             </div>
                             <div className="form-group form-row">
@@ -170,6 +192,39 @@ function AddProduct(){
                                 
                             </div>    
 
+                             <div className="form-group form-row">
+                                <label className="col-sm-4 form-control-label">Pickup and Drop </label>
+                                <div className="col-sm-8">
+                                    <select name="pickupanddroplocation" value={event.pickupanddroplocation} onChange={handleInput} className="form-control">
+                                        <option value="">Select Location</option>
+                                        <option>Pune to Pune</option>
+                                        <option>Mumbai To Mumbai</option>
+                                        <option>Delhi to Delhi</option>
+                                     
+
+                                    </select>
+                                    {errors.pickupandDropLocation && <small className="text-danger float-right">{errors.pickupandDropLocation}</small>}
+                                </div>                                
+                            </div> 
+
+
+                            {/* <div className="form-group form-row">
+                                <label className="col-sm-4 form-control-label">Description</label>
+                                <div className="col-sm-8">
+                                    <input type="number" name="price" value={event.description} onChange={handleInput} className="form-control" />
+                                    <textarea className="form-control" rows="5" id="comment" name="price" value={event.description} onChange={handleInput}></textarea>
+                                    {errors.description && <small className="text-danger float-right">{errors.description}</small>}
+                                </div>                                
+                            </div> */}
+                            {/* <div className="form-group form-row">
+                                <label className="col-sm-4 form-control-label">Location</label>
+                                <div className="col-sm-8">
+                                    <input type="text" name="eventname" value={event.eventname} onChange={handleInput} className="form-control" />
+                                    {errors.eventname && <small className="text-danger float-right">{errors.eventname}</small>}
+                                </div>
+                                
+                            </div> */}
+                           
 
                             <div className="form-group form-row">
                                 <label className="col-sm-4 form-control-label">Photo1</label>

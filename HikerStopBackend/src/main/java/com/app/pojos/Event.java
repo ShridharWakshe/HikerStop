@@ -43,6 +43,7 @@ public class Event {
 	private String thingstocarry;
 	
 	
+	private String pickupanddroplocation;
 	
 	
 	private int price;
