@@ -26,9 +26,11 @@ function MyOrders(){
     }
     
     return (
-        <div className="container-fluid text-white">
-            <div className="row">
-                <div className="col-sm-7">
+        
+        <div className="bg-transparent  text-black" style={{  backgroundImage: `url("http://www.thewowstyle.com/wp-content/uploads/2015/02/the-river-in-valley-of-beautiful-mountains-hd-wallpaper-75015.jpg")`}}> 
+        
+        <div className="col-sm-6 mx-auto " style={{ height:"563px" }}>
+                <div className="col-sm-7" style={{ marginLeft:"-300px" }}>
                 <h4 className="p-2">My Purchased Orders</h4>
                 <table className="table table-bordered table-sm table-dark table-striped">
                     <thead>

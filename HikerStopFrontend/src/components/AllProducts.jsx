@@ -6,6 +6,8 @@ import {useHistory,useParams,useLocation} from "react-router-dom";
 import Event from "./Event";
 import queryString  from "query-string";
 import TopSlider from "./TopSlider";
+import banner5 from '../components/banner5.jpg'
+import Video from './Video';
 
 function AllProduct(){
     const [events,setEvents]=useState([])
@@ -105,12 +107,13 @@ function AllProduct(){
     
     return (
         <>   
-        <div className="container-fluid p-2">
-        <TopSlider/>
-        </div>              
-        <div className="container-fluid" style={{width:"95%"}}>
-            <div className=" bg-transparent text-white">
-                <div className="card-body">
+        <Video/>
+                
+        <div className="container-fluid" style={{width:"100%"}}>
+            <div className=" bg-white text-white" style={{ backgroundColor:"white" ,width:"auto"}}>
+                {/* <div className="card-body"> */}
+                    <h3 style={{marginLeft:"550px",color:"black"}}>Our Popular Treks</h3>
+                    <div style={{marginLeft:"50px"}} >
                 <ReactPaginate 
                     previousLabel={"🢀"}
                     nextLabel={"🢂"}
@@ -125,6 +128,7 @@ function AllProduct(){
                     {events?.map(x=>(
                         <Event key={x.eventid} x={x} showModal={showModal} />
                     ))}
+                    </div>
                     </div>
                     
                 </div>
@@ -198,7 +202,7 @@ function AllProduct(){
                                         }
                                       }
                                     } required/>
-                                    <span> <strong>Tatal bill : {item.price * qty}</strong></span>
+                                    <span> <strong>Total bill : {item.price * qty}</strong></span>
 
                                     
                             <button onClick={e=>addToCart(item)} className="btn btn-warning btn-sm">Book Now</button>
@@ -206,7 +210,7 @@ function AllProduct(){
                     </div>
                 </div>
             </div>) : ""}
-        </div>
+        {/* </div> */}
         </>
     )
 }

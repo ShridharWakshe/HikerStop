@@ -11,12 +11,12 @@ function NavBar(){
     return (
         <Fragment>
             <div className="clearfix"></div>
-            <nav className="navbar navbar-expand-lg navbar-light bg-white position-sticky" style={{top:0,zIndex:"1000"}}>
-                <Link className="navbar-brand" to="#"><h2>HIKERSTOP</h2></Link>
+            <nav className="navbar navbar-expand-lg navbar-light bg-white position-sticky" style={{top:0,zIndex:"1000", padding:"0rem"}}>
+                
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                <div className="collapse navbar-collapse" id="navbarNavDropdown"style={{textDecorationColor:"black"}}>
                     <ul className="navbar-nav">
                     <li className="nav-item active">
                         <Link className="nav-link" to="/">Home</Link>

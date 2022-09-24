@@ -21,16 +21,22 @@ function SellerProfile(){
     },[])
     return (
         
-        <div className="container">
-            <div className="card shadow m-3 p-2 bg-dark text-white text-center">
-                <h4 className="p-2" style={{borderBottom:"2px solid green",width:"300px",margin:"auto"}}>Seller Profile Page</h4>
+    
+        <div className="bg-transparent  text-black" style={{  backgroundImage: `url("http://www.thewowstyle.com/wp-content/uploads/2015/02/the-river-in-valley-of-beautiful-mountains-hd-wallpaper-75015.jpg")`}}> 
+        
+        <div className="col-sm-6 mx-auto " style={{ height:"563px" }}>
+          <div className=" text-center p-2">
+          <h4  style={{color:"black",borderBottom:"2px solid green",width:"300px",margin:"auto"}}>Seller Profile Page</h4>
                 <br/>
                 <h4>Welcome {user.name}</h4>
                 <h5>City : {user.city}</h5>
                 <h5>Email Id : {user.userid}</h5>
                 <h5>Contact No : {user.phone}</h5>
+          </div>
+               
             </div>
-        </div>
+            </div>
+    
     )
 }
 

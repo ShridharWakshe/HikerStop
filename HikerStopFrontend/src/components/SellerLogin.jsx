@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import loginvalidation from "../loginvalidation"
 
+
 function SellerLogin(){
     const dispatch=useDispatch()
     const [user,setUser]=useState({
@@ -49,12 +50,11 @@ function SellerLogin(){
 
 
     return (
-<div className="container">
-<div className="card shadow bg-dark mt-3 text-white">
-        <div className="card-body">
-            <div className="row">
-                <div className="col-sm-6 mx-auto">
-                    <h4 className="text-center p-2  ">
+
+<div className="bg-transparent  text-black" style={{  backgroundImage: `url("http://www.thewowstyle.com/wp-content/uploads/2015/02/the-river-in-valley-of-beautiful-mountains-hd-wallpaper-75015.jpg")`}}> 
+        
+                <div className="col-sm-6 mx-auto" style={{ height:"563px" }}>
+                    <h4 className="text-center p-2  " style={{ color:"black" }}>
                         Seller Login Form
                     </h4>
                     <form onSubmit={handleSubmit}>                 
@@ -72,14 +72,17 @@ function SellerLogin(){
                             <input type="password" name="pwd" value={user.pwd} onChange={handleInput} className="form-control" />
                             {errors.pwd && <small className="text-danger float-right">{errors.pwd}</small>}
                         </div>
-                    </div>                    
+                    </div>      
+                    <div>
+                   
                     <button className="btn btn-primary float-right">Login Now</button>
+                        </div>              
+                    
                     </form>
                 </div>
             </div>
-        </div>
-        </div>
-        </div>
+     
+     
     );
 }
 

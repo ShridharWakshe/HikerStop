@@ -59,12 +59,12 @@ function EditProduct(){
     return (
         <div className="container-fluid">
                     <div className="row">
-                        <div className="col-sm-3">
-                            <img width="300" src={"http://localhost:9090/"+product.photo1} />
+                        <div className="col-sm-2">
+                            {/* <img width="300" src={"http://localhost:9090/"+product.photo1} /> */}
                         </div>
                         <div className="col-sm-9">
                             <h4 className="text-center p-2">
-                                Edit Event Form (Product ID : )
+                                Edit Event Form 
                             </h4>
                             <form onSubmit={handleSubmit}>
                             <div className="form-group form-row">
@@ -78,7 +78,7 @@ function EditProduct(){
                             <div className="form-group form-row">
                                 <label className="col-sm-4 form-control-label">Category</label>
                                 <div className="col-sm-8">
-                                    <select name="pcat" value={product.cat} onChange={handleInput} className="form-control">
+                                    <select name="eventcat" value={product.eventcat} onChange={handleInput} className="form-control">
                                         <option value="">Select Category</option>
                                         <option>Himalayan Trek</option>     
                                         <option>Jungle Safari</option>     
@@ -97,13 +97,81 @@ function EditProduct(){
                                     {errors.price && <small className="text-danger float-right">{errors.price}</small>}
                                 </div>                                
                             </div>
+                            
                             <div className="form-group form-row">
-                                <label className="col-sm-4 form-control-label">Location</label>
+                                <label className="col-sm-4 form-control-label">State</label>
                                 <div className="col-sm-8">
-                                    <input type="text" name="brand" value={product.location} onChange={handleInput} className="form-control" />
-                                    {errors.location && <small className="text-danger float-right">{errors.location}</small>}
+                                <select name="location" value={product.location} onChange={handleInput} className="form-control">
+                                        <option value="">Select State</option>
+                                        <option>Andhra Pradesh</option>
+                                        <option>Arunachal Pradesh</option>
+                                        <option>Assam</option>
+                                        <option>Bihar</option>
+                                        <option>Chhattisgarh</option>
+                                        <option>Goa</option>
+                                        <option>Gujarat</option>
+                                        <option>Haryana</option>
+                                        <option>Himachal Pradesh</option>
+                                        <option>Jharkhand</option>
+                                        <option>Karnataka</option>
+                                        <option>Kerala</option>
+                                        <option>Madhya Pradesh</option>
+                                        <option>Maharashtra</option>
+                                        <option>Manipur</option>
+                                        <option>Meghalaya</option>
+                                        <option>Mizoram</option>
+                                        <option>Nagaland</option>
+                                        <option>Odisha</option>
+                                        <option>Punjab</option>
+                                        <option>Rajasthan</option>
+                                        <option>Sikkim</option>
+                                        <option>Tamil Nadu</option>
+                                        <option>Telangana</option>
+                                        <option>Tripura</option>
+                                        <option>Uttar Pradesh</option>
+                                        <option>Uttarakhand	</option>
+                                        <option>West Bengal</option>
+                                     
+
+                                    </select>  
+                                    {errors.pcat && <small className="text-danger float-right">{errors.pcat}</small>}                    
+                                </div>                        
+                            </div>  
+                            <div className="form-group form-row">
+                                <label className="col-sm-4 form-control-label">Description</label>
+                                <div className="col-sm-8">
+                                    {/* <input type="text" name="eventname" value={event.eventname} onChange={handleInput} className="form-control" /> */}
+                                    <textarea className="form-control" rows="5"  name="description" value={product.description} onChange={handleInput} style={{resize:"none"}}></textarea>
+                                    {errors.description && <small className="text-danger float-right">{errors.description}</small>}
+                                </div>
+                                
+                            </div>     
+                            <div className="form-group form-row">
+                                <label className="col-sm-4 form-control-label">Number of days</label>
+                                <div className="col-sm-8">
+                                    <input type="number" name="noofdays" value={product.noofdays} onChange={handleInput} className="form-control" />
+                                    {errors.noofdays && <small className="text-danger float-right">{errors.noofdays}</small>}
                                 </div>                                
-                            </div>                           
+                            </div>    
+                            <div className="form-group form-row">
+                                <label className="col-sm-4 form-control-label">Daily Schedule</label>
+                                <div className="col-sm-8">
+                                    {/* <input type="text" name="eventname" value={event.eventname} onChange={handleInput} className="form-control" /> */}
+                                    <textarea className="form-control" rows="5"  name="dailywiseschedule" value={product.dailywiseschedule} onChange={handleInput} style={{resize:"none"}}></textarea>
+                                    {errors.dailywiseschedule && <small className="text-danger float-right">{errors.dailywiseschedule}</small>}
+                                </div>
+                                
+                            </div>    
+                            <div className="form-group form-row">
+                                <label className="col-sm-4 form-control-label">Things to Carry</label>
+                                <div className="col-sm-8">
+                                    {/* <input type="text" name="eventname" value={event.eventname} onChange={handleInput} className="form-control" /> */}
+                                    <textarea className="form-control" rows="5"  name="thingstocarry" value={product.thingstocarry} onChange={handleInput} style={{resize:"none"}}></textarea>
+                                    {errors.thingstocarry && <small className="text-danger float-right">{errors.thingstocarry}</small>}
+                                </div>
+                                
+                            </div>   
+                                         
                             
                             <button className="btn btn-primary float-right">Update Product</button>
                             </form>
