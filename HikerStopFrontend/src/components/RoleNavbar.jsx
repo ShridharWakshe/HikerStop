@@ -19,7 +19,7 @@ const RoleNavbar=({isLoggedIn})=>{
     }
     else if(sessionStorage.getItem("role")==="customer"){
     return (
-        <ul className="navbar-nav ml-auto">
+        <ul className="navbar-nav ml-auto" style={{ marginLeft:"880px" }}>
         <li className="nav-item active">
             <Link className="nav-link" to="/cart">View Cart {state.cart.length===0 ? '' : 
             <span className="badge badge-primary p-2">{state.cart.map(x=>x.qty).reduce((a,b)=>parseInt(a)+parseInt(b))}</span>}</Link>
@@ -38,7 +38,7 @@ const RoleNavbar=({isLoggedIn})=>{
     }
     else if(sessionStorage.getItem("role")==="seller"){
         return (
-            <ul className="navbar-nav ml-auto"> 
+            <ul className="navbar-nav ml-auto" style={{ marginLeft:"880px" }}> 
             <li className="nav-item active">
                 <Link className="nav-link" to="/sprofile">Profile</Link>
             </li>
@@ -55,7 +55,7 @@ const RoleNavbar=({isLoggedIn})=>{
         )
     }
     return (
-        <ul className="navbar-nav ml-auto">             
+        <ul className="navbar-nav ml-auto" style={{ marginLeft:"850px" }}>             
         <li className="nav-item active">
             <Link className="nav-link" to="/aprofile">Profile</Link>
         </li>

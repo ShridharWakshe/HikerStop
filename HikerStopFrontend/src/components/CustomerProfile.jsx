@@ -42,26 +42,29 @@ function CustomerProfile(){
 
     return (
         
-        <div className="container text-white">
-            <div className="container">
-            <div className="card shadow m-3 p-2 bg-dark text-white text-center">
+        <div className="bg-transparent  text-black" style={{  backgroundImage: `url("http://www.thewowstyle.com/wp-content/uploads/2015/02/the-river-in-valley-of-beautiful-mountains-hd-wallpaper-75015.jpg")`}}> 
+        
+        <div className="col-sm-6 mx-auto " style={{ height:"650px" }}>
+          
+            <div className="  bg-transparent text-black text-center">
                 <h4 className="p-2" style={{borderBottom:"2px solid green",width:"300px",margin:"auto"}}>Customer Profile Page</h4>
                 <br/>
                 <h4>Welcome {user.name}</h4>
                 <h5>City : {user.city}</h5>
                 <h5>Email Id : {user.userid}</h5>
                 <h5>Contact No : {user.phone}</h5>
-            </div>
+        
         </div>
-            <div className="row">
-                <div className="col-sm-7 mx-auto">
-                    <div className="card shadow bg-dark mt-3">
+        <hr/>
+           
+                <div className="col-sm-12 mx-auto" style={{ marginLeft:"-500px" }}>
+                    <div className=" text-black bg-transparent ">
                         <div className="card-body">
                         
-            <h4 className="p-2 text-center">Welcome {uname}</h4>            
+            <h4 className="p-2 text-black text-center">Update your Profile {uname}</h4>            
             <form onSubmit={handleSubmit}>
                     <div className="form-group form-row">
-                        <label className="col-sm-4 form-control-label">Customer Name</label>
+                        <label className="col-sm-4 form-control-label"><h5>Customer Name</h5></label>
                         <div className="col-sm-8">
                             <input type="text" name="name" value={user.name} onChange={handleInput} className="form-control" />                        
                         </div>
@@ -111,6 +114,7 @@ function CustomerProfile(){
                     </div>
                 </div>
             </div>
+        
             
     )
 }

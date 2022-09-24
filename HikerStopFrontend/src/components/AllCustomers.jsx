@@ -12,10 +12,12 @@ function AllCustomers(){
     },[])
     
     return (
-        <div className="container-fluid">
-            <h4 className="text-white p-2 text-center">All Customers</h4>
-            <table className="table table-bordered table-dark table-striped table-hover">
-                <thead>
+        <div className="bg-transparent  text-black" style={{  backgroundImage: `url("http://www.thewowstyle.com/wp-content/uploads/2015/02/the-river-in-valley-of-beautiful-mountains-hd-wallpaper-75015.jpg")`}}> 
+        
+        <div className="col-sm-6 mx-auto " style={{ height:"563px" }}>
+            <h4 className="p-2 text-center">All Guides</h4>
+            <table className="table table-bordered table-striped table-dark table-hover" style={{ marginLeft:"-225px" }}>
+                <thead className="table-dark">
                     <tr>
                         <th>Name</th>
                         <th>City</th>
@@ -38,6 +40,7 @@ function AllCustomers(){
                 ))}
                 </tbody>
             </table>
+        </div>
         </div>
     )
 }

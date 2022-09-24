@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 function LoginRegisterMenu(){
     return(
         <ul className="navbar-nav ml-auto">
-            <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li className="nav-item dropdown"style={{ marginLeft:"700px" }}>
+                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                 Login
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

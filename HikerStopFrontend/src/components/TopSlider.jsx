@@ -20,7 +20,7 @@ function TopSlider(){
         <>
 
             <Slider {...settings}>   
-              <div className="wdt">  
+              <div className="wdt"style={{height:"400px"}}>  
               <img  className="img" alt="pic1" src= {'assets/banner5.jpg'}/>  
               </div >  
               <div className="wdt">  
