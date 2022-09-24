@@ -80,15 +80,18 @@ function AllProduct(){
                 showModal() 
                 setDisplay("none")
                 setShowDialog("modal fade") 
-                item.qty=qty         
-                dispatch({type:'AddItem',payload:item})
-                alert("Item added to cart successfully")
+               
+                    item.qty=qty  
+                    dispatch({type:'AddItem',payload:item})
+                    alert("Item added to cart successfully")
+               
             }
-            else{                
+            else{   
                 alert("Item already in cart")
             }
         }
     }
+
 
 
     const handlePageClick=({selected:selectedPage})=>{
@@ -180,6 +183,7 @@ function AllProduct(){
                                     {/* <h5 className="px-2">Price: &#8377; {item.price}</h5>
                                     <label> Enter Number Of Person</label><br /> */}
                                   
+
                                     {/* <input type="number" value={qty} onChange={e=>setQty(e.target.value)}/> */}
                                 </div>
                             </div>
