@@ -23,18 +23,39 @@ public class EventDTO {
 	private int price;
 	
 	
+	private String description;
+	
+	
+	private String noofdays;
+	
+	
+	private String dailywiseschedule;
+	
+	
+	private String thingstocarry;
+	
+	
+	private String pickupanddroplocation;
+	
+	
 	private int guideId;
 	
 	
 	private String location;
 	
 	
-	private MultipartFile pic;
+	private MultipartFile pic1;
+	
+	
+	private MultipartFile pic2;
+	
+	
+	private MultipartFile pic3;
 	
 	
 	public static Event toEntity(EventDTO dto) {
 		Event entity=new Event();
-		BeanUtils.copyProperties(dto, entity, "pic");		
+		BeanUtils.copyProperties(dto, entity, "pic1", "pic2", "pic3");		
 		return entity;
 	}
 	

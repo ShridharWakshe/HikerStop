@@ -60,7 +60,7 @@ function EditProduct(){
         <div className="container-fluid">
                     <div className="row">
                         <div className="col-sm-3">
-                            <img width="300" src={"http://localhost:9090/"+product.photo} />
+                            <img width="300" src={"http://localhost:9090/"+product.photo1} />
                         </div>
                         <div className="col-sm-9">
                             <h4 className="text-center p-2">
