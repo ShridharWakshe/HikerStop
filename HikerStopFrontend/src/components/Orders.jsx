@@ -67,7 +67,7 @@ function Orders(){
                             {details.map(x => (
                                 <tr key={x.event.eventid}>
                                     <td>{x.event.eventid}</td>
-                                    <td><img className="mr-2 float-left" src={"http://localhost:9090/"+x.event.photo} width="100" />
+                                    <td><img className="mr-2 float-left" src={"http://localhost:9090/"+x.event.photo} width="100" alt=""/>
                                     {x.event.eventname}<br/>
                                     {x.event.cat}
                                     </td>
