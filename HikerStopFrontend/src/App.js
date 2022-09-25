@@ -20,12 +20,15 @@ import MyOrders from './components/MyOrders';
 import Orders from './components/Orders';
 import ViewCart from './components/ViewCart';
 import Footer from './components/Footer';
+
+
 function App() {
   return (
     <div className="App">
       <Header />      
       <BrowserRouter>
       <NavBar />
+      
         <Switch>
           <Route component={AllProduct} path="/" exact />
           <Route component={AllProduct} path="/cats" />

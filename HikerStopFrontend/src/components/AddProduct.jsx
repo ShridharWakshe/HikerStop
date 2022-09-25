@@ -73,12 +73,10 @@ function AddProduct(){
         }
     },[errors])
     return (
-        <div className="container">
-                <div className="card shadow bg-dark text-white">
-                    <div className="card-body">
-                    <div className="row">
-                        <div className="col-sm-6 mx-auto">
-                            <h4 className="text-center p-2">
+        <div className="bg-transparent  text-black" style={{  backgroundImage: `url("http://www.thewowstyle.com/wp-content/uploads/2015/02/the-river-in-valley-of-beautiful-mountains-hd-wallpaper-75015.jpg")`}}> 
+        
+                <div className="col-sm-6 mx-auto" style={{ height:"1000px" }}>
+                    <h4 className="text-center p-2  " style={{ color:"black" }}>
                                 Add Event Form
                             </h4>
                             <form onSubmit={handleSubmit}>
@@ -249,9 +247,7 @@ function AddProduct(){
                             </form>
                         </div>
                     </div>
-                </div>
-                </div>
-                </div>
+              
     )
 }
 

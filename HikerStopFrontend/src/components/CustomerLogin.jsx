@@ -50,12 +50,11 @@ function CustomerLogin(){
 
 
     return (
-    <div className="container">
-    <div className="card shadow bg-dark mt-3 text-white">
-        <div className="card-body">            
-            <div className="row">
-                <div className="col-sm-6 mx-auto">
-                    <h4 className="text-center p-2">
+  
+    <div className=" bg-transparent  text-black" style={{  backgroundImage: `url("http://www.thewowstyle.com/wp-content/uploads/2015/02/the-river-in-valley-of-beautiful-mountains-hd-wallpaper-75015.jpg")`}}>
+       
+                <div className="col-sm-6 mx-auto" style={{ height:"563px" }}>
+                    <h4 className="text-center p-2" style={{ color:"black" }}>
                         Customer Login Form
                     </h4>
                     <form onSubmit={handleSubmit}>                 
@@ -78,10 +77,8 @@ function CustomerLogin(){
                     </form>
                 </div>
             </div>
-        </div>
-        
-        </div>
-    </div>
+       
+ 
     );
 }
 
