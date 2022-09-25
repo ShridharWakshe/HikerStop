@@ -5,7 +5,7 @@ function Header(){
     console.log("Header ",state.loggedin.Username)
     return (
         <div className="jumbotron p-3 mb-0 rounded-0 bg-white text-dark" style={{opacity: 1}}>
-            <img src={'assets/HikerStop.jpeg'} style={{height:"50px",width:"50px"}} className="float-left"/>
+            <img src={'assets/HikerStop.jpeg'} style={{height:"50px",width:"50px"}} className="float-left" alt=""/>
             {state.loggedin.IsLoggedIn ?
             <>            
             {/* <h5 className="float-left">Role : {state.loggedin.Role}</h5> */}

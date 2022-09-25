@@ -44,8 +44,10 @@ function App() {
           <Route component={MyProducts} path="/myproducts" />          
           <Route component={MyOrders} path="/myorders" />          
           <Route component={Orders} path="/orders" />          
-          <Route component={ViewCart} path="/cart" />          
+          <Route component={ViewCart} path="/cart" /> 
+          <Route component={Footer} path="/Footer" />
         </Switch>
+        <Footer/>
         </BrowserRouter>
     </div>
   );
