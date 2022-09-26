@@ -73,7 +73,10 @@ function AddProduct(){
         }
     },[errors])
     return (
-        <div className="bg-transparent  text-black" style={{  backgroundImage: `url("http://www.thewowstyle.com/wp-content/uploads/2015/02/the-river-in-valley-of-beautiful-mountains-hd-wallpaper-75015.jpg")`}}> 
+
+        
+        <div className="" style={{ backgroundImage: `url(" https://p4.wallpaperbetter.com/wallpaper/874/590/494/adventure-altitude-climb-clouds-wallpaper-preview.jpg ")`,backgroundSize:"cover"}}> 
+
         
                 <div className="col-sm-6 mx-auto" style={{ height:"1000px" }}>
                     <h4 className="text-center p-2  " style={{ color:"black" }}>
@@ -81,7 +84,9 @@ function AddProduct(){
                             </h4>
                             <form onSubmit={handleSubmit}>
                             <div className="form-group form-row">
-                                <label className="col-sm-4 form-control-label">Event Name</label>
+
+                                <label className="col-sm-4 form-control-label font-weight-bold">Event Name</label>
+
                                 <div className="col-sm-8">
                                     <input type="text" name="eventname" value={event.eventname} onChange={handleInput} className="form-control" />
                                     {errors.eventname && <small className="text-danger float-right">{errors.eventname}</small>}
@@ -89,7 +94,9 @@ function AddProduct(){
                                 
                             </div>                            
                             <div className="form-group form-row">
-                                <label className="col-sm-4 form-control-label">Category</label>
+
+                                <label className="col-sm-4 form-control-label font-weight-bold">Category</label>
+
                                 <div className="col-sm-8">
                                     <select name="eventcat" value={event.eventcat} onChange={handleInput} className="form-control">
                                         <option value="">Select Category</option>
@@ -105,7 +112,9 @@ function AddProduct(){
                                 </div>                        
                             </div>
                             <div className="form-group form-row">
-                                <label className="col-sm-4 form-control-label">State</label>
+
+                                <label className="col-sm-4 form-control-label font-weight-bold">State</label>
+
                                 <div className="col-sm-8">
                                     <select name="location" value={event.location} onChange={handleInput} className="form-control">
                                         <option value="">Select State</option>
@@ -144,14 +153,18 @@ function AddProduct(){
                                 </div>                                
                             </div>
                             <div className="form-group form-row">
-                                <label className="col-sm-4 form-control-label">Price</label>
+
+                                <label className="col-sm-4 form-control-label font-weight-bold">Price</label>
+
                                 <div className="col-sm-8">
                                     <input type="number" name="price" value={event.price} onChange={handleInput} className="form-control" />
                                     {errors.price && <small className="text-danger float-right">{errors.price}</small>}
                                 </div>                                
                             </div>
                             <div className="form-group form-row">
-                                <label className="col-sm-4 form-control-label">Description</label>
+
+                                <label className="col-sm-4 form-control-label font-weight-bold">Description</label>
+
                                 <div className="col-sm-8">
                                     {/* <input type="text" name="eventname" value={event.eventname} onChange={handleInput} className="form-control" /> */}
                                     <textarea className="form-control" rows="5"  name="description" value={event.description} onChange={handleInput} style={{resize:"none"}}></textarea>
@@ -161,7 +174,9 @@ function AddProduct(){
                             </div>     
 
                             <div className="form-group form-row">
-                                <label className="col-sm-4 form-control-label">Number of days</label>
+
+                                <label className="col-sm-4 form-control-label font-weight-bold">Number of days</label>
+
                                 <div className="col-sm-8">
                                     <input type="number" name="noofdays" value={event.noofdays} onChange={handleInput} className="form-control" />
                                     {errors.noofdays && <small className="text-danger float-right">{errors.noofdays}</small>}
@@ -171,7 +186,9 @@ function AddProduct(){
                     
 
                             <div className="form-group form-row">
-                                <label className="col-sm-4 form-control-label">Daily Schedule</label>
+
+                                <label className="col-sm-4 form-control-label font-weight-bold">Daily Schedule</label>
+
                                 <div className="col-sm-8">
                                     {/* <input type="text" name="eventname" value={event.eventname} onChange={handleInput} className="form-control" /> */}
                                     <textarea className="form-control" rows="5"  name="dailywiseschedule" value={event.dailywiseschedule} onChange={handleInput} style={{resize:"none"}}></textarea>
@@ -181,7 +198,9 @@ function AddProduct(){
                             </div>     
 
                             <div className="form-group form-row">
-                                <label className="col-sm-4 form-control-label">Things to Carry</label>
+
+                                <label className="col-sm-4 form-control-label font-weight-bold">Things to Carry</label>
+
                                 <div className="col-sm-8">
                                     {/* <input type="text" name="eventname" value={event.eventname} onChange={handleInput} className="form-control" /> */}
                                     <textarea className="form-control" rows="5"  name="thingstocarry" value={event.thingstocarry} onChange={handleInput} style={{resize:"none"}}></textarea>
@@ -191,7 +210,9 @@ function AddProduct(){
                             </div>    
 
                              <div className="form-group form-row">
-                                <label className="col-sm-4 form-control-label">Pickup and Drop </label>
+
+                                <label className="col-sm-4 form-control-label font-weight-bold">Pickup and Drop </label>
+
                                 <div className="col-sm-8">
                                     <select name="pickupanddroplocation" value={event.pickupanddroplocation} onChange={handleInput} className="form-control">
                                         <option value="">Select Location</option>
@@ -225,19 +246,25 @@ function AddProduct(){
                            
 
                             <div className="form-group form-row">
-                                <label className="col-sm-4 form-control-label">Photo1</label>
+
+                                <label className="col-sm-4 form-control-label font-weight-bold">Photo1</label>
+
                                 <div className="col-sm-8">
                                     <input type="file" required name="photo" value={event.photo1} onChange={handleFileInput1} className="form-control-file" />                                    
                                 </div>                                
                             </div>
                             <div className="form-group form-row">
-                                <label className="col-sm-4 form-control-label">Photo2</label>
+
+                                <label className="col-sm-4 form-control-label font-weight-bold">Photo2</label>
+
                                 <div className="col-sm-8">
                                     <input type="file" required name="photo" value={event.photo2} onChange={handleFileInput2} className="form-control-file" />                                    
                                 </div>                                
                             </div>
                             <div className="form-group form-row">
-                                <label className="col-sm-4 form-control-label">Photo3</label>
+
+                                <label className="col-sm-4 form-control-label font-weight-bold">Photo3</label>
+
                                 <div className="col-sm-8">
                                     <input type="file" required name="photo" value={event.photo3} onChange={handleFileInput3} className="form-control-file" />                                    
                                 </div>                                

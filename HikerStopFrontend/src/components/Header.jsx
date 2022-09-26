@@ -4,7 +4,9 @@ function Header(){
     const state=useSelector((state)=>state);
     console.log("Header ",state.loggedin.Username)
     return (
-        <div className="jumbotron p-3 mb-0 rounded-0 bg-white text-dark" style={ {  textDecorationColor:"black"}}>
+
+        <div className="jumbotron p-3 mb-0 rounded-0 bg-info text-dark" style={ {  textDecorationColor:"black"}}>
+
             <img src={'assets/Hikinglogo.jpg'} style={{height:"70px",width:"80px"}} className="float-left"/>
             {state.loggedin.IsLoggedIn ?
             <>            

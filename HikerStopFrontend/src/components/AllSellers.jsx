@@ -31,7 +31,9 @@ function AllSellers(){
         <div className="bg-transparent  text-black" style={{  backgroundImage: `url("http://www.thewowstyle.com/wp-content/uploads/2015/02/the-river-in-valley-of-beautiful-mountains-hd-wallpaper-75015.jpg")`}}> 
         
         <div className="col-sm-6 mx-auto " style={{ height:"563px" }}>
-            <h4 className="p-2 text-center">All Guides</h4>
+
+            <h4 className="p-2 text-center">All Guide</h4>
+
             <table className="table table-bordered table-striped table-dark table-hover" style={{ marginLeft:"-225px" }}>
                 <thead className="table-dark">
                     <tr>
