@@ -79,7 +79,7 @@ function ViewCart(){
                         <th>Event</th>
                         <th>Event Name</th>
                         <th>Price</th>
-                        <th>Qty</th>
+                        <th>No of person</th>
                         <th>Amount</th>
                         <th>Action</th>
                     </tr>
