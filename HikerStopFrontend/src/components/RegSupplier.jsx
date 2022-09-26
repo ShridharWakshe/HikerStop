@@ -52,7 +52,11 @@ function RegSupplier()
 
 
     return (
-        <div className="bg-transparent  text-black" style={{  backgroundImage: `url("http://www.thewowstyle.com/wp-content/uploads/2015/02/the-river-in-valley-of-beautiful-mountains-hd-wallpaper-75015.jpg")`}}>
+
+    
+        <div className="" style={{ backgroundImage: `url("https://img.freepik.com/free-photo/friends-exploring-foreign-city_329181-8513.jpg?w=996&t=st=1664117508~exp=1664118108~hmac=357e10dbb1d4f860e75e3435f31cb231f4ea6d7089548ec05f9073de9ed7749d")`,backgroundSize:"cover"}}> 
+       
+
        
         <div className="col-sm-6 mx-auto" style={{ height:"563px" }}>
                      <h4 className="text-center p-2  " style={{ color:"black" }}>
@@ -60,14 +64,18 @@ function RegSupplier()
                     </h4>
                     <form onSubmit={handleSubmit}>
                     <div className="form-group form-row">
-                        <label className="col-sm-4 form-control-label">Guide Name</label>
+
+                        <label className="col-sm-4 form-control-label font-weight-bold">Guide Name</label>
+
                         <div className="col-sm-8">
                             <input type="text" name="name" value={user.name} onChange={handleInput} className="form-control" />
                             {errors.name && <small className="text-danger float-right">{errors.name}</small>}
                         </div>                        
                     </div>
                     <div className="form-group form-row">
-                        <label className="col-sm-4 form-control-label">City</label>
+
+                        <label className="col-sm-4 form-control-labe font-weight-bold">City</label>
+
                         <div className="col-sm-8">
                             <input type="text" name="city" value={user.city} onChange={handleInput} className="form-control" />
                             {errors.city && <small className="text-danger float-right">{errors.city}</small>}
@@ -75,7 +83,9 @@ function RegSupplier()
                         
                     </div>
                     <div className="form-group form-row">
-                        <label className="col-sm-4 form-control-label">Email Id</label>
+
+                        <label className="col-sm-4 form-control-label font-weight-bold">Email Id</label>
+
                         <div className="col-sm-8">
                             <input type="text" name="userid" value={user.userid} onChange={handleInput} className="form-control" />
                             {errors.userid && <small className="text-danger float-right">{errors.userid}</small>}
@@ -83,7 +93,9 @@ function RegSupplier()
                         
                     </div>
                     <div className="form-group form-row">
-                        <label className="col-sm-4 form-control-label">Phone</label>
+
+                        <label className="col-sm-4 form-control-label font-weight-bold">Phone</label>
+
                         <div className="col-sm-8">
                             <input type="text" maxLength="10" name="phone" value={user.phone} onChange={handleInput} className="form-control" />
                             {errors.phone && <small className="text-danger float-right">{errors.phone}</small>}
@@ -91,19 +103,24 @@ function RegSupplier()
                         
                     </div>
                     <div className="form-group form-row">
-                        <label className="col-sm-4 form-control-label">Password</label>
+
+                        <label className="col-sm-4 form-control-label font-weight-bold">Password</label>
+
                         <div className="col-sm-8">
                             <input type="password" name="pwd" value={user.pwd} onChange={handleInput} className="form-control" />
                             {errors.pwd && <small className="text-danger float-right">{errors.pwd}</small>}
                         </div>
                     </div>
                     <div className="form-group form-row">
-                        <label className="col-sm-4 form-control-label">Confirm Password</label>
+
+                        <label className="col-sm-4 form-control-label font-weight-bold">Confirm Password</label>
+
                         <div className="col-sm-8">
                             <input type="password" name="cpwd" value={user.cpwd} onChange={handleInput} className="form-control" />
                             {errors.cpwd && <small className="text-danger float-right">{errors.cpwd}</small>}
                         </div>
                     </div>
+
                     <div className="" style={{marginLeft:"273px"}} >
                         <ReCAPTCHA className="col-sm-8"
                                 sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
@@ -111,6 +128,7 @@ function RegSupplier()
                         />
                     </div>
                     <button className="btn btn-primary float-right"  disabled={!Verifed}>Register Now</button>
+
                     </form>
                 </div>
             </div>

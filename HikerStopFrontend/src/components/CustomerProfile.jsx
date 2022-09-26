@@ -42,7 +42,9 @@ function CustomerProfile(){
 
     return (
         
-        <div className="bg-transparent  text-black" style={{  backgroundImage: `url("http://www.thewowstyle.com/wp-content/uploads/2015/02/the-river-in-valley-of-beautiful-mountains-hd-wallpaper-75015.jpg")`}}> 
+
+        <div className="" style={{ backgroundImage: `url("https://images.unsplash.com/photo-1502126324834-38f8e02d7160?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80")`,backgroundSize:"cover"}}> 
+
         
         <div className="col-sm-6 mx-auto " style={{ height:"650px" }}>
           
@@ -64,20 +66,22 @@ function CustomerProfile(){
             <h4 className="p-2 text-black text-center">Update your Profile {uname}</h4>            
             <form onSubmit={handleSubmit}>
                     <div className="form-group form-row">
-                        <label className="col-sm-4 form-control-label"><h5>Customer Name</h5></label>
+
+                        <label className="col-sm-4 form-control-label font-weight-bold"><h5>Customer Name</h5></label>
+
                         <div className="col-sm-8">
-                            <input type="text" name="name" value={user.name} onChange={handleInput} className="form-control" />                        
+                            <input type="text" name="name"  value={user.name} onChange={handleInput} className="form-control" />                        
                         </div>
                         
                     </div>
                     <div className="form-group form-row">
-                        <label className="col-sm-4 form-control-label">City</label>
+                        <label className="col-sm-4 form-control-label font-weight-bold">City</label>
                         <div className="col-sm-8">
                             <input type="text" name="city" value={user.city} onChange={handleInput} className="form-control" />                        
                         </div>                        
                     </div>
                     <div className="form-group form-row">
-                        <label className="col-sm-4 form-control-label">Gender</label>
+                        <label className="col-sm-4 form-control-label font-weight-bold">Gender</label>
                         <div className="col-sm-8">
                             <select required name="gender" value={user.gender} onChange={handleInput} className="form-control">
                                 <option value="">Select Gender</option>
@@ -87,14 +91,14 @@ function CustomerProfile(){
                         </div>                        
                     </div>
                     <div className="form-group form-row">
-                        <label className="col-sm-4 form-control-label">Email Id</label>
+                        <label className="col-sm-4 form-control-label font-weight-bold">Email Id</label>
                         <div className="col-sm-8">
                             <input type="text" readOnly name="userid" value={user.userid} onChange={handleInput} className="form-control" />                        
                         </div>
                         
                     </div>
                     <div className="form-group form-row">
-                        <label className="col-sm-4 form-control-label">Phone</label>
+                        <label className="col-sm-4 form-control-label font-weight-bold">Phone</label>
                         <div className="col-sm-8">
                             <input type="text" maxLength="10" name="phone" value={user.phone} onChange={handleInput} className="form-control" />                        
                         </div>
@@ -106,7 +110,9 @@ function CustomerProfile(){
                             <input type="password" name="pwd" value={user.pwd} onChange={handleInput} className="form-control" />                        
                         </div>
                     </div>                     */}
-                    <button className="btn btn-primary float-right">Update Profile</button>
+
+                    <button className="btn btn-primary float-right font-weight-bold">Update Profile</button>
+
                     </form>                           
         </div>
             

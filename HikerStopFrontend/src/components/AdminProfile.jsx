@@ -61,11 +61,13 @@ function AdminProfile(){
             
         // </div>
         
-        <div className="bg-transparent  text-black" style={{  backgroundImage: `url("http://www.thewowstyle.com/wp-content/uploads/2015/02/the-river-in-valley-of-beautiful-mountains-hd-wallpaper-75015.jpg")`}}> 
+
+        <div className="" style={{ backgroundImage: `url("https://p4.wallpaperbetter.com/wallpaper/1013/975/639/accomplishment-adult-adventure-backpacker-wallpaper-preview.jpg")`,backgroundSize:"cover"}}> 
         
-        <div className="col-sm-6 mx-auto " style={{ height:"563px" }}>
-          <div className=" text-center p-2">
-          <h4  style={{color:"black",borderBottom:"2px solid green",width:"300px",margin:"auto"}}>Seller Profile Page</h4>
+        <div className="col-sm-6 mx-auto  " style={{ height:"563px", }}>
+          <div className=" text-center p-4 font-weight-bold ">
+          <h4  style={{color:"black",borderBottom:"2px solid green",width:"300px",margin:"auto"}}>Admin Profile Page</h4>
+
                 <br/>
                 <h4>Welcome {user.uname}</h4>
                 {/* <h5>City : {user.city}</h5> */}

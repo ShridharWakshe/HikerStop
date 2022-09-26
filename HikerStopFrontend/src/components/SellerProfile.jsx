@@ -22,11 +22,13 @@ function SellerProfile(){
     return (
         
     
-        <div className="bg-transparent  text-black" style={{  backgroundImage: `url("http://www.thewowstyle.com/wp-content/uploads/2015/02/the-river-in-valley-of-beautiful-mountains-hd-wallpaper-75015.jpg")`}}> 
+
+        <div className="" style={{ backgroundImage: `url("https://cdn.pixabay.com/photo/2016/08/01/20/13/girl-1561989_960_720.jpg")`,backgroundSize:"cover"}}> 
         
         <div className="col-sm-6 mx-auto " style={{ height:"563px" }}>
           <div className=" text-center p-2">
-          <h4  style={{color:"black",borderBottom:"2px solid green",width:"300px",margin:"auto"}}>Seller Profile Page</h4>
+          <h4  style={{color:"black",borderBottom:"2px solid green",width:"300px",margin:"auto"}}>Guide Profile Page</h4>
+
                 <br/>
                 <h4>Welcome {user.name}</h4>
                 <h5>City : {user.city}</h5>
