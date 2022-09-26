@@ -27,7 +27,9 @@ function MyOrders(){
     
     return (
         
-        <div className="bg-transparent  text-black" style={{  backgroundImage: `url("http://www.thewowstyle.com/wp-content/uploads/2015/02/the-river-in-valley-of-beautiful-mountains-hd-wallpaper-75015.jpg")`}}> 
+
+        <div className="" style={{ backgroundImage: `url("https://images.unsplash.com/photo-1520208422220-d12a3c588e6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80 ")`,backgroundSize:"cover"}}> 
+
         
         <div className="col-sm-6 mx-auto " style={{ height:"563px" }}>
                 <div className="col-sm-7" style={{ marginLeft:"-300px" }}>
