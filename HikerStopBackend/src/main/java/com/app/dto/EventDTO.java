@@ -1,5 +1,7 @@
 package com.app.dto;
 
+import java.sql.Date;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -51,6 +53,8 @@ public class EventDTO {
 	
 	
 	private MultipartFile pic3;
+	
+	 private Date date;
 	
 	
 	public static Event toEntity(EventDTO dto) {

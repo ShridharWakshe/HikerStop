@@ -41,6 +41,7 @@ public class EventController {
 	public ResponseEntity<?> saveEvent(EventDTO dto) {
 		System.out.println(dto +"dto object");
 		Event event=EventDTO.toEntity(dto);
+		event.setDate(dto.getDate());
 		Guide guide= guideService.findById(dto.getGuideId());
 		event.setGuide(guide);
 		eventService.addEvent(event,dto.getPic1(), dto.getPic2(), dto.getPic3());
@@ -61,7 +62,7 @@ public class EventController {
 		System.out.println(id);
 		
 		Event event=eventService.findEventById(id);
-		System.out.println(event);
+		System.out.println("get evnt detail : "+event);
 		return Response.success(EventResponseDTO.fromEntity(event));
 	}
 	
@@ -69,10 +70,12 @@ public class EventController {
 	public ResponseEntity<?> findAllEvents(Optional<Integer> guideid,Optional<String> cat) {
 		System.out.println("whyyyyyy");
 		List<EventResponseDTO> result = new ArrayList<EventResponseDTO>();
+		
 		if(guideid.isPresent()) {
-			System.out.println(guideid);
+			
 			for(Event p : eventService.findEvent(guideid.get())) {
 				result.add(EventResponseDTO.fromEntity(p));
+				System.out.println(result);
 			}
 		}
 		else if(cat.isPresent()) {

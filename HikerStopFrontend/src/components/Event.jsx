@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import Moment from "react-moment";
 
 function Event(props){
     const {x,showModal}=props
@@ -16,7 +16,7 @@ function Event(props){
                 <h6 className="">Price: &#8377; {x.price}</h6>                           
                 </div>
                 <div className="card-footer p-1">
-                    <button  className="btn btn-info btn-sm mr-2"><Link to= './Sandhanvalley'>view details</Link></button>
+                    <h6 className="">Event date: &#8377; <Moment format="ddd, DD-MMM-YYYY">{x.date}</Moment></h6> 
                     <button onClick={e=>showModal(x)} className="btn btn-primary btn-sm">Book</button>
                 </div>
             </div>

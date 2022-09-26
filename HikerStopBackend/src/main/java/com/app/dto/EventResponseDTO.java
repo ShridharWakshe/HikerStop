@@ -1,5 +1,7 @@
 package com.app.dto;
 
+import java.util.Date;
+
 import org.springframework.beans.BeanUtils;
 
 import com.app.pojos.Event;
@@ -54,6 +56,8 @@ public class EventResponseDTO {
 	
 	
 	private String photo3;
+	
+	private Date date;
 	
 		
 	public static EventResponseDTO fromEntity(Event entity) {

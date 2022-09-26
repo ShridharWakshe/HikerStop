@@ -2,6 +2,7 @@ package com.app.pojos;
 
 import java.util.Date;
 
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -65,6 +66,8 @@ public class Event {
 	@Column(name = "created_timestamp", insertable = false, updatable = false)
 	private Date createdTimestamp;
 	
+	@Basic
+	private Date date;
 	
 	@ManyToOne
 	@JoinColumn(name="guided")

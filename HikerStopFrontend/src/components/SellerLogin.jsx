@@ -60,7 +60,7 @@ function SellerLogin(){
         
                 <div className="col-sm-6 mx-auto" style={{ height:"563px" }}>
                     <h4 className="text-center p-2  " style={{ color:"black" }}>
-                        Seller Login Form
+                        Guide Login Form
                     </h4>
                     <form onSubmit={handleSubmit}>                 
                     <div className="form-group form-row">
