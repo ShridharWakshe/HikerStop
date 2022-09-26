@@ -122,7 +122,7 @@ function RegCustomer()
                             {errors.phone && <small className="text-danger float-right">{errors.phone}</small>}
                         </div>
                         
-                    </div>
+                    {/* </div> */}
                     <div className="form-group form-row">
 
                         <label className="col-sm-4 form-control-label font-weight-bold">Password</label>
