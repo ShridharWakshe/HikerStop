@@ -2,11 +2,12 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { useHistory } from "react-router-dom"
 import uservalidation from "../uservalidation"
-
+import ReCAPTCHA from "react-google-recaptcha"
 function RegSupplier()
 {
     const history=useHistory()
     const [submitted,setSubmitted]=useState(false)
+    const [Verifed,setVerifed]=useState(false);
     const [user,setUser]=useState({
         "name":"",
         "city":"",
@@ -43,6 +44,13 @@ function RegSupplier()
             })            
         }
     },[errors])
+
+    function onChange(value) {
+        console.log("Captcha value:", value);
+        setVerifed(true);
+      }
+
+
     return (
 
     
@@ -113,7 +121,13 @@ function RegSupplier()
                         </div>
                     </div>
 
-                    <button className="btn btn-primary float-right font-weight-bold">Register Now</button>
+                    <div className="" style={{marginLeft:"273px"}} >
+                        <ReCAPTCHA className="col-sm-8"
+                                sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                                onChange={onChange}
+                        />
+                    </div>
+                    <button className="btn btn-primary float-right"  disabled={!Verifed}>Register Now</button>
 
                     </form>
                 </div>

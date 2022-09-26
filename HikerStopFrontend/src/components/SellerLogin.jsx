@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import loginvalidation from "../loginvalidation"
-
+import ReCAPTCHA from "react-google-recaptcha";
 
 function SellerLogin(){
     const dispatch=useDispatch()
@@ -13,6 +13,7 @@ function SellerLogin(){
     })
     const [errors,setErrors]=useState({})
     const [submitted,setSubmitted]=useState(false)
+    const [Verifed,setVerifed]=useState(false);
     const history=useHistory()
 
     const handleInput=(e)=>{
@@ -48,6 +49,10 @@ function SellerLogin(){
         }
     },[errors])
 
+    function onChange(value) {
+        console.log("Captcha value:", value);
+        setVerifed(true);
+      }
 
     return (
 
@@ -56,7 +61,9 @@ function SellerLogin(){
 
         
                 <div className="col-sm-6 mx-auto" style={{ height:"563px" }}>
-                    <h4 className="text-center p-4  " style={{ color:"black" }}>
+
+                    <h4 className="text-center p-2  " style={{ color:"black" }}>
+
                         Guide Login Form
                     </h4>
                     <form onSubmit={handleSubmit}>                 
@@ -79,10 +86,16 @@ function SellerLogin(){
                         </div>
                     </div>      
                     <div>
+
+                    <div className="" style={{marginLeft:"273px"}} >
+                        <ReCAPTCHA className="col-sm-8"
+                                sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                                onChange={onChange}
+                        />
+                    </div>   
                    
 
-                    <button className="btn btn-primary float-center mt-1">Login Now</button>
-                    <div className="clearfix"></div>
+                    <button className="btn btn-primary float-right" disabled={!Verifed}>Login Now</button>
 
                         </div>              
                     
