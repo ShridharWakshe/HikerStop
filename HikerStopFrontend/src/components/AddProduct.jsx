@@ -10,6 +10,7 @@ function AddProduct(){
         "location":"",
         "eventcat":"",
         "price":"",
+        "date":"",
         "description":"",
         "guideid":sellerid
     })
@@ -17,10 +18,12 @@ function AddProduct(){
     const [selectedPhoto1,setSelectedPhoto1]=useState(null)
     const [selectedPhoto2,setSelectedPhoto2]=useState(null)
     const [selectedPhoto3,setSelectedPhoto3]=useState(null)
+    const [qty,setQty]=useState(1)
     const [submitted,setSubmitted]=useState(false)
     const history=useHistory()
 
     const handleInput=e=>{
+       
         setEvent({...event,[e.target.name]:e.target.value})
     }
 
@@ -50,6 +53,7 @@ function AddProduct(){
             formData.append("price",event.price)
             formData.append("description",event.description)
             formData.append("noofdays",event.noofdays)
+            formData.append("date",event.date)
             formData.append("dailywiseschedule",event.dailywiseschedule)
             formData.append("thingstocarry",event.thingstocarry)
             formData.append("pickupanddroplocation",event.pickupanddroplocation)
@@ -171,6 +175,14 @@ function AddProduct(){
                                     {errors.description && <small className="text-danger float-right">{errors.description}</small>}
                                 </div>
                                 
+                            </div>
+                            <div className="form-group form-row">
+                                <label className="col-sm-4 form-control-label">set Event Date</label>
+                                <div className="col-sm-8">
+                                    <input type="date" name="date" value={event.date} onChange={handleInput} className="form-control"
+                                    />
+                                    
+                                </div>                                
                             </div>     
 
                             <div className="form-group form-row">

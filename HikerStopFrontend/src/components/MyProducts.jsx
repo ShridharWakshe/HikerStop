@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import  Moment  from 'react-moment';
 
 function MyEvent(){
     const guideid=sessionStorage.getItem("id");
@@ -24,6 +25,7 @@ function MyEvent(){
                 .then(resp=>{
                     console.log(resp.data)
                     setEvents(resp.data.data)
+                    console.log("event data ")
                     console.log(events)
                 })
             })            
@@ -48,6 +50,7 @@ function MyEvent(){
                     <tr>
                         <th>Name</th>
                         <th>Category</th>
+                        <th>Event Date</th>
                         <th>Location</th>
                         <th>Price</th>
                         <th>Action</th>                                
@@ -58,6 +61,7 @@ function MyEvent(){
                     <tr key={x.eventid}>
                         <td><img width="100" src={"http://localhost:9090/"+x.photo1} className="img-thumnail"  alt=""/>{x.eventname}</td>
                         <td>{x.eventcat}</td>
+                        <td><Moment format="ddd, DD-MMM-YYYY">{x.date}</Moment></td>
                         <td>{x.location}</td>
                         <td>{x.price}</td>
                         <td>
