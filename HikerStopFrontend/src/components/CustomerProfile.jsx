@@ -42,7 +42,9 @@ function CustomerProfile(){
 
     return (
         
+
         <div className="" style={{ backgroundImage: `url("https://images.unsplash.com/photo-1502126324834-38f8e02d7160?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80")`,backgroundSize:"cover"}}> 
+
         
         <div className="col-sm-6 mx-auto " style={{ height:"650px" }}>
           
@@ -64,7 +66,9 @@ function CustomerProfile(){
             <h4 className="p-2 text-black text-center">Update your Profile {uname}</h4>            
             <form onSubmit={handleSubmit}>
                     <div className="form-group form-row">
+
                         <label className="col-sm-4 form-control-label font-weight-bold"><h5>Customer Name</h5></label>
+
                         <div className="col-sm-8">
                             <input type="text" name="name"  value={user.name} onChange={handleInput} className="form-control" />                        
                         </div>
@@ -106,7 +110,9 @@ function CustomerProfile(){
                             <input type="password" name="pwd" value={user.pwd} onChange={handleInput} className="form-control" />                        
                         </div>
                     </div>                     */}
+
                     <button className="btn btn-primary float-right font-weight-bold">Update Profile</button>
+
                     </form>                           
         </div>
             

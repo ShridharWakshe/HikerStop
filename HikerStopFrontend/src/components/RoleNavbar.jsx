@@ -60,7 +60,9 @@ const RoleNavbar=({isLoggedIn})=>{
             <Link className="nav-link" to="/aprofile">Profile</Link>
         </li>
         <li className="nav-item active">
+
             <Link className="nav-link" to="/sellers">Guide</Link>
+
         </li>
         <li className="nav-item active">
             <Link className="nav-link" to="/customers">Customers</Link>

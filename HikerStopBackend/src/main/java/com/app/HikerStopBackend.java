@@ -8,6 +8,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
 
 @SpringBootApplication(exclude = SecurityAutoConfiguration.class)
+//@SpringBootApplication
+
 @EnableJpaAuditing
 @EnableEncryptableProperties
 public class HikerStopBackend {

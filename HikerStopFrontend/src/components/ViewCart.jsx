@@ -171,7 +171,9 @@ function ViewCart(){
             </div>
              </div> : <h1>Cart is Empty</h1>} 
         </div>
+
         // </div>
+
     )
 }
 

@@ -51,10 +51,12 @@ function CustomerLogin(){
 
     return (
   
+
         <div className="" style={{ backgroundImage: `url("https://images.pexels.com/photos/869258/pexels-photo-869258.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")`,backgroundSize:"cover"}}> 
        
                 <div className="col-sm-3 mx-auto" style={{ height:"563px" }}>
                     <h4 className="text-center p-4" style={{ color:"black" }}>
+
                         Customer Login Form
                     </h4>
                     <form onSubmit={handleSubmit}>                 

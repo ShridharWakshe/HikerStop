@@ -114,7 +114,9 @@ function AllProduct(){
                 {/* <div className="card-body"> */}
                     <h3 style={{marginLeft:"550px",color:"black"}}>Our Popular Treks</h3>
                     <div style={{marginLeft:"50px"}} >
-                {/* <ReactPaginate 
+
+                <ReactPaginate 
+
                     previousLabel={"🢀"}
                     nextLabel={"🢂"}
                     containerClassName={"pagination"}
@@ -128,7 +130,9 @@ function AllProduct(){
                     {events?.map(x=>(
                         <Event key={x.eventid} x={x} showModal={showModal} />
                     ))}
-                    </div> */}
+
+                    </div>
+
                     </div>
                     
                 </div>

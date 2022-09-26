@@ -76,14 +76,18 @@ function Footer(){
    
             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           
+
               <h6 className="text-uppercase fw-bold">HIKERSTOP</h6>
+
               <hr
                 className="mb-4 mt-0 d-inline-block mx-auto"
                 style={{width: "60px", backgroundVColor: "#7c4dff", height: "2px"}}
               />
               <p>
+
               Leading organization engaged in conducting adventure activities that include trekking, 
               mountaineering, jungle safaris etc. throughout Sahyadri as well as the mighty Himalayas.
+
               </p>
             </div>
          
@@ -172,7 +176,7 @@ function Footer(){
 </>
 );
 }
-    
+
 
 
 export default Footer;

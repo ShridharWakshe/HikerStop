@@ -48,7 +48,8 @@ function AdminLogin(){
 
 
     return (
-    // <div className="" style={{  backgroundImage: `url("http://www.thewowstyle.com/wp-content/uploads/2015/02/the-river-in-valley-of-beautiful-mountains-hd-wallpaper-75015.jpg")`}}>
+
+  
 
  <div className="" style={{ backgroundImage: `url("https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")`,backgroundSize:"cover"}}> 
 
@@ -56,6 +57,8 @@ function AdminLogin(){
    
    
             <div className="col-sm-3 mx-auto" style={{ height:"563px" }}>
+
+
                 <h4 className="text-center p-2" style={{ color:"black" }}>
                     Admin Login Form
                 </h4>
