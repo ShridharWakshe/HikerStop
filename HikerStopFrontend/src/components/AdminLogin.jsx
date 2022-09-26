@@ -48,39 +48,42 @@ function AdminLogin(){
 
 
     return (
-    <div className="container">
-            <div className="card shadow bg-dark mt-3 text-white">
-        <div className="card-body">
-        <div className="row">
-            <div className="col-sm-6 mx-auto">
-                <h4 className="text-center p-2">
+    // <div className="" style={{  backgroundImage: `url("http://www.thewowstyle.com/wp-content/uploads/2015/02/the-river-in-valley-of-beautiful-mountains-hd-wallpaper-75015.jpg")`}}>
+
+ <div className="" style={{ backgroundImage: `url("https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")`,backgroundSize:"cover"}}> 
+
+            <div className=" bg-transparent text-dark changesize " style={{  }}>
+   
+   
+            <div className="col-sm-3 mx-auto" style={{ height:"563px" }}>
+                <h4 className="text-center p-2" style={{ color:"black" }}>
                     Admin Login Form
                 </h4>
                 <form onSubmit={handleSubmit}>                 
                 <div className="form-group form-row">
                     <label className="col-sm-4 form-control-label">Email Id</label>
-                    <div className="col-sm-8">
-                        <input type="text" name="userid" value={user.userid} onChange={handleInput} className="form-control" />
+                    <div className="col-sm-10">
+                        <input type="text"placeholder="Enter your email id" name="userid" value={user.userid} onChange={handleInput} className="form-control" />
                         {errors.userid && <small className="text-danger float-right">{errors.userid}</small>}
                     </div>
                     
                 </div>                    
                 <div className="form-group form-row">
                     <label className="col-sm-4 form-control-label">Password</label>
-                    <div className="col-sm-8">
-                        <input type="password" name="pwd" value={user.pwd} onChange={handleInput} className="form-control" />
+                    <div className="col-sm-10">
+                        <input type="password" placeholder="Enter your password" name="pwd" value={user.pwd} onChange={handleInput} className="form-control" />
                         {errors.pwd && <small className="text-danger float-right">{errors.pwd}</small>}
                     </div>
                 </div>                    
-                <button className="btn btn-primary float-right">Login Now</button>
+                <button className="btn btn-primary float-right mt-3">Login Now</button>
                 </form>
                 <div className="clearfix"></div>
                 {errmsg && <p className="alert alert-danger mt-4 text-center font-weight-bold">{errmsg}</p>}
             </div>
         </div>
     </div>
-    </div>
-    </div>
+
+    
     );
 }
 

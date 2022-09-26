@@ -65,30 +65,32 @@ function ViewCart(){
         })  
     }
     return (
-        <div className="container-fluid text-center text-dark">
+        <div className="bg-transparent  text-black" style={{  backgroundImage: `url("http://www.thewowstyle.com/wp-content/uploads/2015/02/the-river-in-valley-of-beautiful-mountains-hd-wallpaper-75015.jpg")`}}> 
+        
+        <div className=" mx-auto " style={{ height:"650px" }}>
             
             {state.cart.length>0 ? 
             <div className="row">
-                <div className="col-sm-7">
-                <h4 className="p-2">Cart View</h4>
+                <div className="col-sm-7" style={{ marginLeft:"50px" }}>
+                <h4 className="">Cart View</h4>
             <table className="table table-bordered table-dark table-striped">
                 <thead>
                     <tr>
-                        <th>Prodid</th>
-                        <th>Product Name</th>
+                        <th>Event</th>
+                        <th>Event Name</th>
                         <th>Price</th>
-                        <th>Qty</th>
+                        <th>No of person</th>
                         <th>Amount</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     {state.cart.map(item=>(
-                        <tr key={item.prodid}>
-                            <td>{item.prodid}</td>
+                        <tr key={item.eventid}>
+                            <td>{item.eventid}</td>
                             <td>
-                                <img className="mr-2 float-left" src={"http://localhost:9090/"+item.photo} width="100" />
-                                {item.pname}
+                                <img className="mr-2 float-left" src={"http://localhost:9090/"+item.photo1} width="100" />
+                                {item.eventname}
                             </td>
                             <td>&#8377; {item.price}</td>
                             <td>{item.qty}</td>
@@ -105,7 +107,7 @@ function ViewCart(){
                 </tfoot>
             </table>
             </div>
-            <div className="col-sm-4 text-light">     
+            <div className=" text-dark" style={{ marginLeft:"100px" }}>     
             <form onSubmit={handleSubmit} >           
                 <h5 className="p-2">Address Information</h5>
                 <div className="form-group form-row">
@@ -167,8 +169,9 @@ function ViewCart(){
                 <button className="btn btn-success float-right">Place Order</button>
                 </form>
             </div>
-            </div> : <h1>Cart is Empty</h1>}
+             </div> : <h1>Cart is Empty</h1>} 
         </div>
+        // </div>
     )
 }
 

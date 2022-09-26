@@ -39,6 +39,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  background-image: url();
 }
 
 html {
@@ -57,10 +58,10 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
+  /* line-height: 1.5; */
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 [tabindex="-1"]:focus {
@@ -153,13 +154,13 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color:#ffffff;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #0056b3;
+  color: #414141;
   text-decoration: underline;
 }
 
@@ -577,13 +578,13 @@ pre code {
   }
 }
 
-.container-fluid {
+/* .container-fluid {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
+} */
 
 .row {
   display: -ms-flexbox;
@@ -4361,6 +4362,7 @@ input[type="button"].btn-block {
     display: flex !important;
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
+    background-color: transparent;
   }
   .navbar-expand-lg .navbar-toggler {
     display: none;
@@ -5829,6 +5831,7 @@ a.close.disabled {
   outline: 0;
   width: 166%;
   height: 568px;
+  margin-left: -150px;
 }
 
 .modal-backdrop {
@@ -8116,6 +8119,7 @@ button.bg-dark:focus {
 
 .p-2 {
   padding: 0.5rem !important;
+  
 }
 
 .pt-2,
@@ -8139,7 +8143,7 @@ button.bg-dark:focus {
 }
 
 .p-3 {
-  padding: 1rem !important;
+  padding: 0rem !important;
 }
 
 .pt-3,
@@ -10042,5 +10046,10 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+.changesize{
+  height: auto;
+  width: auto;
 }
 /*# sourceMappingURL=bootstrap.css.map */
