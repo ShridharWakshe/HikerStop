@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import loginvalidation from "../loginvalidation"
 import ReCAPTCHA from "react-google-recaptcha";
 
-function SellerLogin(){
+function GuideLogin(){
     const dispatch=useDispatch()
     const [user,setUser]=useState({
         "userid":"",
@@ -37,7 +37,7 @@ function SellerLogin(){
                 sessionStorage.setItem("id",result.id)
                 sessionStorage.setItem("userid",result.userid)//userid in both customer and seller
                 sessionStorage.setItem("uname",result.name)
-                sessionStorage.setItem("role","seller")
+                sessionStorage.setItem("role","Guide")
                // sessionStorage.setItem("id",result.id)
                 dispatch({type:'IsLoggedIn'})
                 history.push("/sprofile")
@@ -107,4 +107,4 @@ function SellerLogin(){
     );
 }
 
-export default SellerLogin;
+export default GuideLogin;

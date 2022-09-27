@@ -11,7 +11,7 @@ function Header(){
             {state.loggedin.IsLoggedIn ?
             <>            
             
-            <h5 className="float-right"style={{paddingTop:"5px"}}>Username {state.loggedin.Username}<br/>Role : {state.loggedin.Role}</h5> </>:
+            <h5 className="float-right"style={{paddingTop:"5px"}}>Username : {state.loggedin.Username}<br/>Role : {state.loggedin.Role}</h5> </>:
             ''}
             <h2 className="text-center"style={{paddingTop:"10px"}}>Welcome to HikerStop</h2>
             <div className="clearfix"></div>

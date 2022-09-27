@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import eventvalidation from "./eventvalidation";
 
-function AddProduct(){
-    const sellerid=sessionStorage.getItem("id")
+function AddEvent(){
+    const guideid=sessionStorage.getItem("id")
     const [event,setEvent]=useState({
         "eventname":"",
         "location":"",
@@ -12,7 +12,7 @@ function AddProduct(){
         "price":"",
         "date":"",
         "description":"",
-        "guideid":sellerid
+        "guideid":guideid
     })
     const [errors,setErrors]=useState({})
     const [selectedPhoto1,setSelectedPhoto1]=useState(null)
@@ -60,19 +60,19 @@ function AddProduct(){
             formData.append("pic1",selectedPhoto1)
             formData.append("pic2",selectedPhoto2)
             formData.append("pic3",selectedPhoto3)
-            formData.append("guideId",sellerid)
+            formData.append("guideId",guideid)
             console.log(event)
             axios.post("http://localhost:9090/api/events",formData)
             .then(resp=>{
                 console.log(resp);
                 let result=resp.data;
                 console.log(result) 
-                alert("event saved successfully")               
+                alert("Event Saved Successfully")               
                 history.push("/myproducts")
             })
             .catch(error=>{
                 console.log("Error",error);
-                alert("Error saving event")
+                alert("Error Saving Event")
             })            
         }
     },[errors])
@@ -134,6 +134,7 @@ function AddProduct(){
                                         <option>Jharkhand</option>
                                         <option>Karnataka</option>
                                         <option>Kerala</option>
+                                        <option>Ladak</option>
                                         <option>Madhya Pradesh</option>
                                         <option>Maharashtra</option>
                                         <option>Manipur</option>
@@ -150,6 +151,7 @@ function AddProduct(){
                                         <option>Uttar Pradesh</option>
                                         <option>Uttarakhand	</option>
                                         <option>West Bengal</option>
+                                        
                                      
 
                                     </select>
@@ -290,4 +292,4 @@ function AddProduct(){
     )
 }
 
-export default AddProduct;
+export default AddEvent;

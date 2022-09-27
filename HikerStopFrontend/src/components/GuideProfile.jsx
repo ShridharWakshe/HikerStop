@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 
-function SellerProfile(){
+function GuideProfile(){
     const id=sessionStorage.getItem("id")
     const [user,setUser]=useState({
         "id":sessionStorage.getItem("id"),
@@ -42,4 +42,4 @@ function SellerProfile(){
     )
 }
 
-export default SellerProfile;
+export default GuideProfile;

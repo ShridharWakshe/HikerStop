@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import eventvalidation from "./eventvalidation";
 
-function EditProduct(){
+function EditEvent(){
     console.log("Edit Event page")
     const sellerid=sessionStorage.getItem("id")
     const {prodid}=useParams()
@@ -181,4 +181,4 @@ function EditProduct(){
     )
 }
 
-export default EditProduct;
+export default EditEvent;

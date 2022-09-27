@@ -13,7 +13,7 @@ public class EmailService {
 
 	public void sendEmailForNewRegistration(String email) {
 		SimpleMailMessage message = new SimpleMailMessage();
-		message.setFrom("patilbhushan971@gmail.com");
+		message.setFrom("shridharwakshe12@gmail.com");
 		message.setTo(email);
 		message.setSubject("Thank you for Registering with us!");
 		message.setText("WELCOME to HikerStop ");
@@ -23,7 +23,7 @@ public class EmailService {
 	
 	public void sendEmailForWorker(String email) {
 		SimpleMailMessage message = new SimpleMailMessage();
-		message.setFrom("patilbhushan971@gmail.com");
+		message.setFrom("shridharwakshe12@gmail.com");
 		message.setTo(email);
 		message.setSubject("Event has been booked");
 		message.setText("Please check the My orders ");
