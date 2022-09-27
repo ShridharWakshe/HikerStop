@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { useHistory } from "react-router-dom"
+// import{navigate} from "react-router-dom"
 import uservalidation from "../uservalidation"
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -16,7 +17,8 @@ function RegCustomer()
         "gender":""
     })
     const [errors,setErrors]=useState({})
-    const history=useHistory()
+     const history=useHistory()
+    //    const navigate=usenavigate()
     const [submitted,setSubmitted]=useState(false)
     const [Verifed,setVerifed]=useState(false);
  
@@ -69,7 +71,7 @@ function RegCustomer()
        
        <div className="col-sm-6 mx-auto" style={{ height:"563px" }}>
                     <h4 className="text-center p-2  " style={{ color:"black" }}>
-                        Customer Registration Form
+                        Customer Registration
                     </h4>
                     <form onSubmit={handleSubmit}>
                     <div className="form-group form-row">
@@ -84,7 +86,7 @@ function RegCustomer()
                     </div>
                     <div className="form-group form-row">
 
-                        <label className="col-sm-4 form-control-labe font-weight-bold">City</label>
+                        <label className="col-sm-4 form-control-label font-weight-bold">City</label>
                         <div className="col-sm-8">
                             <input type="text" name="city" placeholder="Please enter your city" value={user.city} onChange={handleInput} className="form-control" />
 
@@ -114,15 +116,15 @@ function RegCustomer()
                         </div>
                         
                     </div>
-
-                        <label className="col-sm-4 form-control-label font-weight-bold">Mobile No</label>
+                      <div className="form-group form-row">
+                        <label className="col-sm-4 form-control-label font-weight-bold">phone</label>
                         <div className="col-sm-8">
-                            <input type="text" maxLength="10" name="phone" placeholder="Please enter your mobile no" value={user.phone} onChange={handleInput} className="form-control" />
+                            <input type="number" maxLength="10" name="phone" placeholder="Please enter your phone" value={user.phone} onChange={handleInput} className="form-control" />
 
-                            {errors.phone && <small className="text-danger float-right">{errors.phone}</small>}
+                            {errors.phone && <small className="text-danger  float-right">{errors.phone}</small>}
                         </div>
                         
-                    {/* </div> */}
+                    </div> 
                     <div className="form-group form-row">
 
                         <label className="col-sm-4 form-control-label font-weight-bold">Password</label>

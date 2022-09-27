@@ -43,11 +43,12 @@ function MyEvent(){
 
         <div className="col-sm-6 mx-auto" style={{ height:"563px" }}>
             <h4 className="text-center p-2" style={{ color:"black" }}>
-                Admin Login Form
+                Admin Login 
             </h4>
             <table className="table table-bordered table-transparent " style={{ width:"1000px", marginLeft:"-170px" }}>
                 <thead className="table-transparent">
-                    <tr>
+                    <tr class="table-success">
+                        
                         <th>Name</th>
                         <th>Category</th>
                         <th>Event Date</th>
@@ -58,7 +59,7 @@ function MyEvent(){
                 </thead>
                 <tbody>
                 {events.map(x=>(
-                    <tr key={x.eventid}>
+                    <tr class="table-danger" key={x.eventid}>
                         <td><img width="100" src={"http://localhost:9090/"+x.photo1} className="img-thumnail"  alt=""/>{x.eventname}</td>
                         <td>{x.eventcat}</td>
                         <td><Moment format="ddd, DD-MMM-YYYY">{x.date}</Moment></td>

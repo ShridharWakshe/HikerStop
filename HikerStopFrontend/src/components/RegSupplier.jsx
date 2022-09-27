@@ -60,7 +60,7 @@ function RegSupplier()
        
         <div className="col-sm-6 mx-auto" style={{ height:"563px" }}>
                      <h4 className="text-center p-2  " style={{ color:"black" }}>
-                        Guide Registration Form
+                        Guide Registration 
                     </h4>
                     <form onSubmit={handleSubmit}>
                     <div className="form-group form-row">
@@ -68,7 +68,7 @@ function RegSupplier()
                         <label className="col-sm-4 form-control-label font-weight-bold">Guide Name</label>
 
                         <div className="col-sm-8">
-                            <input type="text" name="name" value={user.name} onChange={handleInput} className="form-control" />
+                            <input type="text" name="name" placeholder="Please enter your name" value={user.name} onChange={handleInput} className="form-control" />
                             {errors.name && <small className="text-danger float-right">{errors.name}</small>}
                         </div>                        
                     </div>
@@ -77,7 +77,7 @@ function RegSupplier()
                         <label className="col-sm-4 form-control-labe font-weight-bold">City</label>
 
                         <div className="col-sm-8">
-                            <input type="text" name="city" value={user.city} onChange={handleInput} className="form-control" />
+                            <input type="text" name="city" placeholder="Please enter your city" value={user.city} onChange={handleInput} className="form-control" />
                             {errors.city && <small className="text-danger float-right">{errors.city}</small>}
                         </div>
                         
@@ -87,7 +87,7 @@ function RegSupplier()
                         <label className="col-sm-4 form-control-label font-weight-bold">Email Id</label>
 
                         <div className="col-sm-8">
-                            <input type="text" name="userid" value={user.userid} onChange={handleInput} className="form-control" />
+                            <input type="text" name="userid" placeholder="Please enter your email id" value={user.userid} onChange={handleInput} className="form-control" />
                             {errors.userid && <small className="text-danger float-right">{errors.userid}</small>}
                         </div>
                         
@@ -97,7 +97,7 @@ function RegSupplier()
                         <label className="col-sm-4 form-control-label font-weight-bold">Phone</label>
 
                         <div className="col-sm-8">
-                            <input type="text" maxLength="10" name="phone" value={user.phone} onChange={handleInput} className="form-control" />
+                            <input type="number" maxLength="10" name="phone" placeholder="Please enter your phone" value={user.phone} onChange={handleInput} className="form-control" />
                             {errors.phone && <small className="text-danger float-right">{errors.phone}</small>}
                         </div>
                         
@@ -107,7 +107,7 @@ function RegSupplier()
                         <label className="col-sm-4 form-control-label font-weight-bold">Password</label>
 
                         <div className="col-sm-8">
-                            <input type="password" name="pwd" value={user.pwd} onChange={handleInput} className="form-control" />
+                            <input type="password" name="pwd" placeholder="Please enter your password"value={user.pwd} onChange={handleInput} className="form-control" />
                             {errors.pwd && <small className="text-danger float-right">{errors.pwd}</small>}
                         </div>
                     </div>
@@ -116,7 +116,7 @@ function RegSupplier()
                         <label className="col-sm-4 form-control-label font-weight-bold">Confirm Password</label>
 
                         <div className="col-sm-8">
-                            <input type="password" name="cpwd" value={user.cpwd} onChange={handleInput} className="form-control" />
+                            <input type="password" name="cpwd" placeholder="Please enter your confirm password" value={user.cpwd} onChange={handleInput} className="form-control" />
                             {errors.cpwd && <small className="text-danger float-right">{errors.cpwd}</small>}
                         </div>
                     </div>

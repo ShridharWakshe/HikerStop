@@ -34,8 +34,8 @@ function MyOrders(){
         <div className="col-sm-6 mx-auto " style={{ height:"563px" }}>
                 <div className="col-sm-7" style={{ marginLeft:"-300px" }}>
                 <h4 className="p-2">My Purchased Orders</h4>
-                <table className="table table-bordered table-sm table-dark table-striped">
-                    <thead>
+                <table className="table table-info table-sm table-dark table-striped">
+                    <thead  table-dark >
                         <tr>
                             <th>Id</th>
                             <th>Order Date</th>

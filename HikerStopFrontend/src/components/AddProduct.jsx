@@ -84,7 +84,7 @@ function AddProduct(){
         
                 <div className="col-sm-6 mx-auto" style={{ height:"1000px" }}>
                     <h4 className="text-center p-2  " style={{ color:"black" }}>
-                                Add Event Form
+                                Add Event 
                             </h4>
                             <form onSubmit={handleSubmit}>
                             <div className="form-group form-row">
