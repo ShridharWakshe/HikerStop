@@ -17,5 +17,7 @@ public class HikerStopBackend {
 	public static void main(String[] args) {
 		SpringApplication.run(HikerStopBackend.class, args);
 	}
+	
+	
 
 }

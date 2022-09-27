@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Moment from "react-moment";
 
-function Orders(){
+function Bookings(){
     const [orders,setOrders]=useState([])
     const [show,setShow]=useState(false)
     const [details,setDetails]=useState([])
@@ -53,8 +53,8 @@ function Orders(){
                 </div>
                 <div className="col-sm-5">
                     {show ? <>
-                    <h4 className="p-2">Order Details</h4>
-                    <table className="table table-bordered table-light table-hover table-striped table-sm">
+                    <h4 className="p-2 text-light">Order Details</h4>
+                    <table className="table table-bordered table-dark table-hover table-striped table-sm">
                         <thead>
                             <tr>
                                 <th>Id</th>
@@ -67,7 +67,7 @@ function Orders(){
                             {details.map(x => (
                                 <tr key={x.event.eventid}>
                                     <td>{x.event.eventid}</td>
-                                    <td><img className="mr-2 float-left" src={"http://localhost:9090/"+x.event.photo} width="100" alt=""/>
+                                    <td><img className="mr-2 float-left" src={"http://localhost:9090/"+x.event.photo1} width="100" alt=""/>
                                     {x.event.eventname}<br/>
                                     {x.event.cat}
                                     </td>
@@ -85,4 +85,4 @@ function Orders(){
     )
 }
 
-export default Orders;
+export default Bookings;

@@ -24,7 +24,6 @@ public class AdminController {
 	@Autowired AdminService adminService;
 	
 	@PostMapping("/validate")
-	@ApiOperation(value = "Validate the admin user")
 	public ResponseEntity<?> validateUser(@RequestBody LoginDTO dto) {
 		System.out.println(dto);
 		Admin admin=adminService.validate(dto.getUserid(),dto.getPwd());
@@ -35,7 +34,6 @@ public class AdminController {
 	}
 	
 	@PostMapping
-	@ApiOperation(value="Update the admin profile such as name and password")
 	public ResponseEntity<?> updateProfile(@RequestBody Admin admin) {
 		adminService.updateAdmin(admin);
 		return Response.status(HttpStatus.OK);
