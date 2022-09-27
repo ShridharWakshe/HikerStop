@@ -5,14 +5,13 @@ function Header(){
     console.log("Header ",state.loggedin.Username)
     return (
 
-        <div className="jumbotron p-3 mb-0 rounded-0 bg-info text-dark" style={ {  textDecorationColor:"black"}}>
+        <div className="jumbotron p-3 mb-0 bg-dark text-light" style={ {  textDecorationColor:"black"}}>
 
-            <img src={'assets/Hikinglogo.jpg'} style={{height:"70px",width:"80px"}} className="float-left"/>
+            <img src={'assets/Hikinglogo.jpg'} style={{height:"70px",width:"80px"}} className="float-left" alt=""/>
             {state.loggedin.IsLoggedIn ?
-            <>            
-            
-            <h5 className="float-right"style={{paddingTop:"5px"}}>Username {state.loggedin.Username}<br/>Role : {state.loggedin.Role}</h5> </>:
-            ''}
+            <>  
+            <h5 className="float-right  mr-3 "style={{paddingTop:"5px"}}>Username {state.loggedin.Username}<br/>Role : {state.loggedin.Role}</h5> 
+            </>:''}
             <h2 className="text-center"style={{paddingTop:"10px"}}>Welcome to HikerStop</h2>
             <div className="clearfix"></div>
         </div>

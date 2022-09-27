@@ -112,8 +112,8 @@ function AllProduct(){
         <div className="container-fluid" style={{width:"100%"}}>
             <div className=" bg-white text-white" style={{ backgroundColor:"white" ,width:"auto"}}>
                 {/* <div className="card-body"> */}
-                    <h3 style={{marginLeft:"550px",color:"black"}}>Our Popular Treks</h3>
-                    <div style={{marginLeft:"50px"}} >
+                    <h3 style={{marginLeft:"609px",color:"black"}}>Our Popular Treks</h3>
+                    <div style={{margin:"25px"}} >
 
                 <ReactPaginate 
 

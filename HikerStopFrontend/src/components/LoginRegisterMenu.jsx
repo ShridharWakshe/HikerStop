@@ -3,24 +3,26 @@ import { Link } from "react-router-dom";
 
 function LoginRegisterMenu(){
     return(
-        <ul className="navbar-nav ml-auto">
+        <ul className="navbar-nav ml-auto mr-3">
             <li className="nav-item dropdown"style={{ marginLeft:"700px" }}>
-                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                <Link className="nav-link dropdown-toggle text-dark  mr-3" to="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                 Login
-                </a>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <Link className="dropdown-item" to="/alogin">Admin</Link>
-                <Link className="dropdown-item" to="/slogin">Guide</Link>                        
-                <Link className="dropdown-item" to="/clogin">Customer</Link>                        
+                </Link>
+                <div className="dropdown-menu text-dark " aria-labelledby="navbarDropdownMenuLink" >
+                <Link className="dropdown-item " to="/alogin">Admin</Link>
+                <Link className="dropdown-item " to="/slogin">Guide</Link>                        
+                <Link className="dropdown-item " to="/clogin">Customer</Link>                        
                 </div>
             </li>
             <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <Link className="nav-link dropdown-toggle text-dark 
+                 mr-3" to="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                 Register
-                </a>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <Link className="dropdown-item" to="/regsupplier">Guide</Link>
-                <Link className="dropdown-item" to="/register">Customer</Link>                        
+                </Link>
+                <div className="dropdown-menu text-dark " aria-labelledby="navbarDropdownMenuLink" >
+
+                <Link className="dropdown-item pr-0" to="/regsupplier">Guide</Link>
+                <Link className="dropdown-item pr-0" to="/register">Customer</Link>                        
                 </div>
             </li>
         </ul>
