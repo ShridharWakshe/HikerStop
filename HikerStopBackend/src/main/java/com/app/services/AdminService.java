@@ -8,7 +8,7 @@ public interface AdminService {
 	Admin validate(String userid,String pwd);
 	
 	
-	void updateAdmin(Admin amin);
+	void updateAdmin(Admin admin);
 	
 	
 }
