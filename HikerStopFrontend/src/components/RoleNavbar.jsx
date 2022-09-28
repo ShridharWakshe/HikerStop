@@ -17,7 +17,7 @@ const RoleNavbar=({isLoggedIn})=>{
         <LoginRegisterMenu/>
         )
     }
-    else if(sessionStorage.getItem("role")==="customer"){
+    else if(sessionStorage.getItem("role")==="Customer"){
     return (
         <ul className="navbar-nav ml-auto" style={{ marginLeft:"880px" }}>
         <li className="nav-item active">
@@ -36,7 +36,7 @@ const RoleNavbar=({isLoggedIn})=>{
         </ul>
     )
     }
-    else if(sessionStorage.getItem("role")==="seller"){
+    else if(sessionStorage.getItem("role")==="Guide"){
         return (
             <ul className="navbar-nav ml-auto" style={{ marginLeft:"880px" }}> 
             <li className="nav-item active">

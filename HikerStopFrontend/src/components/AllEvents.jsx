@@ -15,7 +15,7 @@ function AllEvents(){
     const state=useSelector((state)=>state);
     const location=useLocation()
     const [item,setItem]=useState({})
-    const [qty,setQty]=useState(1)
+    const [qty,setQty]=useState("")
     const dispatch=useDispatch()
     const history=useHistory()
 
@@ -79,11 +79,14 @@ function AllEvents(){
             {     
                 showModal() 
                 setDisplay("none")
-                setShowDialog("modal fade") 
-               
-                    item.qty=qty  
-                    dispatch({type:'AddItem',payload:item})
-                    alert("Item added to cart successfully")
+                setShowDialog("modal fade")
+                item.qty=qty  
+                    if((item.qty!=="")){  
+                        dispatch({type:'AddItem',payload:item})
+                        alert("Item added to cart successfully")
+                    }else{
+                        alert("Enter valid No of person !")
+                    }
                
             }
             else{   
@@ -98,9 +101,7 @@ function AllEvents(){
         loadDataFromServer(selectedPage)
     }
 
-    const mystyle=({
-
-    })
+   
 
 
    
