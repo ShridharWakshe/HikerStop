@@ -65,7 +65,7 @@ function MyOrders(){
                                 <th>Id</th>
                                 <th>Product</th>
                                 <th>Price</th>
-                                <th>Qty</th>
+                                <th>No of Person</th>
                             </tr>
                         </thead>
                         <tbody>

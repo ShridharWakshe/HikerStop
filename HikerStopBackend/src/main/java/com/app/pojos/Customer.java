@@ -26,14 +26,13 @@ public class Customer {
 	private int id;
 	
 	
-	
 	private String name;
 	
 	
 	private String city;
 	
 	
-	
+	@Email(message="Please provide a valid email address")
 	@Column(name = "email", unique = true)
 	private String userid;
 	

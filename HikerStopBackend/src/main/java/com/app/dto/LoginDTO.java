@@ -12,6 +12,6 @@ public class LoginDTO {
 	private String pwd;
 	
 	
-	private String role;
+
 	
 }
