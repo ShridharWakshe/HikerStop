@@ -25,7 +25,6 @@ public class Guide {
 	@Id
 	private int id;
 	
-	
 	private String name;
 
 	
