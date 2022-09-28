@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import  Moment  from 'react-moment';
 
-function MyEvent(){
+function MyEvents(){
     const guideid=sessionStorage.getItem("id");
     const [events,setEvents]=useState([])
     useEffect(()=>{
@@ -83,4 +83,4 @@ function MyEvent(){
     )
 }
 
-export default MyEvent;
+export default MyEvents;

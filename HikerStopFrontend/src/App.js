@@ -12,7 +12,7 @@ import GuideLogin from './components/GuideLogin';
 import CustomerLogin from './components/CustomerLogin';
 import GuideProfile from './components/GuideProfile';
 import AddEvent from './components/AddEvent';
-import MyProducts from './components/MyProducts';
+import MyEvents from './components/MyEvents';
 import AllEvents from './components/AllEvents';
 import EditEvent from './components/EditEvent';
 import CustomerProfile from './components/CustomerProfile';
@@ -44,7 +44,7 @@ function App() {
           <Route component={AllGuides} path="/guides" />                  
           <Route component={AddEvent} path="/add-product" />          
           <Route component={EditEvent} path="/edit/:prodid" />          
-          <Route component={MyProducts} path="/myproducts" />          
+          <Route component={MyEvents} path="/myproducts" />          
           <Route component={MyOrders} path="/myorders" />          
           <Route component={Bookings} path="/bookings" />          
           <Route component={ViewCart} path="/cart" /> 

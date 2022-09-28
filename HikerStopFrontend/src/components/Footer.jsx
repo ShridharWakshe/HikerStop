@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Footer(){
   return(
     <>
-    <div className="container-fluid  my-5 bg-dark text-light" style={{backgroundColor: "#1c2331;"}}>
+    <div className="container-fluid  my-5 bg-dark text-light" style={{backgroundColor: "#1c2331;",marginTop:"0px"}}>
 
     <footer className="bd-footer py-4 py-md-5 mt-5"
             style={{backgroundColor: "#1c2331;"}}
