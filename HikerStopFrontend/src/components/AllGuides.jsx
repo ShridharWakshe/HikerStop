@@ -34,7 +34,7 @@ function AllGuides(){
 
             <h4 className="p-2 text-center">All Guide</h4>
 
-            <table className="table table-bordered table-striped table-dark table-hover" style={{ marginLeft:"-225px" }}>
+            <table className="table table-danger table-striped table-hover" style={{ marginLeft:"-225px" }}>
                 <thead className="table-dark">
                     <tr>
                         <th>Id</th>

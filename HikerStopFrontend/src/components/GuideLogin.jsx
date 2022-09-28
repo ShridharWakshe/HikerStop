@@ -64,14 +64,14 @@ function GuideLogin(){
 
                     <h4 className="text-center p-2  " style={{ color:"black" }}>
 
-                        Guide Login Form
+                        Guide Login 
                     </h4>
                     <form onSubmit={handleSubmit}>                 
                     <div className="form-group form-row">
                         <label className="col-sm-4 form-control-label font-weight-bold">Email Id</label>
                         <div className="col-sm-10">
 
-                            <input type="text" name="userid" value={user.userid} onChange={handleInput} className="form-control" />
+                            <input type="text" name="userid" placeholder="Please enter your email id" value={user.userid} onChange={handleInput} className="form-control" />
                             {errors.userid && <small className="text-danger float-right">{errors.userid}</small>}
                         </div>
                         
@@ -81,13 +81,13 @@ function GuideLogin(){
                         <label className="col-sm-4 form-control-label font-weight-bold">Password</label>
                         <div className="col-sm-10">
 
-                            <input type="password" name="pwd" value={user.pwd} onChange={handleInput} className="form-control" />
+                            <input type="password" name="pwd" placeholder="Please enter your password" value={user.pwd} onChange={handleInput} className="form-control" />
                             {errors.pwd && <small className="text-danger float-right">{errors.pwd}</small>}
                         </div>
                     </div>      
                     <div>
 
-                    <div className="" style={{marginLeft:"273px"}} >
+                    <div className="" style={{marginLeft:"-15px"}} >
                         <ReCAPTCHA className="col-sm-8"
                                 sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                                 onChange={onChange}
@@ -95,7 +95,7 @@ function GuideLogin(){
                     </div>   
                    
 
-                    <button className="btn btn-primary float-right" disabled={!Verifed}>Login Now</button>
+                    <button className="btn btn-primary float-left " style={{marginLeft:"500px"}} disabled={!Verifed}>Login Now</button>
 
                         </div>              
                     
