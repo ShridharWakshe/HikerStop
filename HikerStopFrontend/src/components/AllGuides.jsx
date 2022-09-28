@@ -43,7 +43,7 @@ function AllGuides(){
                         <th>Phone</th>
                         <th>User Id</th>
                         <th>Password</th>
-                        <th>Action</th>
+                       
                     </tr>
                 </thead>
                 <tbody>
@@ -55,7 +55,7 @@ function AllGuides(){
                         <td>{x.phone}</td>
                         <td>{x.userid}</td>
                         <td>{x.pwd}</td>
-                        <td><button onClick={(e)=>deleteSeller(x.id)} className="btn btn-danger btn-sm">Delete</button></td>
+                        {/* <td><button onClick={(e)=>deleteSeller(x.id)} className="btn btn-danger btn-sm">Delete</button></td> */}
                     </tr>
                 ))}
                 </tbody>
