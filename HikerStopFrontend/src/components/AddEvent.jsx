@@ -18,7 +18,7 @@ function AddEvent(){
     const [selectedPhoto1,setSelectedPhoto1]=useState(null)
     const [selectedPhoto2,setSelectedPhoto2]=useState(null)
     const [selectedPhoto3,setSelectedPhoto3]=useState(null)
-    const [qty,setQty]=useState(1)
+  
     const [submitted,setSubmitted]=useState(false)
     const history=useHistory()
 
@@ -44,8 +44,10 @@ function AddEvent(){
     }
 
     useEffect(()=>{
-        console.log(errors)
-        if(Object.keys(errors).length===0 && submitted){
+        console.log(errors) 
+        
+
+        if(Object.keys(errors).length===0 && submitted ){
             const formData=new FormData()
             formData.append("eventname",event.eventname)
             formData.append("location",event.location)
@@ -81,7 +83,7 @@ function AddEvent(){
         
         <div className="" style={{ backgroundImage: `url(" https://p4.wallpaperbetter.com/wallpaper/874/590/494/adventure-altitude-climb-clouds-wallpaper-preview.jpg ")`,backgroundSize:"cover"}}> 
 
-        
+        <div style={{    height: "1150px"}}>
                 <div className="col-sm-6 mx-auto" style={{ height:"1000px" }}>
                     <h4 className="text-center p-2  " style={{ color:"black" }}>
                                 Add Event 
@@ -92,7 +94,7 @@ function AddEvent(){
                                 <label className="col-sm-4 form-control-label font-weight-bold">Event Name</label>
 
                                 <div className="col-sm-8">
-                                    <input type="text" name="eventname" value={event.eventname} onChange={handleInput} className="form-control" />
+                                    <input type="text" name="eventname" value={event.eventname} onChange={handleInput} className="form-control" required placeholder="Enter Event Name"/>
                                     {errors.eventname && <small className="text-danger float-right">{errors.eventname}</small>}
                                 </div>
                                 
@@ -155,7 +157,7 @@ function AddEvent(){
                                      
 
                                     </select>
-                                    {errors.brand && <small className="text-danger float-right">{errors.brand}</small>}
+                                    {errors.location && <small className="text-danger float-right">{errors.location}</small>}
                                 </div>                                
                             </div>
                             <div className="form-group form-row">
@@ -164,12 +166,12 @@ function AddEvent(){
 
                                 <div className="col-sm-8">
                                     <input type="number" name="price" value={event.price} onChange={handleInput} className="form-control" 
-                                     pattern="[0-9]+(\.[0-9][0-9]?)?"
+                                     
                                      maxLength="10"
                                      required
-                                    
+                                    placeholder="Enter price"
                                     />
-                                    {errors.price && <small className="text-danger float-right">{errors.price}</small>}
+                                    {errors.price && <h6 className="text-danger float-right ">{errors.price}</h6>}
                                 </div>                                
                             </div>
                             <div className="form-group form-row">
@@ -178,17 +180,23 @@ function AddEvent(){
 
                                 <div className="col-sm-8">
                                     {/* <input type="text" name="eventname" value={event.eventname} onChange={handleInput} className="form-control" /> */}
-                                    <textarea className="form-control" rows="5"  name="description" value={event.description} onChange={handleInput} style={{resize:"none"}}></textarea>
+                                    <textarea className="form-control" rows="5"  name="description" value={event.description} onChange={handleInput} style={{resize:"none"}}
+                                    required
+                                    placeholder="Enter Description"
+                                    >
+                                        
+                                    </textarea>
                                     {errors.description && <small className="text-danger float-right">{errors.description}</small>}
                                 </div>
                                 
                             </div>
                             <div className="form-group form-row">
-                                <label className="col-sm-4 form-control-label font-weight-bold">set Event Date</label>
+                                <label className="col-sm-4 form-control-label font-weight-bold">Set Event Date</label>
                                 <div className="col-sm-8">
                                     <input type="date" name="date" value={event.date} onChange={handleInput} className="form-control"
+                                    required
                                     />
-                                    
+                                    {errors.date && <h6 className="text-danger float-right">{errors.date}</h6>}
                                 </div>                                
                             </div>     
 
@@ -197,8 +205,10 @@ function AddEvent(){
                                 <label className="col-sm-4 form-control-label font-weight-bold">Number of days</label>
 
                                 <div className="col-sm-8">
-                                    <input type="number" name="noofdays" value={event.noofdays} onChange={handleInput} className="form-control" />
-                                    {errors.noofdays && <small className="text-danger float-right">{errors.noofdays}</small>}
+                                    <input type="number" name="noofdays" value={event.noofdays} onChange={handleInput} className="form-control" 
+                                    placeholder="Enter Number of days"
+                                    required/>
+                                    {errors.noofdays && <h6 className="text-danger float-right">{errors.noofdays}</h6>}
                                 </div>                                
                             </div>
 
@@ -210,7 +220,10 @@ function AddEvent(){
 
                                 <div className="col-sm-8">
                                     {/* <input type="text" name="eventname" value={event.eventname} onChange={handleInput} className="form-control" /> */}
-                                    <textarea className="form-control" rows="5"  name="dailywiseschedule" value={event.dailywiseschedule} onChange={handleInput} style={{resize:"none"}}></textarea>
+                                    <textarea className="form-control" rows="5"  name="dailywiseschedule" value={event.dailywiseschedule} onChange={handleInput} style={{resize:"none"}}
+                                    placeholder="Enter detail Event Schedule"
+                                    required
+                                    ></textarea>
                                     {errors.dailywiseschedule && <small className="text-danger float-right">{errors.dailywiseschedule}</small>}
                                 </div>
                                 
@@ -222,7 +235,10 @@ function AddEvent(){
 
                                 <div className="col-sm-8">
                                     {/* <input type="text" name="eventname" value={event.eventname} onChange={handleInput} className="form-control" /> */}
-                                    <textarea className="form-control" rows="5"  name="thingstocarry" value={event.thingstocarry} onChange={handleInput} style={{resize:"none"}}></textarea>
+                                    <textarea className="form-control" rows="5"  name="thingstocarry" value={event.thingstocarry} onChange={handleInput} style={{resize:"none"}}
+                                        placeholder="Enter things to carry"
+                                        required
+                                    ></textarea>
                                     {errors.thingstocarry && <small className="text-danger float-right">{errors.thingstocarry}</small>}
                                 </div>
                                 
@@ -290,9 +306,10 @@ function AddEvent(){
                             </div>
                             
                             <button className="btn btn-primary float-right">Add event</button>
-                            </form>
-                        </div>
-                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
               
     )
 }
