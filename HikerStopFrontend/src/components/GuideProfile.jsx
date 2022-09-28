@@ -13,7 +13,7 @@ function GuideProfile(){
     })
 
     useEffect(()=>{
-        axios.get("http://localhost:9090/api/sellers/"+id)
+        axios.get("http://localhost:9090/api/guide/"+id)
         .then(resp=>{
             console.log(resp.data.data)
             setUser(resp.data.data)

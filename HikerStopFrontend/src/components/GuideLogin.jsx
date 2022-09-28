@@ -30,7 +30,7 @@ function GuideLogin(){
         console.log(errors)
         if(Object.keys(errors).length===0 && submitted){
             console.log(user)
-            axios.post("http://localhost:9090/api/sellers/validate",user)
+            axios.post("http://localhost:9090/api/guide/validate",user)
             .then(resp=>{
                 let result=resp.data.data;
                 console.log(resp.data.data)
