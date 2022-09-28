@@ -64,7 +64,7 @@ function AdminProfile(){
 
         <div className="" style={{ backgroundImage: `url("https://p4.wallpaperbetter.com/wallpaper/1013/975/639/accomplishment-adult-adventure-backpacker-wallpaper-preview.jpg")`,backgroundSize:"cover"}}> 
         
-        <div className="col-sm-6 mx-auto  " style={{ height:"563px", }}>
+        <div className="col-sm-6 mx-auto  " style={{ height:"600px", }}>
           <div className=" text-center p-4 font-weight-bold ">
           <h4  style={{color:"black",borderBottom:"2px solid green",width:"300px",margin:"auto"}}>Admin Profile Page</h4>
 

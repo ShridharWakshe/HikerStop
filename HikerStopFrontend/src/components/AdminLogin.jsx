@@ -36,7 +36,7 @@ function AdminLogin(){
                 console.log(resp.data.data)
                 sessionStorage.setItem("userid",result.userid)
                 sessionStorage.setItem("uname",result.uname)
-                sessionStorage.setItem("role","admin")
+                sessionStorage.setItem("role","Admin")
                 dispatch({type:'IsLoggedIn'})
                 history.push("/aprofile")
             })
