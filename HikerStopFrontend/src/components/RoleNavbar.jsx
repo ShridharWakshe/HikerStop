@@ -17,11 +17,11 @@ const RoleNavbar=({isLoggedIn})=>{
         <LoginRegisterMenu/>
         )
     }
-    else if(sessionStorage.getItem("role")==="customer"){
+    else if(sessionStorage.getItem("role")==="Customer"){
     return (
         <ul className="navbar-nav ml-auto" style={{ marginLeft:"880px" }}>
         <li className="nav-item active">
-            <Link className="nav-link" to="/cart">View Cart {state.cart.length===0 ? '' : 
+            <Link className="nav-link" to="/cart">View Bookings {state.cart.length===0 ? '' : 
             <span className="badge badge-primary p-2">{state.cart.map(x=>x.qty).reduce((a,b)=>parseInt(a)+parseInt(b))}</span>}</Link>
         </li>
         <li className="nav-item active">
@@ -36,7 +36,7 @@ const RoleNavbar=({isLoggedIn})=>{
         </ul>
     )
     }
-    else if(sessionStorage.getItem("role")==="seller"){
+    else if(sessionStorage.getItem("role")==="Guide"){
         return (
             <ul className="navbar-nav ml-auto" style={{ marginLeft:"880px" }}> 
             <li className="nav-item active">
@@ -61,14 +61,14 @@ const RoleNavbar=({isLoggedIn})=>{
         </li>
         <li className="nav-item active">
 
-            <Link className="nav-link" to="/sellers">Guide</Link>
+            <Link className="nav-link" to="/guides">Guide</Link>
 
         </li>
         <li className="nav-item active">
             <Link className="nav-link" to="/customers">Customers</Link>
         </li>
         <li className="nav-item active">
-            <Link className="nav-link" to="/orders">Orders</Link>
+            <Link className="nav-link" to="/bookings">Bookings</Link>
         </li>
         <li className="nav-item active">
             <Link className="nav-link" onClick={logout} to="#">Logout</Link>

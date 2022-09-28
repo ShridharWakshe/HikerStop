@@ -28,11 +28,12 @@ function MyOrders(){
     return (
         
 
-        <div className="" style={{ backgroundImage: `url("https://images.unsplash.com/photo-1520208422220-d12a3c588e6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80 ")`,backgroundSize:"cover"}}> 
+        <div className="" style={{ backgroundImage: `url("https://images.unsplash.com/photo-1520208422220-d12a3c588e6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80 ")`,backgroundSize:"cover",height:"563px"}}> 
 
-        
-        <div className="col-sm-6 mx-auto " style={{ height:"563px" }}>
-                <div className="col-sm-7" style={{ marginLeft:"-300px" }}>
+<div className="container-fluid">
+<div className="row">
+         
+                <div className="col-sm-6" style={{paddingLeft:"30px" }}>
                 <h4 className="p-2">My Purchased Orders</h4>
                 <table className="table table-info table-sm table-dark table-striped">
                     <thead  table-dark >
@@ -55,7 +56,7 @@ function MyOrders(){
                     </tbody>
                 </table>  
                 </div>
-                <div className="col-sm-5">
+                <div className="col-sm-6" style={{paddingRight:"30px" }}>
                     {show ? <>
                     <h4 className="p-2">Order Details</h4>
                     <table className="table table-bordered table-sm table-dark table-striped">
@@ -71,7 +72,7 @@ function MyOrders(){
                             {details.map(x => (
                                 <tr>
                                     <td>{x.event.eventid}</td>
-                                    <td><img className="mr-2 float-left" src={"http://localhost:9090/"+x.event.photo} width="100" />
+                                    <td><img className="mr-2 float-left" src={"http://localhost:9090/"+x.event.photo1} width="100" />
                                     {x.event.eventname}<br/>
                                     Category: {x.event.eventcat}<br/>
                                     location: {x.event.location}<br/>
@@ -87,6 +88,8 @@ function MyOrders(){
             </div>                
                               
         </div>
+        </div>
+        
     )
 }
 export default MyOrders;

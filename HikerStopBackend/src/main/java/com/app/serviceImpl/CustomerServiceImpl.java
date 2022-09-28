@@ -17,15 +17,11 @@ public class CustomerServiceImpl implements CustomerService {
 	@Autowired 
 	private CustomerDao dao;
 	
-	@Autowired
-	private EmailService emailService;
-	
 	PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
 	@Override
 	public Customer registerCustomer(Customer cust) {
 		cust.setPwd(this.passwordEncoder.encode(cust.getPwd()));
-		emailService.sendEmailForNewRegistration(cust.getUserid());
 		return dao.save(cust);
 	}
 

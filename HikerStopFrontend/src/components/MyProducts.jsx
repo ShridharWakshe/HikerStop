@@ -43,7 +43,9 @@ function MyEvent(){
 
         <div className="col-sm-6 mx-auto" style={{ height:"563px" }}>
             <h4 className="text-center p-2" style={{ color:"black" }}>
-                Admin Login 
+
+                Events List
+
             </h4>
             <table className="table table-bordered table-transparent " style={{ width:"1000px", marginLeft:"-170px" }}>
                 <thead className="table-transparent">

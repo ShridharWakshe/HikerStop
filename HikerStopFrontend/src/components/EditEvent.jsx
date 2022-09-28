@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import eventvalidation from "./eventvalidation";
 
-function EditProduct(){
+function EditEvent(){
     console.log("Edit Event page")
     const sellerid=sessionStorage.getItem("id")
     const {prodid}=useParams()
@@ -57,18 +57,18 @@ function EditProduct(){
         }
     },[errors])
     return (
-        <div className="container-fluid">
+        <div className="container-fluid" style={{ backgroundImage: `url("https://images.unsplash.com/photo-1520208422220-d12a3c588e6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")`,backgroundSize:"cover"}}>
                     <div className="row">
                         <div className="col-sm-2">
                             {/* <img width="300" src={"http://localhost:9090/"+product.photo1} /> */}
                         </div>
                         <div className="col-sm-9">
-                            <h4 className="text-center p-2">
-                                Edit Event Form 
+                            <h4 className="text-center p-2 font-weight-bold">
+                                Edit Event 
                             </h4>
                             <form onSubmit={handleSubmit}>
                             <div className="form-group form-row">
-                                <label className="col-sm-4 form-control-label">Event Name</label>
+                                <label className="col-sm-4 form-control-label font-weight-bold">Event Name</label>
                                 <div className="col-sm-8">
                                     <input type="text" name="eventname" value={product.eventname} onChange={handleInput} className="form-control" />
                                     {errors.eventname && <small className="text-danger float-right">{errors.eventname}</small>}
@@ -76,7 +76,7 @@ function EditProduct(){
                                 
                             </div>                            
                             <div className="form-group form-row">
-                                <label className="col-sm-4 form-control-label">Category</label>
+                                <label className="col-sm-4 form-control-label font-weight-bold ">Category</label>
                                 <div className="col-sm-8">
                                     <select name="eventcat" value={product.eventcat} onChange={handleInput} className="form-control">
                                         <option value="">Select Category</option>
@@ -91,7 +91,7 @@ function EditProduct(){
                                 </div>                        
                             </div>                            
                             <div className="form-group form-row">
-                                <label className="col-sm-4 form-control-label">Price</label>
+                                <label className="col-sm-4 form-control-label font-weight-bold">Price</label>
                                 <div className="col-sm-8">
                                     <input type="number" name="price" value={product.price} onChange={handleInput} className="form-control" />
                                     {errors.price && <small className="text-danger float-right">{errors.price}</small>}
@@ -99,7 +99,7 @@ function EditProduct(){
                             </div>
                             
                             <div className="form-group form-row">
-                                <label className="col-sm-4 form-control-label">State</label>
+                                <label className="col-sm-4 form-control-label font-weight-bold">State</label>
                                 <div className="col-sm-8">
                                 <select name="location" value={product.location} onChange={handleInput} className="form-control">
                                         <option value="">Select State</option>
@@ -138,7 +138,7 @@ function EditProduct(){
                                 </div>                        
                             </div>  
                             <div className="form-group form-row">
-                                <label className="col-sm-4 form-control-label">Description</label>
+                                <label className="col-sm-4 form-control-label font-weight-bold">Description</label>
                                 <div className="col-sm-8">
                                     {/* <input type="text" name="eventname" value={event.eventname} onChange={handleInput} className="form-control" /> */}
                                     <textarea className="form-control" rows="5"  name="description" value={product.description} onChange={handleInput} style={{resize:"none"}}></textarea>
@@ -147,14 +147,14 @@ function EditProduct(){
                                 
                             </div>     
                             <div className="form-group form-row">
-                                <label className="col-sm-4 form-control-label">Number of days</label>
+                                <label className="col-sm-4 form-control-label font-weight-bold">Number of days</label>
                                 <div className="col-sm-8">
                                     <input type="number" name="noofdays" value={product.noofdays} onChange={handleInput} className="form-control" />
                                     {errors.noofdays && <small className="text-danger float-right">{errors.noofdays}</small>}
                                 </div>                                
                             </div>    
                             <div className="form-group form-row">
-                                <label className="col-sm-4 form-control-label">Daily Schedule</label>
+                                <label className="col-sm-4 form-control-label font-weight-bold">Daily Schedule</label>
                                 <div className="col-sm-8">
                                     {/* <input type="text" name="eventname" value={event.eventname} onChange={handleInput} className="form-control" /> */}
                                     <textarea className="form-control" rows="5"  name="dailywiseschedule" value={product.dailywiseschedule} onChange={handleInput} style={{resize:"none"}}></textarea>
@@ -163,7 +163,7 @@ function EditProduct(){
                                 
                             </div>    
                             <div className="form-group form-row">
-                                <label className="col-sm-4 form-control-label">Things to Carry</label>
+                                <label className="col-sm-4 form-control-label font-weight-bold">Things to Carry</label>
                                 <div className="col-sm-8">
                                     {/* <input type="text" name="eventname" value={event.eventname} onChange={handleInput} className="form-control" /> */}
                                     <textarea className="form-control" rows="5"  name="thingstocarry" value={product.thingstocarry} onChange={handleInput} style={{resize:"none"}}></textarea>
@@ -173,7 +173,7 @@ function EditProduct(){
                             </div>   
                                          
                             
-                            <button className="btn btn-primary float-right">Update Product</button>
+                            <button className="btn btn-primary float-right ">Update Event</button>
                             </form>
                         </div>
                     </div>
@@ -181,4 +181,4 @@ function EditProduct(){
     )
 }
 
-export default EditProduct;
+export default EditEvent;

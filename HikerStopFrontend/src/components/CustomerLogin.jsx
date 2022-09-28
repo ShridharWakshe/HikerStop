@@ -38,7 +38,7 @@ function CustomerLogin(){
                 console.log(resp.data.data)
                 sessionStorage.setItem("userid",result.id)
                 sessionStorage.setItem("uname",result.name)
-                sessionStorage.setItem("role","customer")
+                sessionStorage.setItem("role","Customer")
                 sessionStorage.setItem("id",result.id)  
                 dispatch({type:'IsLoggedIn'})
                 history.push("/")

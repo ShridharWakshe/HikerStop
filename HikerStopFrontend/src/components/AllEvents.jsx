@@ -9,7 +9,7 @@ import TopSlider from "./TopSlider";
 import banner5 from '../components/banner5.jpg'
 import Video from './Video';
 
-function AllProduct(){
+function AllEvents(){
     const [events,setEvents]=useState([])
     const [totalPage,setTotalPage]=useState(0)
     const state=useSelector((state)=>state);
@@ -71,7 +71,7 @@ function AllProduct(){
             alert("Please login first to buy product")
             history.push("/clogin")
         }
-        else if(sessionStorage.getItem("role")!=="customer"){
+        else if(sessionStorage.getItem("role")!=="Customer"){
             alert("Only customer can buy product")
         }      
         else{            
@@ -219,4 +219,4 @@ function AllProduct(){
     )
 }
 
-export default AllProduct;
+export default AllEvents;
