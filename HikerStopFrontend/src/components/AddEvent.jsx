@@ -184,7 +184,7 @@ function AddEvent(){
                                 
                             </div>
                             <div className="form-group form-row">
-                                <label className="col-sm-4 form-control-label">set Event Date</label>
+                                <label className="col-sm-4 form-control-label font-weight-bold">Set Event Date</label>
                                 <div className="col-sm-8">
                                     <input type="date" name="date" value={event.date} onChange={handleInput} className="form-control"
                                     />
