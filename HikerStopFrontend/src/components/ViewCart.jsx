@@ -19,13 +19,13 @@ function ViewCart(){
         "cardno":"1212444433336666",
         "nameoncard":"Test Name",
         "cvv":"123",
-        "amount":state.cart.reduce((a,b)=> (a+b.price),0)       
+        "amount":state.cart.reduce(myfun,0)       
     })
     const deleteItem=(item)=>{
         let resp=window.confirm('Are you sure to delete this item ?')
         if(resp){        
         dispatch({type:'RemoveItem',payload:item})   
-        let amount=state.cart.reduce((a,b)=> (a+b.price),0)
+        let amount=state.cart.reduce(myfun,0)
         console.log("Amount ",amount)
         }
     }
@@ -38,11 +38,12 @@ function ViewCart(){
     }
 
     useEffect(()=>{
-        let amount=state.cart.reduce((a,b)=> (a+b.price),0)
+        let amount=state.cart.reduce(myfun,0)
         setPayment({...payment,'amount':amount}) 
         console.log("Amount => ",amount)
     },[state.cart])
 
+   
     const handleSubmit=(e)=>{
         e.preventDefault()  
         //setSubmitted(true)
@@ -63,6 +64,10 @@ function ViewCart(){
             dispatch({type:'Clear'});
             history.push('/myorders')
         })  
+    }
+
+    function myfun(total, num){
+        return total+(num.price*parseInt(num.qty))
     }
     return (
         <div className="bg-transparent  text-black" style={{  backgroundImage: `url("http://www.thewowstyle.com/wp-content/uploads/2015/02/the-river-in-valley-of-beautiful-mountains-hd-wallpaper-75015.jpg")`}}> 
@@ -89,7 +94,7 @@ function ViewCart(){
                         <tr key={item.eventid}>
                             <td>{item.eventid}</td>
                             <td>
-                                <img className="mr-2 float-left" src={"http://localhost:9090/"+item.photo1} width="100" />
+                                <img className="mr-2 float-left" src={"http://localhost:9090/"+item.photo1} width="100" alt=""/>
                                 {item.eventname}
                             </td>
                             <td>&#8377; {item.price}</td>
@@ -102,7 +107,8 @@ function ViewCart(){
                 <tfoot>
                     <tr>
                         <th colSpan="4">Total Amount</th>
-                        <th>&#8377; {state.cart.reduce((a,b)=> (a+b.price),0)}</th>
+                        {/* <th>&#8377; {state.cart.reduce((a,b)=>(a+b.price),0)}</th> */}
+                        <th>&#8377; {state.cart.reduce(myfun,0)}</th>
                     </tr>
                 </tfoot>
             </table>
@@ -163,7 +169,7 @@ function ViewCart(){
                 <div className="form-group form-row">
                     <label className="col-sm-4 form-control-label">Billed Amount</label>
                     <div className="col-sm-8">
-                        <input type="text" maxLength="3" readOnly value={payment.amount} onChange={handlePaymentInput} className="form-control" />                        
+                        <input type="text"  readOnly value={payment.amount} onChange={handlePaymentInput} className="form-control" />                        
                     </div>                        
                 </div>                
                 <button className="btn btn-success float-right">Place Order</button>
@@ -172,7 +178,7 @@ function ViewCart(){
              </div > : <h1 style={{ marginLeft:"500px" }}>No Bookings Available</h1>} 
         </div>
 
-        // </div>
+         </div>
 
     )
 }
