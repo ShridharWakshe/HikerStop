@@ -1,7 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { useHistory } from "react-router-dom"
-// import{navigate} from "react-router-dom"
 import uservalidation from "../uservalidation"
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -17,8 +16,7 @@ function RegCustomer()
         "gender":""
     })
     const [errors,setErrors]=useState({})
-     const history=useHistory()
-    //    const navigate=usenavigate()
+    const history=useHistory()
     const [submitted,setSubmitted]=useState(false)
     const [Verifed,setVerifed]=useState(false);
  
@@ -71,14 +69,17 @@ function RegCustomer()
        
        <div className="col-sm-6 mx-auto" style={{ height:"563px" }}>
                     <h4 className="text-center p-2  " style={{ color:"black" }}>
-                        Customer Registration
+                        Customer Registration Form
                     </h4>
                     <form onSubmit={handleSubmit}>
                     <div className="form-group form-row">
 
                         <label className="col-sm-4 form-control-label font-weight-bold ">Customer Name</label>
                         <div className="col-sm-8">
-                            <input type="text" name="name" placeholder="Please enter your name" value={user.name} onChange={handleInput} className="form-control" />
+                            <input type="text" name="name" placeholder="Enter Name" value={user.name} onChange={handleInput} className="form-control" 
+                            minLength="2" maxLength="60"
+                            required
+                            />
 
                             {errors.name && <small className="text-danger float-right">{errors.name}</small>}
                         </div>
@@ -86,9 +87,12 @@ function RegCustomer()
                     </div>
                     <div className="form-group form-row">
 
-                        <label className="col-sm-4 form-control-label font-weight-bold">City</label>
+                        <label className="col-sm-4 form-control-labe font-weight-bold">City</label>
                         <div className="col-sm-8">
-                            <input type="text" name="city" placeholder="Please enter your city" value={user.city} onChange={handleInput} className="form-control" />
+                            <input type="text" name="city"  value={user.city} onChange={handleInput} className="form-control" 
+                             placeholder="Enter City"
+                             minLength="2" maxLength="40"
+                             required/>
 
                             {errors.city && <small className="text-danger float-right">{errors.city}</small>}
                         </div>                        
@@ -110,26 +114,38 @@ function RegCustomer()
 
                         <label className="col-sm-4 form-control-label font-weight-bold">Email Id</label>
                         <div className="col-sm-8">
-                            <input type="text" name="userid" placeholder="Please enter your emailid" value={user.userid} onChange={handleInput} className="form-control" />
+                            <input type="email" name="userid" value={user.userid} onChange={handleInput} className="form-control"
+                             placeholder="example@gmail.com"
+                             pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+                             required
+                            />
 
                             {errors.userid && <small className="text-danger float-right">{errors.userid}</small>}
                         </div>
                         
                     </div>
-                      <div className="form-group form-row">
-                        <label className="col-sm-4 form-control-label font-weight-bold">phone</label>
+                    <div className="form-group form-row">
+                        <label className="col-sm-4 form-control-label font-weight-bold">Mobile No</label>
                         <div className="col-sm-8">
-                            <input type="number" maxLength="10" name="phone" placeholder="Please enter your phone" value={user.phone} onChange={handleInput} className="form-control" />
+                            <input type="number" maxLength="10" name="phone" placeholder="Enter Mobile Number" value={user.phone} onChange={handleInput} className="form-control" 
+                            pattern="[0-9]+(\.[0-9][0-9]?)?"
+                            required
+                            
+                            />
 
-                            {errors.phone && <small className="text-danger  float-right">{errors.phone}</small>}
+                            {errors.phone && <small className="text-danger float-right">{errors.phone}</small>}
                         </div>
-                        
-                    </div> 
+                    </div>  
+                   
                     <div className="form-group form-row">
 
                         <label className="col-sm-4 form-control-label font-weight-bold">Password</label>
                         <div className="col-sm-8">
-                            <input type="password" name="pwd" placeholder="Please enter your password" value={user.pwd} onChange={handleInput} className="form-control" />
+                            <input type="password" name="pwd"  value={user.pwd} onChange={handleInput} className="form-control"
+                            placeholder="Enter Password"
+                            minLength="8"
+                            required
+                            />
 
                             {errors.pwd && <small className="text-danger float-right">{errors.pwd}</small>}
                         </div>
@@ -138,7 +154,11 @@ function RegCustomer()
 
                         <label className="col-sm-4 form-control-label font-weight-bold">Confirm Password</label>
                         <div className="col-sm-8">
-                            <input type="password" name="cpwd" placeholder="Please enter your confirm password"value={user.cpwd} onChange={handleInput} className="form-control" />
+                            <input type="password" name="cpwd" value={user.cpwd} onChange={handleInput} className="form-control" 
+                            placeholder="Enter Conform Password"
+                            minLength="8"
+                            required
+                            />
                             {errors.cpwd && <small className="text-danger float-right">{errors.cpwd}</small>}
                         </div>
                     </div>

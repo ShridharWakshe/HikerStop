@@ -17,39 +17,39 @@ const RoleNavbar=({isLoggedIn})=>{
         <LoginRegisterMenu/>
         )
     }
-    else if(sessionStorage.getItem("role")==="Customer"){
+    else if(sessionStorage.getItem("role")==="customer"){
     return (
         <ul className="navbar-nav ml-auto" style={{ marginLeft:"880px" }}>
         <li className="nav-item active">
-            <Link className="nav-link" to="/cart">View Bookings {state.cart.length===0 ? '' : 
+            <Link className="nav-link text-dark " to="/cart">View Cart {state.cart.length===0 ? '' : 
             <span className="badge badge-primary p-2">{state.cart.map(x=>x.qty).reduce((a,b)=>parseInt(a)+parseInt(b))}</span>}</Link>
         </li>
-        <li className="nav-item active">
-            <Link className="nav-link" to="/cprofile">Profile</Link>
+        <li className="nav-item active ">
+            <Link className="nav-link text-dark " to="/cprofile">Profile</Link>
         </li>
         <li className="nav-item active">
-            <Link className="nav-link" to="/myorders">My Orders</Link>
+            <Link className="nav-link text-dark " to="/myorders">My Orders</Link>
         </li>
         <li className="nav-item active">
-            <Link className="nav-link" onClick={logout} to="#">Logout</Link>
+            <Link className="nav-link text-dark " onClick={logout} to="#">Logout</Link>
         </li>        
         </ul>
     )
     }
-    else if(sessionStorage.getItem("role")==="Guide"){
+    else if(sessionStorage.getItem("role")==="seller"){
         return (
             <ul className="navbar-nav ml-auto" style={{ marginLeft:"880px" }}> 
             <li className="nav-item active">
-                <Link className="nav-link" to="/sprofile">Profile</Link>
+                <Link className="nav-link text-dark " to="/sprofile">Profile</Link>
             </li>
             <li className="nav-item active">
-                <Link className="nav-link" to="/add-product">Add Event</Link>
+                <Link className="nav-link text-dark " to="/add-product">Add Event</Link>
             </li>
             <li className="nav-item active">
-                <Link className="nav-link" to="/myproducts">Events</Link>
+                <Link className="nav-link text-dark " to="/myproducts">Events</Link>
             </li>          
-            <li className="nav-item active">
-                <Link className="nav-link" onClick={logout} to="#">Logout</Link>
+            <li className="nav-item active text-dark ">
+                <Link className="nav-link text-dark" onClick={logout} to="#">Logout</Link>
             </li>        
             </ul>
         )
@@ -57,21 +57,21 @@ const RoleNavbar=({isLoggedIn})=>{
     return (
         <ul className="navbar-nav ml-auto" style={{ marginLeft:"850px" }}>             
         <li className="nav-item active">
-            <Link className="nav-link" to="/aprofile">Profile</Link>
+            <Link className="nav-link text-dark fw-bold" to="/aprofile">Profile</Link>
         </li>
-        <li className="nav-item active">
+        <li className="nav-item active text-dark fw-bold">
 
-            <Link className="nav-link" to="/guides">Guide</Link>
+            <Link className="nav-link text-dark fw-bold" to="/sellers">Guide</Link>
 
         </li>
         <li className="nav-item active">
-            <Link className="nav-link" to="/customers">Customers</Link>
+            <Link className="nav-link text-dark fw-bold" to="/customers">Customers</Link>
         </li>
         <li className="nav-item active">
-            <Link className="nav-link" to="/bookings">Bookings</Link>
+            <Link className="nav-link text-dark fw-bold" to="/orders">Orders</Link>
         </li>
         <li className="nav-item active">
-            <Link className="nav-link" onClick={logout} to="#">Logout</Link>
+            <Link className="nav-link text-dark " onClick={logout} to="#">Logout</Link>
         </li>        
         </ul>
     )

@@ -163,7 +163,12 @@ function AddEvent(){
                                 <label className="col-sm-4 form-control-label font-weight-bold">Price</label>
 
                                 <div className="col-sm-8">
-                                    <input type="number" name="price" value={event.price} onChange={handleInput} className="form-control" />
+                                    <input type="number" name="price" value={event.price} onChange={handleInput} className="form-control" 
+                                     pattern="[0-9]+(\.[0-9][0-9]?)?"
+                                     maxLength="10"
+                                     required
+                                    
+                                    />
                                     {errors.price && <small className="text-danger float-right">{errors.price}</small>}
                                 </div>                                
                             </div>
