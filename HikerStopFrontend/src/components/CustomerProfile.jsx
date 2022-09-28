@@ -70,14 +70,14 @@ function CustomerProfile(){
                         <label className="col-sm-4 form-control-label font-weight-bold"><h5>Customer Name</h5></label>
 
                         <div className="col-sm-8">
-                            <input type="text" name="name"  value={user.name} onChange={handleInput} className="form-control" />                        
+                            <input type="text" name="name" placeholder="Please enter your name"  value={user.name} onChange={handleInput} className="form-control" />                        
                         </div>
                         
                     </div>
                     <div className="form-group form-row">
                         <label className="col-sm-4 form-control-label font-weight-bold">City</label>
                         <div className="col-sm-8">
-                            <input type="text" name="city" value={user.city} onChange={handleInput} className="form-control" />                        
+                            <input type="text" name="city" placeholder="Please enter your city" value={user.city} onChange={handleInput} className="form-control" />                        
                         </div>                        
                     </div>
                     <div className="form-group form-row">
@@ -93,14 +93,14 @@ function CustomerProfile(){
                     <div className="form-group form-row">
                         <label className="col-sm-4 form-control-label font-weight-bold">Email Id</label>
                         <div className="col-sm-8">
-                            <input type="text" readOnly name="userid" value={user.userid} onChange={handleInput} className="form-control" />                        
+                            <input type="text" readOnly name="userid" placeholder="Please enter your email id"value={user.userid} onChange={handleInput} className="form-control" />                        
                         </div>
                         
                     </div>
                     <div className="form-group form-row">
                         <label className="col-sm-4 form-control-label font-weight-bold">Phone</label>
                         <div className="col-sm-8">
-                            <input type="text" maxLength="10" name="phone" value={user.phone} onChange={handleInput} className="form-control" />                        
+                            <input type="number" maxLength="10" name="phone" placeholder="Please enter your phone" value={user.phone} onChange={handleInput} className="form-control" />                        
                         </div>
                         
                     </div>

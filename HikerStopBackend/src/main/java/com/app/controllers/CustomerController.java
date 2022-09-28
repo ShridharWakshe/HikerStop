@@ -49,14 +49,12 @@ public class CustomerController {
 	
 
 	@GetMapping
-	@ApiOperation(value="List all customers",response=Iterable.class)
 	public ResponseEntity<?> findAllCustomers() {
 		List<Customer> result = customerService.allCustomers();
 		return Response.success(result);
 	}
 	
 	@GetMapping("/{id}")
-	@ApiOperation(value="Display the details of a customer")
 	public ResponseEntity<?> findCustomerById(@PathVariable("id") int id) {
 		Customer result = customerService.findById(id);
 		return Response.success(result);

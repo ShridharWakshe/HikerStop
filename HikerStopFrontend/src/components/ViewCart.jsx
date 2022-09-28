@@ -175,7 +175,7 @@ function ViewCart(){
                 <button className="btn btn-success float-right">Place Order</button>
                 </form>
             </div>
-             </div> : <h1>Cart is Empty</h1>} 
+             </div > : <h1 style={{ marginLeft:"500px" }}>No Bookings Available</h1>} 
         </div>
 
          </div>

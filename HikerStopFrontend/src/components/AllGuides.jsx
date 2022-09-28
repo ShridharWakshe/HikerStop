@@ -1,14 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function AllSellers(){
-    const [sellers,setSellers]=useState([])
+function AllGuides(){
+    const [guides,setGuide]=useState([])
     useEffect(()=>{
         axios.get("http://localhost:9090/api/sellers")
         .then(resp=>{
             //console.log(resp.data.data)
-            setSellers(resp.data.data)
-            console.log(sellers)
+            setGuide(resp.data.data)
+            console.log(guides)
         })
     },[])
 
@@ -21,7 +21,7 @@ function AllSellers(){
                 axios.get("http://localhost:9090/api/sellers")
                 .then(resp=>{
                     //console.log(resp.data.data)
-                    setSellers(resp.data.data)            
+                    setGuide(resp.data.data)            
                 })
            })
         }
@@ -34,7 +34,7 @@ function AllSellers(){
 
             <h4 className="p-2 text-center">All Guide</h4>
 
-            <table className="table table-bordered table-striped table-dark table-hover" style={{ marginLeft:"-225px" }}>
+            <table className="table table-danger table-striped table-hover" style={{ marginLeft:"-225px" }}>
                 <thead className="table-dark">
                     <tr>
                         <th>Id</th>
@@ -47,7 +47,7 @@ function AllSellers(){
                     </tr>
                 </thead>
                 <tbody>
-                {sellers.map(x=>(
+                {guides.map(x=>(
                     <tr key={x.id}>
                         <td>{x.id}</td>
                         <td>{x.name}</td>
@@ -65,4 +65,4 @@ function AllSellers(){
     )
 }
 
-export default AllSellers;
+export default AllGuides;

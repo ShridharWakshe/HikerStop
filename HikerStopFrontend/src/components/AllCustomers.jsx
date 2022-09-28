@@ -19,7 +19,7 @@ function AllCustomers(){
         <div className="col-sm-6 mx-auto " style={{ height:"563px" }}>
             <h4 className="p-2 text-center">All customer</h4>
 
-            <table className="table table-bordered table-striped table-dark table-hover" style={{ marginLeft:"-225px" }}>
+            <table className="table table-warning table-striped table-hover" style={{ marginLeft:"-225px" }}>
                 <thead className="table-dark">
                     <tr>
                         <th>Name</th>
