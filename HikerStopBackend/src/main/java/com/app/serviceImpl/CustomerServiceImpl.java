@@ -2,6 +2,8 @@ package com.app.serviceImpl;
 
 import java.util.List;
 
+import javax.persistence.Basic;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -26,19 +28,19 @@ public class CustomerServiceImpl implements CustomerService {
 		emailService.sendEmailForNewRegistration(cust.getUserid(),cust.getPwd() );
 		
 		cust.setPwd(this.passwordEncoder.encode(cust.getPwd()));
-		return dao.save(cust);
+		return dao.save(cust);  //crude Repository
 	}
 
 	@Override
 	public List<Customer> allCustomers() {
 		
-		return dao.findAll();
+		return dao.findAll(); 	//JpaRepository
 	}
 
 	@Override
 	public Customer findById(int id) {
 		
-		return dao.getById(id);
+		return dao.getById(id); 	
 	}
 
 	@Override

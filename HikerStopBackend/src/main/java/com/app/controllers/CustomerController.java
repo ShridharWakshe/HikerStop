@@ -33,21 +33,18 @@ public class CustomerController {
 	CustomerService customerService;
 	
 	@PostMapping
-	@ApiOperation(value="Save a customer details",response = Customer.class)
-	
 	public ResponseEntity<?> save(@Valid @RequestBody Customer cust) {
 		try {	
 			return new ResponseEntity<>(customerService.registerCustomer(cust), HttpStatus.CREATED);
 //			customerService.registerCustomer(cust);
 //			return Response.success(cust);
 		}catch (RuntimeException e) {
-			System.out.println("err in add " + e);
+			//System.out.println("err in add " + e);
 			return new ResponseEntity<>(new ErrorResponse("Adding Customer failed!!!!!", e.getMessage()),
 					HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
 	
-
 	@GetMapping
 	public ResponseEntity<?> findAllCustomers() {
 		List<Customer> result = customerService.allCustomers();
