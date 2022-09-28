@@ -27,9 +27,8 @@ public class Guide {
 	
 	
 	
-	
 	private String name;
-	
+
 	
 	private String city;
 	
