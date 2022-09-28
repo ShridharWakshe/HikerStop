@@ -58,6 +58,7 @@ public class GuideController {
 		return Response.success(result);
 	}
 	
+	
 	@DeleteMapping("{id}")
 	public ResponseEntity<?> deleteSeller(@PathVariable("id") int id) {
 		guideService.deleteGuide(id);
