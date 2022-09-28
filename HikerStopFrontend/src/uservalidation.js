@@ -3,7 +3,7 @@ const uservalidation=(values)=>{
     if(!values.name){
         errors.name="Name is required"
     }
-    if(!/^[a-zA-Z]{0,30}$/.test(values.name)){
+    if(!/(^[a-zA-Z][a-zA-Z\s]{0,40}[a-zA-Z]$)/.test(values.name)){
         errors.name="Name should contain alphabets only"
     }
     if(!values.city){
@@ -21,13 +21,20 @@ const uservalidation=(values)=>{
     else if(values.phone.length!==10){
         errors.phone="Invalid Phone No."
     }
-    if(!values.pwd){
-        errors.pwd="Password is required"
-    }
-    else if(!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/.test(values.pwd)){
-        errors.pwd="Minimum six characters, at least one letter and one number required"
-    }
+    // if(!values.pwd){
+    //     errors.pwd="Password is required"
+    // }
+    // else if(!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/.test(values.pwd)){
+    //     errors.pwd="Minimum six characters, at least one letter and one number required"
+    // }
 
+    else if (
+        values.pwd === "" ||
+        values.pwd.search(
+            /^(?=.[0-9])(?=.[!@#$%^&])[a-zA-Z0-9!@#$%^&]{8,20}$/   ) < 0 || values.pwd.length < 6
+ ) {
+
+ }
     if(!values.cpwd){
         errors.cpwd="Confirm password is required"
     }

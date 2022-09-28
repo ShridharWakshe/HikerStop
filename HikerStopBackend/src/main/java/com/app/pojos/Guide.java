@@ -48,6 +48,5 @@ public class Guide {
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "created_timestamp")
 	private Date createdTimestamp= new Date();
-	
-	
+
 }
