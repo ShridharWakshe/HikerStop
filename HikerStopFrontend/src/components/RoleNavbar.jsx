@@ -61,14 +61,14 @@ const RoleNavbar=({isLoggedIn})=>{
         </li>
         <li className="nav-item active text-dark fw-bold">
 
-            <Link className="nav-link text-dark fw-bold" to="/sellers">Guide</Link>
+            <Link className="nav-link text-dark fw-bold" to="/guides">Guide</Link>
 
         </li>
         <li className="nav-item active">
             <Link className="nav-link text-dark fw-bold" to="/customers">Customers</Link>
         </li>
         <li className="nav-item active">
-            <Link className="nav-link text-dark fw-bold" to="/orders">Orders</Link>
+            <Link className="nav-link text-dark fw-bold" to="/bookings">Orders</Link>
         </li>
         <li className="nav-item active">
             <Link className="nav-link text-dark " onClick={logout} to="#">Logout</Link>
