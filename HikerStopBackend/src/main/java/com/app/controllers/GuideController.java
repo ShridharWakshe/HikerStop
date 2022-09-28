@@ -27,7 +27,6 @@ import com.app.services.GuideService;
 @RequestMapping("/api/sellers")
 public class GuideController {
 
-	
 	@Autowired 
 	private GuideService guideService;
 	
