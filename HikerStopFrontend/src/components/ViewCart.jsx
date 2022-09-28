@@ -70,14 +70,14 @@ function ViewCart(){
         return total+(num.price*parseInt(num.qty))
     }
     return (
-        <div className="bg-transparent  text-black" style={{  backgroundImage: `url("http://www.thewowstyle.com/wp-content/uploads/2015/02/the-river-in-valley-of-beautiful-mountains-hd-wallpaper-75015.jpg")`}}> 
+        <div className="bg-transparent  text-black" style={{  backgroundImage: `url("http://www.thewowstyle.com/wp-content/uploads/2015/02/the-river-in-valley-of-beautiful-mountains-hd-wallpaper-75015.jpg")` }}> 
         
         <div className=" mx-auto " style={{ height:"650px" }}>
             
             {state.cart.length>0 ? 
             <div className="row">
                 <div className="col-sm-7" style={{ marginLeft:"50px" }}>
-                <h4 className="">Cart View</h4>
+                <h4 className="text-white">Cart View</h4>
             <table className="table table-bordered table-dark table-striped">
                 <thead>
                     <tr>
@@ -115,67 +115,75 @@ function ViewCart(){
             </div>
             <div className=" text-dark" style={{ marginLeft:"100px" }}>     
             <form onSubmit={handleSubmit} >           
-                <h5 className="p-2">Address Information</h5>
+                <h4 className="p-2 font-weight-bold">Address Information</h4>
                 <div className="form-group form-row">
-                    <label className="col-sm-4 form-control-label">City</label>
+                    <label className="col-sm-4 form-control-label font-weight-bold">City</label>
                     <div className="col-sm-8">
-                        <input type="text" name="city" required value={address.city} onChange={handleAddressInput} className="form-control" />                        
+                        <input type="text" name="city" required value={address.city} onChange={handleAddressInput}  className="form-control" 
+                        placeholder="Enter City"
+                        
+                        />                        
                     </div>                        
                 </div>
                 <div className="form-group form-row">
-                    <label className="col-sm-4 form-control-label">State</label>
+                    <label className="col-sm-4 form-control-label font-weight-bold">State</label>
                     <div className="col-sm-8">
                         <input type="text" name="state" required value={address.state} onChange={handleAddressInput} className="form-control" />
                     </div>                        
                 </div>
                 <div className="form-group form-row">
-                    <label className="col-sm-4 form-control-label">Zip</label>
+                    <label className="col-sm-4 form-control-label font-weight-bold">Zip</label>
                     <div className="col-sm-8">
                         <input type="text" name="zip" required value={address.zip} onChange={handleAddressInput} className="form-control" />                        
                     </div>                        
                 </div>
                 <div className="form-group form-row">
-                    <label className="col-sm-4 form-control-label">Country</label>
+                    <label className="col-sm-4 form-control-label font-weight-bold">Country</label>
                     <div className="col-sm-8">
                         <input type="text" name="country" required value={address.country} onChange={handleAddressInput} className="form-control" />                       
                     </div>                        
                 </div>
 
-                <h5 className="p-2">Payment Information</h5>
+                <h5 className="p-2 font-weight-bold">Payment Information</h5>
                 <div className="form-group form-row">
-                    <label className="col-sm-4 form-control-label">Card No</label>
+                    <label className="col-sm-4 form-control-label font-weight-bold">Card No</label>
                     <div className="col-sm-8">
-                        <input type="text" name="cardno" value={payment.cardno} onChange={handlePaymentInput} className="form-control" maxLength="16" />                        
+                        <input type="text" name="cardno" value={payment.cardno} onChange={handlePaymentInput} className="form-control" maxLength="16" required/>                        
                     </div>                        
                 </div>
                 <div className="form-group form-row">
-                    <label className="col-sm-4 form-control-label">Name on Card</label>
+                    <label className="col-sm-4 form-control-label font-weight-bold">Name on Card</label>
                     <div className="col-sm-8">
-                        <input type="text" name="nameoncard" value={payment.nameoncard} onChange={handlePaymentInput} className="form-control" />                        
+                        <input type="text" name="nameoncard" value={payment.nameoncard} onChange={handlePaymentInput} className="form-control" 
+                        required                        
+                        />                        
                     </div>                        
                 </div>
                 <div className="form-group form-row">
-                    <label className="col-sm-4 form-control-label">Expiry Date</label>
+                    <label className="col-sm-4 form-control-label font-weight-bold">Expiry Date</label>
                     <div className="col-sm-8">
                         <input type="month" required className="form-control" />                        
                     </div>                        
                 </div>
                 <div className="form-group form-row">
-                    <label className="col-sm-4 form-control-label">CVV</label>
+                    <label className="col-sm-4 form-control-label font-weight-bold">CVV</label>
                     <div className="col-sm-8">
-                        <input type="text" maxLength="3" value={payment.cvv} onChange={handlePaymentInput} className="form-control" />                        
+                        <input type="text" maxLength="3" value={payment.cvv} onChange={handlePaymentInput} className="form-control" 
+                            required
+                        />                        
                     </div>                        
                 </div>
                 <div className="form-group form-row">
-                    <label className="col-sm-4 form-control-label">Billed Amount</label>
+                    <label className="col-sm-4 form-control-label font-weight-bold">Billed Amount</label>
                     <div className="col-sm-8">
-                        <input type="text"  readOnly value={payment.amount} onChange={handlePaymentInput} className="form-control" />                        
+                        <input type="text"  readOnly value={payment.amount} onChange={handlePaymentInput} className="form-control" 
+                        />                        
                     </div>                        
                 </div>                
-                <button className="btn btn-success float-right">Place Order</button>
+                <button className="btn btn-success float-right " >Place Order</button>
                 </form>
             </div>
-             </div > : <h1 style={{ marginLeft:"500px" }}>No Bookings Available</h1>} 
+             </div > : <h1 className="font-weight-bold" style={{ marginLeft:"500px" }}>No Bookings Available</h1>} 
         </div>
 
          </div>

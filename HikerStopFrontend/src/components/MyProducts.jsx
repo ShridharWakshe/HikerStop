@@ -49,7 +49,7 @@ function MyEvent(){
             </h4>
             <table className="table table-bordered table-transparent " style={{ width:"1000px", marginLeft:"-170px" }}>
                 <thead className="table-transparent">
-                    <tr class="table-success">
+                    <tr className="table-success">
                         
                         <th>Name</th>
                         <th>Category</th>
