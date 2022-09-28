@@ -18,6 +18,8 @@ public class GuideServiceImpl implements GuideService {
 	@Autowired 
 	private GuideDao dao;
 	PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+	
+	
 	@Override
 	public Guide registerGuide(Guide guide) {
 		guide.setPwd(this.passwordEncoder.encode(guide.getPwd()));

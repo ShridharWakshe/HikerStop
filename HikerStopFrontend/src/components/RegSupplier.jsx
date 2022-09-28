@@ -35,12 +35,12 @@ function RegSupplier()
             axios.post("http://localhost:9090/api/sellers",user)
             .then(resp=>{
                 console.log(resp)
-                alert("Seller registered successfully")
+                alert("Guide registered successfully")
                 history.push("/slogin")
             })
             .catch(error=>{
                 console.log("Error",error)
-                alert("Seller registration Failed")
+                alert("Guide registration Failed")
             })            
         }
     },[errors])
