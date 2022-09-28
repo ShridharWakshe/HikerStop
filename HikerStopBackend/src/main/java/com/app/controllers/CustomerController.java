@@ -33,7 +33,6 @@ public class CustomerController {
 	CustomerService customerService;
 	
 	@PostMapping
-	@ApiOperation(value="Save a customer details",response = Customer.class)
 	
 	public ResponseEntity<?> save(@Valid @RequestBody Customer cust) {
 		try {	
