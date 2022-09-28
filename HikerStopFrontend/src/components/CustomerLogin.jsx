@@ -89,7 +89,7 @@ function CustomerLogin(){
                                 onChange={onChange}
                         />
                     </div>                   
-                    <button className="btn btn-primary float-left" style={{marginLeft:"500px"}}  disabled={!Verifed}>Login Now</button>
+                    <button className="btn btn-primary float-left" style={{marginLeft:"470px"}}  disabled={!Verifed}>Login Now</button>
 
                     </form>
                 </div>

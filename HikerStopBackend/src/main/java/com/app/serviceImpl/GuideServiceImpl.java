@@ -17,12 +17,16 @@ public class GuideServiceImpl implements GuideService {
 
 	@Autowired 
 	private GuideDao dao;
+	@Autowired
+	private EmailService emailService;
 	PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 	
 	
 	@Override
 	public Guide registerGuide(Guide guide) {
+		emailService.sendEmailForNewRegistration(guide.getUserid(), guide.getPwd());
 		guide.setPwd(this.passwordEncoder.encode(guide.getPwd()));
+		
 		return dao.save(guide);
 	}
 

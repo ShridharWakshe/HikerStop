@@ -11,19 +11,19 @@ public class EmailService {
 	@Autowired
 	private JavaMailSender emailSender;
 
-	public void sendEmailForNewRegistration(String email) {
+	public void sendEmailForNewRegistration(String email , String password) {
 		SimpleMailMessage message = new SimpleMailMessage();
-		message.setFrom("shridharwakshe12@gmail.com");
+		message.setFrom("patilbhushan971@gmail.com");
 		message.setTo(email);
 		message.setSubject("Thank you for Registering with us!");
-		message.setText("WELCOME to HikerStop ");
+		message.setText("WELCOME to HikerStop \n\n"+"UserId : "+email+" \n"+"Password : "+password);
 		emailSender.send(message);
 	}
 
 	
 	public void sendEmailForWorker(String email) {
 		SimpleMailMessage message = new SimpleMailMessage();
-		message.setFrom("shridharwakshe12@gmail.com");
+		message.setFrom("patilbhushan971@gmail.com");
 		message.setTo(email);
 		message.setSubject("Event has been booked");
 		message.setText("Please check the My orders ");
