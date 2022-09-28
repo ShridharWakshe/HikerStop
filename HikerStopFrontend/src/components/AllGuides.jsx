@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 function AllGuides(){
     const [guides,setGuide]=useState([])
     useEffect(()=>{
-        axios.get("http://localhost:9090/api/sellers")
+        axios.get("http://localhost:9090/api/guide")
         .then(resp=>{
             //console.log(resp.data.data)
             setGuide(resp.data.data)
@@ -16,9 +16,9 @@ function AllGuides(){
         let response=window.confirm('Are you sure to delete this seller ?');
         if(response){
            console.log(id);
-           axios.delete("http://localhost:9090/api/sellers/"+id)
+           axios.delete("http://localhost:9090/api/guide/"+id)
            .then(resp=>{
-                axios.get("http://localhost:9090/api/sellers")
+                axios.get("http://localhost:9090/api/guide")
                 .then(resp=>{
                     //console.log(resp.data.data)
                     setGuide(resp.data.data)            

@@ -32,7 +32,7 @@ function RegSupplier()
         console.log(errors)
         if(Object.keys(errors).length===0 && submitted){
             console.log(user)
-            axios.post("http://localhost:9090/api/sellers",user)
+            axios.post("http://localhost:9090/api/guide",user)
             .then(resp=>{
                 console.log(resp)
                 alert("Guide registered successfully")

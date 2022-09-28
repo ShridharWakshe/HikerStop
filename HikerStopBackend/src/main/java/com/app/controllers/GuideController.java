@@ -25,7 +25,7 @@ import com.app.services.GuideService;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/api/sellers")
+@RequestMapping("/api/guide")
 public class GuideController {
 
 	@Autowired 
