@@ -22,11 +22,10 @@ public class Customer {
 	
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
-	@ApiModelProperty(notes="Database generated Customer Id")
+	
 	private int id;
 	
 	
-	@ApiModelProperty(notes = "Name of the customer")
 	private String name;
 	
 	
@@ -34,7 +33,6 @@ public class Customer {
 	
 	
 	@Email(message="Please provide a valid email address")
-	@Pattern(regexp=".+@.+\\..+", message="Please provide a valid email address")
 	@Column(name = "email", unique = true)
 	private String userid;
 	

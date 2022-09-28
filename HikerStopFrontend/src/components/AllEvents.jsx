@@ -114,7 +114,7 @@ function AllEvents(){
             <div className=" bg-white text-white" style={{ backgroundColor:"white" ,width:"auto"}}>
                 {/* <div className="card-body"> */}
                     <h3 style={{marginLeft:"609px",color:"black"}}>Our Popular Treks</h3>
-                    <div style={{margin:"25px"}} >
+                    <div style={{margin:"25px", marginBottom:"0px"}} >
 
                 <ReactPaginate 
 

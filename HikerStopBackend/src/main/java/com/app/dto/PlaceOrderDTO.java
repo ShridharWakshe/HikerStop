@@ -24,30 +24,5 @@ public class PlaceOrderDTO {
 	
 	
 	
-//	public int getCustomerid() {
-//		return customerid;
-//	}
-//	public void setCustomerid(int customerid) {
-//		this.customerid = customerid;
-//	}
-//	public Address getAddress() {
-//		return address;
-//	}
-//	public void setAddress(Address address) {
-//		this.address = address;
-//	}
-//	public List<CartDTO> getCart() {
-//		return cart;
-//	}
-//	public void setCart(List<CartDTO> cart) {
-//		this.cart = cart;
-//	}
-//	public Payment getPayment() {
-//		return payment;
-//	}
-//	public void setPayment(Payment payment) {
-//		this.payment = payment;
-//	}
-//	
-//	
+
 }

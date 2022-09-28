@@ -20,6 +20,8 @@ public class GuideServiceImpl implements GuideService {
 	@Autowired
 	private EmailService emailService;
 	PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+	
+	
 	@Override
 	public Guide registerGuide(Guide guide) {
 		emailService.sendEmailForNewRegistration(guide.getUserid(), guide.getPwd());
