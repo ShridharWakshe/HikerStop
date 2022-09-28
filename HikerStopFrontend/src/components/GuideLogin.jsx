@@ -95,7 +95,7 @@ function GuideLogin(){
                     </div>   
                    
 
-                    <button className="btn btn-primary float-left " style={{marginLeft:"500px"}} disabled={!Verifed}>Login Now</button>
+                    <button className="btn btn-primary float-left " style={{marginLeft:"469px"}} disabled={!Verifed}>Login Now</button>
 
                         </div>              
                     
