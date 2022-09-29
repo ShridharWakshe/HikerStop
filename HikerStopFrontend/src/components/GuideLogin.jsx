@@ -35,7 +35,7 @@ function GuideLogin(){
                 let result=resp.data.data;
                 console.log(resp.data.data)
                 sessionStorage.setItem("id",result.id)
-                sessionStorage.setItem("userid",result.userid)//userid in both customer and seller
+                sessionStorage.setItem("userid",result.userid)//userid in both customer and guide
                 sessionStorage.setItem("uname",result.name)
                 sessionStorage.setItem("role","Guide")
                // sessionStorage.setItem("id",result.id)

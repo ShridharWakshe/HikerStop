@@ -1,4 +1,4 @@
-function ProductDetails({x}){
+function EventDetails({x}){
 
     return (
         <div className="modal fade">
@@ -13,4 +13,4 @@ function ProductDetails({x}){
     )
 }
 
-export default ProductDetails;
+export default EventDetails;
