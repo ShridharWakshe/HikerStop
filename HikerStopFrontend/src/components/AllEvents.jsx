@@ -68,11 +68,11 @@ function AllEvents(){
     },[location])
     const addToCart=item=>{  
         if(sessionStorage.getItem("userid")==null){
-            alert("Please login first to buy product")
+            alert("Please login first to buy event")
             history.push("/clogin")
         }
         else if(sessionStorage.getItem("role")!=="Customer"){
-            alert("Only customer can buy product")
+            alert("Only customer can buy event")
         }      
         else{            
             if(checkItem(item.eventid))
