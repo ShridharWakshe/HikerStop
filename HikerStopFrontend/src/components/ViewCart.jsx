@@ -47,7 +47,7 @@ function ViewCart(){
     const handleSubmit=(e)=>{
         e.preventDefault()  
         //setSubmitted(true)
-        let amount=state.cart.reduce((a,b)=> (a+b.price),0)
+        let amount=state.cart.reduce((a,b)=>(a+b.price),0)
         console.log("Amount ",payment.amount)
         setPayment({...payment,'amount':amount})
 

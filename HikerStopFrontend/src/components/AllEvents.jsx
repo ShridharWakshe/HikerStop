@@ -5,8 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import {useHistory,useParams,useLocation} from "react-router-dom";
 import Event from "./Event";
 import queryString  from "query-string";
-import TopSlider from "./TopSlider";
-import banner5 from '../components/banner5.jpg'
 import Video from './Video';
 
 function AllEvents(){
@@ -66,13 +64,14 @@ function AllEvents(){
             loadDataFromServer()
         }
     },[location])
+
     const addToCart=item=>{  
         if(sessionStorage.getItem("userid")==null){
-            alert("Please login first to buy event")
+            alert("Please login first to book Event")
             history.push("/clogin")
         }
         else if(sessionStorage.getItem("role")!=="Customer"){
-            alert("Only customer can buy event")
+            alert("Only customer can book Event")
         }      
         else{            
             if(checkItem(item.eventid))
@@ -112,22 +111,22 @@ function AllEvents(){
                 
         <div className="container-fluid" style={{width:"100%"}}>
             <div className=" bg-white text-white" style={{ backgroundColor:"white" ,width:"auto"}}>
-                {/* <div className="card-body"> */}
-                    <h3 style={{marginLeft:"609px",color:"black"}}>Our Popular Treks</h3>
-                    <div style={{margin:"25px", marginBottom:"0px"}} >
+               
+                    <h3 style={{marginLeft:"560px",color:"black"}}>Our Popular Treks</h3>
+                    <div style={{margin:"0px 25px 0px"}} >
 
                 <ReactPaginate 
 
-                    previousLabel={"🢀"}
-                    nextLabel={"🢂"}
-                    containerClassName={"pagination"}
-                    pageCount={totalPage}
-                    onPageChange={handlePageClick}
-                    previousLinkClassName={"pagination__link"}
-                    nextLinkClassName={"pagination__link"}
-                    disabledClassName={"pagination__link--disabled"}
-                    activeClassName={"pagination__link--active"} />
-                    <div className="row">
+                        previousLabel={"🢀"}
+                        nextLabel={"🢂"}
+                        containerClassName={"pagination"}
+                        pageCount={totalPage}
+                        onPageChange={handlePageClick}
+                        previousLinkClassName={"pagination__link--active"}
+                        nextLinkClassName={"pagination__link--active"}
+                        // disabledClassName={"pagination__link--disabled"}
+                        activeClassName={"pagination__link--active"} />
+                        <div className="row">
                     {events?.map(x=>(
                         <Event key={x.eventid} x={x} showModal={showModal} />
                     ))}
@@ -214,7 +213,8 @@ function AllEvents(){
                         </div>
                     </div>
                 </div>
-            </div>) : ""}
+            </div>) 
+            : ""}
         {/* </div> */}
         </>
     )

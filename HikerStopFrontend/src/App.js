@@ -32,7 +32,7 @@ function App() {
         <Switch>
           <Route component={AllEvents} path="/" exact />
           <Route component={AllEvents} path="/cats" />
-          <Route component={RegSupplier} path="/regsupplier" />
+          <Route component={RegSupplier} path="/regsupplier" /> {/* change to guide */}
           <Route component={RegCustomer} path="/register" />          
           <Route component={AdminLogin} path="/alogin" />          
           <Route component={GuideLogin} path="/slogin" />          

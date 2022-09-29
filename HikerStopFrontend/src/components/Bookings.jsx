@@ -24,12 +24,12 @@ function Bookings(){
         setShow(true)
     }
     return (
-        <div className="container-fluid">
+        <div className="container-fluid" style={{ backgroundImage: `url("https://images.unsplash.com/photo-1520208422220-d12a3c588e6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")`,backgroundSize:"cover ",height:"563px"}}>
             <div className="row">
                 <div className="col-sm-7">
-                <h4 className="p-2 text-center text-white">Booking detail</h4>
-                <table className="table table-warning table-striped table-hover">
-                    <thead className="table-dark">
+                <h4 className="p-2 text-center text-white">Booking Details</h4>
+                <table className="table table-bordered table-sm table-dark table-hover table-striped">
+                    <thead>
                         <tr>
                             <th>Id</th>
                             <th>Order Date</th>
