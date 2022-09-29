@@ -28,8 +28,8 @@ function Bookings(){
             <div className="row">
                 <div className="col-sm-7">
                 <h4 className="p-2 text-center text-white">Booking detail</h4>
-                <table className="table table-bordered table-sm table-dark table-hover table-striped">
-                    <thead>
+                <table className="table table-warning table-striped table-hover">
+                    <thead className="table-dark">
                         <tr>
                             <th>Id</th>
                             <th>Order Date</th>
