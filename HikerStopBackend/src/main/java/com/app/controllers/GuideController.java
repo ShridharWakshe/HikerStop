@@ -22,7 +22,6 @@ import com.app.dto.Response;
 import com.app.pojos.Guide;
 import com.app.services.GuideService;
 
-
 @CrossOrigin
 @RestController
 @RequestMapping("/api/guide")
@@ -51,12 +50,13 @@ public class GuideController {
 		List<Guide> result = guideService.allGuide();
 		return Response.success(result);
 	}
-	
+
 	@GetMapping("{id}")
 	public ResponseEntity<?> findSellerProfile(@PathVariable("id") int id) {
 		Guide result = guideService.findById(id);
 		return Response.success(result);
 	}
+	
 	
 	@DeleteMapping("{id}")
 	public ResponseEntity<?> deleteSeller(@PathVariable("id") int id) {
