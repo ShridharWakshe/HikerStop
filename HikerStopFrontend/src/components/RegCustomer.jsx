@@ -78,7 +78,7 @@ function RegCustomer()
                         <div className="col-sm-8">
                             <input type="text" name="name" placeholder="Enter Name" value={user.name} onChange={handleInput} className="form-control" 
                             minLength="2" maxLength="60"
-                            required
+                           required
                             />
 
                             {errors.name && <small className="text-danger float-right">{errors.name}</small>}
@@ -92,7 +92,8 @@ function RegCustomer()
                             <input type="text" name="city"  value={user.city} onChange={handleInput} className="form-control" 
                              placeholder="Enter City"
                              minLength="2" maxLength="40"
-                             required/>
+                             required
+                            />
 
                             {errors.city && <small className="text-danger float-right">{errors.city}</small>}
                         </div>                        
@@ -144,7 +145,7 @@ function RegCustomer()
                             <input type="password" name="pwd"  value={user.pwd} onChange={handleInput} className="form-control"
                             placeholder="Enter Password"
                             minLength="8"
-                            required
+                           required
                             />
 
                             {errors.pwd && <small className="text-danger float-right">{errors.pwd}</small>}
@@ -157,7 +158,7 @@ function RegCustomer()
                             <input type="password" name="cpwd" value={user.cpwd} onChange={handleInput} className="form-control" 
                             placeholder="Enter Conform Password"
                             minLength="8"
-                            required
+                         required
                             />
                             {errors.cpwd && <small className="text-danger float-right">{errors.cpwd}</small>}
                         </div>
