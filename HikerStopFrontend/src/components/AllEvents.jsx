@@ -112,7 +112,7 @@ function AllEvents(){
         <div className="container-fluid" style={{width:"100%"}}>
             <div className=" bg-white text-white" style={{ backgroundColor:"white" ,width:"auto"}}>
                
-                    <h3 style={{marginLeft:"560px",color:"black"}}>Our Popular Treks</h3>
+                    <h3 style={{marginLeft:"625px",color:"black"}}>Our Popular Treks</h3>
                     <div style={{margin:"0px 25px 0px"}} >
 
                 <ReactPaginate 
